@@ -26,6 +26,7 @@
     zoxide
     starship
     fastfetch
+    yazi
 
     neovim
     ripgrep
