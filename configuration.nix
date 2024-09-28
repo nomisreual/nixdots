@@ -4,6 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      ./greetd.nix
     ];
 
   # Configure nixpkgs:
@@ -99,6 +100,7 @@
     pyprland
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     hyprpaper
+    hypridle
 
     brave
     thunderbird
@@ -145,7 +147,7 @@
   # List services that you want to enable:
   services.gvfs.enable = true;
 
-  services.hypridle.enable = true;
+  # services.hypridle.enable = true;
 
   system.stateVersion = "24.05";
 }
