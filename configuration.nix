@@ -59,7 +59,7 @@
   # User accounts.
   users.users.simon = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" ];
     packages = with pkgs; [
     ];
   };
@@ -76,18 +76,7 @@
     samba
 
     vim
-    neovim
     kitty
-    gotop
-
-    stow
-    ripgrep
-    fd
-    fzf
-    zoxide
-    wl-clipboard
-    starship
-    fastfetch
 
     python311
     go
@@ -102,13 +91,6 @@
     hyprpaper
     hypridle
 
-    brave
-    thunderbird
-    slack
-    _1password-gui
-    pika-backup
-    spotify
-    obsidian
   ];
 
   # Fonts
