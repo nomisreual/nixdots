@@ -87,13 +87,23 @@
     '';
   };
 
+  gtk = {
+    enable = true;
+    theme = {
+      package = pkgs.rose-pine-gtk-theme;
+      name = "rose-pine-moon";
+    };
+    iconTheme = {
+      package = pkgs.rose-pine-icon-theme;
+      name = "rose-pine-moon";
+    };
+  };
+
 
 
   home.file = { };
 
-  home.sessionVariables = {
-    FOO = "Bar";
-  };
+  home.sessionVariables = { };
 
   home.stateVersion = "24.05";
 

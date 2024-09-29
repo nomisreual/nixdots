@@ -21,6 +21,9 @@
     auto-optimise-store = true;
   };
 
+  # Latest Kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   # Systemd-Boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -71,7 +74,6 @@
     curl
     git
     gcc
-    gnupg
     cifs-utils
     samba
 
@@ -114,6 +116,12 @@
   # ZSH
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
+
+  # GnuPG
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-curses;
+  };
 
   # Nix LD
   programs.nix-ld.enable = true;
