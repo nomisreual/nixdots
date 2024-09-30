@@ -23,7 +23,6 @@
 
     gotop
     stow
-    # fastfetch
     yazi
 
     neovim
@@ -110,6 +109,20 @@
         fastfetch
       fi
     '';
+  };
+
+  programs.git = {
+    enable = true;
+    userEmail = "simon.lauer@posteo.de";
+    userName = "Simon Antonius Lauer";
+    extraConfig = {
+      init = {
+        defaultBranch = "main";
+      };
+      core = {
+        editor = "nvim";
+      };
+    };
   };
 
   programs.zoxide = {
