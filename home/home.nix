@@ -143,7 +143,13 @@
 
 
 
-  home.file = { };
+  home.file = {
+    "mako" = {
+      source = ./dotfiles/mako;
+      target = ".config/mako";
+      recursive = true;
+    };
+  };
 
   home.sessionVariables = { };
 
