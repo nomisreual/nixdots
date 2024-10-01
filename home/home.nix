@@ -214,6 +214,16 @@
       target = ".config/nvim";
       recursive = true;
     };
+    "kitty" = {
+      source = ./dotfiles/kitty;
+      target = ".config/kitty";
+      recursive = true;
+    };
+    "gammastep" = {
+      source = ./dotfiles/gammastep;
+      target = ".config/gammastep";
+      recursive = true;
+    };
   };
 
   home.sessionVariables = { };
