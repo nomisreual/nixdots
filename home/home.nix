@@ -224,6 +224,11 @@
       target = ".config/gammastep";
       recursive = true;
     };
+    "wofi" = {
+      source = ./dotfiles/wofi;
+      target = ".config/wofi";
+      recursive = true;
+    };
   };
 
   home.sessionVariables = { };
