@@ -21,6 +21,8 @@
     spotify
     obsidian
     teams-for-linux
+    libreoffice
+    naps2
 
     gotop
     stow

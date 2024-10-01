@@ -51,7 +51,19 @@
   };
 
   # Enable CUPS to print documents.
-  # services.printing.enable = true;
+  services.printing.enable = true;
+
+  # Printer disovery.
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
+  hardware.sane = {
+    enable = true;
+    extraBackends = [ pkgs.sane-airscan ];
+  };
 
   # Enable sound.
   services.pipewire = {
@@ -62,7 +74,7 @@
   # User accounts.
   users.users.simon = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "scanner" "lp" ];
     packages = with pkgs; [
     ];
   };
