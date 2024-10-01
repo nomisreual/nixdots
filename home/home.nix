@@ -109,7 +109,11 @@
       # Fuzzy find files in current directory
       ff = "fd --type f --strip-cwd-prefix | fzf --height 40%  --layout reverse --border --bind 'enter:become(nvim {})' --preview 'bat --color=always {}'";
 
+      # Switch tmux sessions
       fp = "tmux_select_directory";
+
+      # Neovim
+      n = "nvim";
 
     };
     initExtra = ''
@@ -130,6 +134,14 @@
       core = {
         editor = "nvim";
       };
+    };
+  };
+
+  programs.poetry = {
+    enable = true;
+    settings = {
+      virtualenvs.in-project = true;
+      virtualenvs.prefer-active-python = true;
     };
   };
 
@@ -231,6 +243,11 @@
     "wofi" = {
       source = ./dotfiles/wofi;
       target = ".config/wofi";
+      recursive = true;
+    };
+    "rofi" = {
+      source = ./dotfiles/rofi;
+      target = ".config/rofi";
       recursive = true;
     };
   };

@@ -92,13 +92,14 @@
     vim
     kitty
 
-    python311
+    python312
     go
     nodejs_22
     cargo
 
     mako
-    wofi
+    # wofi
+    rofi-wayland
     gammastep
     pyprland
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
