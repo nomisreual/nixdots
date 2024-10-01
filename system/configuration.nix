@@ -92,7 +92,7 @@
     vim
     kitty
 
-    python312
+    python311
     go
     nodejs_22
     cargo
