@@ -25,7 +25,6 @@
     naps2
 
     gotop
-    stow
     yazi
 
     neovim
