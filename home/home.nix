@@ -199,6 +199,11 @@
       target = ".config/mako";
       recursive = true;
     };
+    "hypr" = {
+      source = ./dotfiles/hypr;
+      target = ".config/hypr";
+      recursive = true;
+    };
   };
 
   home.sessionVariables = { };
