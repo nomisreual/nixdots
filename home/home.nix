@@ -20,6 +20,7 @@
     pika-backup
     spotify
     obsidian
+    teams-for-linux
 
     gotop
     stow
@@ -90,6 +91,7 @@
     syntaxHighlighting = {
       enable = true;
     };
+    defaultKeymap = "viins";
     history = {
       size = 1000;
       save = 1000;
