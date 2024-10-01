@@ -26,6 +26,7 @@
 
     gotop
     yazi
+    direnv
 
     neovim
     ripgrep
