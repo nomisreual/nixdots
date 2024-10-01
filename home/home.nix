@@ -204,6 +204,16 @@
       target = ".config/hypr";
       recursive = true;
     };
+    "waybar" = {
+      source = ./dotfiles/waybar;
+      target = ".config/waybar";
+      recursive = true;
+    };
+    "nvim" = {
+      source = ./dotfiles/nvim;
+      target = ".config/nvim";
+      recursive = true;
+    };
   };
 
   home.sessionVariables = { };
