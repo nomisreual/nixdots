@@ -32,6 +32,8 @@
     fd
     fzf
     wl-clipboard
+
+    (import ./scripts/tmux_select_directory.nix { inherit pkgs; })
   ];
 
   programs.tmux = {
@@ -106,6 +108,9 @@
       boxsftp = "sftp boxuser@134.122.93.78";
       # Fuzzy find files in current directory
       ff = "fd --type f --strip-cwd-prefix | fzf --height 40%  --layout reverse --border --bind 'enter:become(nvim {})' --preview 'bat --color=always {}'";
+
+      fp = "tmux_select_directory";
+
     };
     initExtra = ''
       if [[ -z $TMUX ]]; then
