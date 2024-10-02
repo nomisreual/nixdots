@@ -150,6 +150,11 @@
   # List services that you want to enable:
   services.gvfs.enable = true;
 
+  services.postgresql = {
+    enable = true;
+    package = pkgs.postgresql_16;
+  };
+
   # services.hypridle.enable = true;
 
   system.stateVersion = "24.05";
