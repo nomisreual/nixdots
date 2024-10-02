@@ -26,7 +26,7 @@
 
     gotop
     yazi
-    direnv
+    # direnv
 
     neovim
     ripgrep
@@ -36,6 +36,12 @@
 
     (import ./scripts/tmux_select_directory.nix { inherit pkgs; })
   ];
+
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
+  };
 
   programs.tmux = {
     enable = true;
