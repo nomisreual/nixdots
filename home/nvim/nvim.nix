@@ -22,6 +22,8 @@
         gofumpt
         # LSPs
         rust-analyzer
+        cargo # rust-analyzer needs it
+        rustc # rust-analyzer needs it
         lua-language-server
         pyright
       ];
