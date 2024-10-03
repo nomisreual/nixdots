@@ -98,6 +98,18 @@
           plugin = nvim-cmp;
           config = toLuaFile ./plugins/cmp.lua;
         }
+        {
+          plugin = (nvim-treesitter.withPlugins (p: [
+            p.tree-sitter-nix
+            p.tree-sitter-vim
+            p.tree-sitter-bash
+            p.tree-sitter-lua
+            p.tree-sitter-python
+            p.tree-sitter-json
+            p.tree-sitter-rust
+          ]));
+          config = toLuaFile ./plugins/treesitter.lua;
+        }
         vim-tmux-navigator
       ];
     };
