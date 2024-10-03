@@ -10,6 +10,10 @@
   home.username = "simon";
   home.homeDirectory = "/home/simon";
 
+  imports = [
+    ./nvim/nvim.nix
+  ];
+
 
   home.packages = with pkgs; [
     discord
@@ -26,16 +30,10 @@
 
     gotop
     yazi
-    # direnv
-
-    neovim
-    ripgrep
-    fd
-    fzf
-    wl-clipboard
 
     (import ./scripts/tmux_select_directory.nix { inherit pkgs; })
   ];
+
 
   programs.direnv = {
     enable = true;
@@ -233,11 +231,11 @@
       target = ".config/waybar";
       recursive = true;
     };
-    "nvim" = {
-      source = ./dotfiles/nvim;
-      target = ".config/nvim";
-      recursive = true;
-    };
+    # "nvim" = {
+    #   source = ./dotfiles/nvim;
+    #   target = ".config/nvim";
+    #   recursive = true;
+    # };
     "kitty" = {
       source = ./dotfiles/kitty;
       target = ".config/kitty";
