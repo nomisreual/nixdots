@@ -92,13 +92,7 @@
     vim
     kitty
 
-    python311
-    go
-    nodejs_22
-    cargo
-
     mako
-    # wofi
     rofi-wayland
     gammastep
     pyprland

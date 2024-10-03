@@ -20,6 +20,10 @@
         black
         prettierd
         gofumpt
+        # LSPs
+        rust-analyzer
+        lua-language-server
+        pyright
       ];
       withRuby = true;
       extraLuaConfig = ''
@@ -34,6 +38,12 @@
         plenary-nvim
         telescope-fzf-native-nvim
         telescope-ui-select-nvim
+        cmp-nvim-lsp
+        luvit-meta
+        luasnip
+        cmp_luasnip
+        cmp-nvim-lsp
+        cmp-path
         {
           plugin = which-key-nvim;
           config = toLuaFile ./plugins/which-key.lua;
@@ -73,6 +83,18 @@
         {
           plugin = conform-nvim;
           config = toLuaFile ./plugins/conform.lua;
+        }
+        {
+          plugin = nvim-lspconfig;
+          config = toLuaFile ./plugins/lspconfig.lua;
+        }
+        {
+          plugin = lazydev-nvim;
+          config = toLuaFile ./plugins/lazydev.lua;
+        }
+        {
+          plugin = nvim-cmp;
+          config = toLuaFile ./plugins/cmp.lua;
         }
         vim-tmux-navigator
       ];
