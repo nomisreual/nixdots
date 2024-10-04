@@ -16,10 +16,9 @@
         # Formatters
         nixpkgs-fmt
         stylua
-        # isort
-        # black
         prettierd
         gofumpt
+        rustfmt
         # LSPs
         rust-analyzer
         cargo # rust-analyzer needs it

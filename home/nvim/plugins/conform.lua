@@ -7,19 +7,13 @@ require("conform").setup({
 
 	formatters_by_ft = {
 		lua = { "stylua" },
-		-- python = function(bufnr)
-		-- 	if require("conform").get_formatter_info("ruff", bufnr).available then
-		-- 		return { "ruff format" }
-		-- 	else
-		-- 		return { "isort", "black" }
-		-- 	end
-		-- end,
-		javascript = { { "prettierd", "prettier" } },
-		-- html = { { 'prettierd', 'prettier' } },
-		htmldjango = { "djlint" },
-		sql = { "sql_formatter" },
+		rust = { "rustfmt" },
+		-- javascript = { "prettierd" },
+		-- html = { "prettierd" },
+		-- htmldjango = { "djlint" },
+		-- sql = { "sql_formatter" },
 		-- cs = { 'csharpier' },
-		go = { "goimports", "gofumpt" },
+		-- go = { "goimports", "gofumpt" },
 		nix = { "nixpkgs_fmt" },
 	},
 })
