@@ -30,6 +30,8 @@
 
     gotop
     yazi
+    fzf
+    fd
 
     (import ./scripts/tmux_select_directory.nix { inherit pkgs; })
   ];

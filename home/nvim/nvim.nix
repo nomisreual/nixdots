@@ -11,7 +11,6 @@
       extraPackages = with pkgs; [
         ripgrep
         wl-clipboard
-        fd
         fzf
         # Formatters
         nixpkgs-fmt
