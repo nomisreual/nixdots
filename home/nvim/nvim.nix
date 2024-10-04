@@ -16,8 +16,8 @@
         # Formatters
         nixpkgs-fmt
         stylua
-        isort
-        black
+        # isort
+        # black
         prettierd
         gofumpt
         # LSPs
@@ -25,6 +25,7 @@
         cargo # rust-analyzer needs it
         rustc # rust-analyzer needs it
         lua-language-server
+        ruff
         pyright
       ];
       withRuby = true;

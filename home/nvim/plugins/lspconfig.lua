@@ -97,6 +97,22 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
+-- Disable certain features in Ruff
+vim.api.nvim_create_autocmd("LspAttach", {
+	group = vim.api.nvim_create_augroup("lsp_attach_disable_ruff_hover", { clear = true }),
+	callback = function(args)
+		local client = vim.lsp.get_client_by_id(args.data.client_id)
+		if client == nil then
+			return
+		end
+		if client.name == "ruff" then
+			-- Disable hover in favor of Pyright
+			client.server_capabilities.hoverProvider = false
+		end
+	end,
+	desc = "LSP: Disable hover capability from Ruff",
+})
+
 -- LSP servers and clients are able to communicate to each other what features they support.
 --  By default, Neovim doesn't support everything that is in the LSP specification.
 --  When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.
@@ -105,6 +121,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
 require("lspconfig").lua_ls.setup({
+	capabilities = capabilities,
 	lua_ls = {
 		settings = {
 			Lua = {
@@ -116,9 +133,28 @@ require("lspconfig").lua_ls.setup({
 	},
 })
 
+-- Pyright LSP
+-- no linting and formatting in favor of Ruff
 require("lspconfig").pyright.setup({
-	capabilities = capabilities,
+	-- capabilities = capabilities,
+	settings = {
+		pyright = {
+			-- Using Ruff's import organizer
+			disableOrganizeImports = true,
+		},
+		python = {
+			analysis = {
+				-- Ignore all files for analysis to exclusively use Ruff for linting
+				ignore = { "*" },
+			},
+		},
+	},
 })
+
+-- Ruff for linting and formatting
+require("lspconfig").ruff.setup({})
+
+-- Rust
 require("lspconfig").rust_analyzer.setup({
 	capabilities = capabilities,
 	settings = {
