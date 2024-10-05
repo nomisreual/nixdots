@@ -8,6 +8,11 @@ require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
 		rust = { "rustfmt" },
+		python = {
+			exe = "ruff",
+			args = { "format" },
+			lsp_format = "never",
+		},
 		-- javascript = { "prettierd" },
 		-- html = { "prettierd" },
 		-- htmldjango = { "djlint" },

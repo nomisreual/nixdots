@@ -24,7 +24,7 @@
         rustc # rust-analyzer needs it
         lua-language-server
         ruff
-        pyright
+        python312Packages.python-lsp-server
       ];
       withRuby = true;
       extraLuaConfig = ''
