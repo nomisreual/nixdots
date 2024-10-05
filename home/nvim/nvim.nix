@@ -25,6 +25,7 @@
         lua-language-server
         ruff
         python312Packages.python-lsp-server
+        nil
       ];
       withRuby = true;
       extraLuaConfig = ''
