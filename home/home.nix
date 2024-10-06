@@ -148,8 +148,7 @@
   programs.poetry = {
     enable = true;
     settings = {
-      virtualenvs.in-project = true;
-      virtualenvs.prefer-active-python = true;
+      virtualenvs.create = false;
     };
   };
 
