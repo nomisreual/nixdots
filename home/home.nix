@@ -44,6 +44,17 @@
     silent = true;
   };
 
+  programs.kitty = {
+    enable = true;
+    font = {
+      package = (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; });
+      name = "FantasqueSansM Nerd Font Mono";
+      size = 16;
+    };
+    # themeFile = "SpaceGray_Eighties";
+    themeFile = "rose-pine-moon";
+  };
+
   programs.tmux = {
     enable = true;
     baseIndex = 1;
@@ -237,11 +248,11 @@
     #   target = ".config/nvim";
     #   recursive = true;
     # };
-    "kitty" = {
-      source = ./dotfiles/kitty;
-      target = ".config/kitty";
-      recursive = true;
-    };
+    # "kitty" = {
+    #   source = ./dotfiles/kitty;
+    #   target = ".config/kitty";
+    #   recursive = true;
+    # };
     "gammastep" = {
       source = ./dotfiles/gammastep;
       target = ".config/gammastep";
