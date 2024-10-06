@@ -44,6 +44,7 @@
     silent = true;
   };
 
+
   programs.kitty = {
     enable = true;
     font = {
@@ -253,11 +254,11 @@
     #   target = ".config/kitty";
     #   recursive = true;
     # };
-    "gammastep" = {
-      source = ./dotfiles/gammastep;
-      target = ".config/gammastep";
-      recursive = true;
-    };
+    # "gammastep" = {
+    #   source = ./dotfiles/gammastep;
+    #   target = ".config/gammastep";
+    #   recursive = true;
+    # };
     "wofi" = {
       source = ./dotfiles/wofi;
       target = ".config/wofi";
@@ -267,6 +268,23 @@
       source = ./dotfiles/rofi;
       target = ".config/rofi";
       recursive = true;
+    };
+  };
+
+  # User level services.
+
+  services.gammastep = {
+    enable = true;
+    provider = "geoclue2";
+    temperature = {
+      day = 5500;
+      night = 1500;
+    };
+    settings = {
+      general = {
+        fade = 1;
+        adjustment-method = "randr";
+      };
     };
   };
 

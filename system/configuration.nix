@@ -144,6 +144,8 @@
   # List services that you want to enable:
   services.gvfs.enable = true;
 
+  services.geoclue2.enable = true;
+
   services.postgresql = {
     enable = true;
     package = pkgs.postgresql_16;
