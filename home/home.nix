@@ -160,7 +160,7 @@
   programs.poetry = {
     enable = true;
     settings = {
-      virtualenvs.create = false;
+      virtualenvs.in-project = true;
     };
   };
 
