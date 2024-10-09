@@ -91,7 +91,7 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #language,
-#custom-do_not_disturb,
+#custom-power,
 #mpd {
     padding: 0 10px;
     color: @text;
@@ -196,6 +196,10 @@ label:focus {
 
 #network {
     /* background-color: #2980b9; */
+    background-color: @base;
+}
+
+#custom-power {
     background-color: @base;
 }
 
