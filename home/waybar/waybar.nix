@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 {
   programs.waybar = {
     enable = true;
@@ -11,6 +11,7 @@
         ];
         modules-center = [
           "hyprland/window"
+          # "custom/media"
         ];
         modules-right = [
           "idle_inhibitor"
@@ -25,17 +26,33 @@
           "custom/power"
         ];
 
+        "hyprland/workspaces" = {
+          persistent-workspaces = {
+            DP-1 = [ 1 2 3 4 5 ];
+            DP-2 = [ 6 7 8 9 10 ];
+          };
+        };
+        # "custom/media" =
+        #   let
+        #     script = import ./mediaplayer.nix { inherit pkgs; };
+        #   in
+        #   {
+        #     format = "{icon} {}";
+        #     escape = true;
+        #     return-type = "json";
+        #     max-length = 40;
+        #     on-click = "playerctl play-pause";
+        #     on-click-right = "playerctl stop";
+        #     smooth-scrolling-threshold = 10;
+        #     on-scroll-up = "playerctl next";
+        #     on-scroll-down = "playerctl previous";
+        #     exec = "${lib.getExe script}";
+        #   };
         "idle_inhibitor" = {
           format = "{icon}";
           format-icons = {
             activated = " ";
             deactivated = " ";
-          };
-        };
-        "hyprland/workspaces" = {
-          persistent-workspaces = {
-            DP-1 = [ 1 2 3 4 5 ];
-            DP-2 = [ 6 7 8 9 10 ];
           };
         };
         "pulseaudio" = {
@@ -95,7 +112,6 @@
           format = "⏻ ";
           tooltip = false;
           menu = "on-click";
-          # menu-file = "$HOME/.config/waybar/power_menu.xml";
           menu-file = ./power_menu.xml;
           menu-actions = {
             shutdown = "shutdown";
