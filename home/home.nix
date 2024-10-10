@@ -12,6 +12,7 @@
 
   imports = [
     ./nvim/nvim.nix
+    ./waybar/waybar.nix
   ];
 
 
@@ -241,11 +242,11 @@
       target = ".config/hypr";
       recursive = true;
     };
-    "waybar" = {
-      source = ./dotfiles/waybar;
-      target = ".config/waybar";
-      recursive = true;
-    };
+    # "waybar" = {
+    #   source = ./dotfiles/waybar;
+    #   target = ".config/waybar";
+    #   recursive = true;
+    # };
     # "nvim" = {
     #   source = ./dotfiles/nvim;
     #   target = ".config/nvim";
