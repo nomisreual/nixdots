@@ -192,25 +192,13 @@
         "uptime"
         "packages"
         "shell"
-        # "display"
         "de"
         "wm"
         "wmtheme"
-        # "theme"
-        # "icons"
-        # "font"
-        # "cursor"
         "terminal"
-        # "terminalfont"
         "cpu"
         "gpu"
         "memory"
-        # "swap"
-        # "disk"
-        # "localip"
-        # "battery"
-        # "poweradapter"
-        # "locale"
         "break"
         "colors"
       ];
@@ -242,26 +230,6 @@
       target = ".config/hypr";
       recursive = true;
     };
-    # "waybar" = {
-    #   source = ./dotfiles/waybar;
-    #   target = ".config/waybar";
-    #   recursive = true;
-    # };
-    # "nvim" = {
-    #   source = ./dotfiles/nvim;
-    #   target = ".config/nvim";
-    #   recursive = true;
-    # };
-    # "kitty" = {
-    #   source = ./dotfiles/kitty;
-    #   target = ".config/kitty";
-    #   recursive = true;
-    # };
-    # "gammastep" = {
-    #   source = ./dotfiles/gammastep;
-    #   target = ".config/gammastep";
-    #   recursive = true;
-    # };
     "wofi" = {
       source = ./dotfiles/wofi;
       target = ".config/wofi";
