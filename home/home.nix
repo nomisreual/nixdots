@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   nixpkgs = {
@@ -37,6 +37,8 @@
     pavucontrol
 
     (import ./scripts/tmux_select_directory.nix { inherit pkgs; })
+
+    inputs.mediaplayer.packages.${pkgs.system}.default
   ];
 
 

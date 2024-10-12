@@ -10,8 +10,8 @@
           "hyprland/workspaces"
         ];
         modules-center = [
-          "hyprland/window"
-          # "custom/media"
+          # "hyprland/window"
+          "custom/media"
         ];
         modules-right = [
           "idle_inhibitor"
@@ -32,22 +32,19 @@
             DP-2 = [ 6 7 8 9 10 ];
           };
         };
-        # "custom/media" =
-        #   let
-        #     script = import ./mediaplayer.nix { inherit pkgs; };
-        #   in
-        #   {
-        #     format = "{icon} {}";
-        #     escape = true;
-        #     return-type = "json";
-        #     max-length = 40;
-        #     on-click = "playerctl play-pause";
-        #     on-click-right = "playerctl stop";
-        #     smooth-scrolling-threshold = 10;
-        #     on-scroll-up = "playerctl next";
-        #     on-scroll-down = "playerctl previous";
-        #     exec = "${lib.getExe script}";
-        #   };
+        "custom/media" =
+          {
+            format = "{icon} {}";
+            escape = true;
+            return-type = "json";
+            max-length = 40;
+            on-click = "playerctl play-pause";
+            on-click-right = "playerctl stop";
+            smooth-scrolling-threshold = 10;
+            on-scroll-up = "playerctl next";
+            on-scroll-down = "playerctl previous";
+            exec = "mediaplayer";
+          };
         "idle_inhibitor" = {
           format = "{icon}";
           format-icons = {
