@@ -43,7 +43,7 @@
             smooth-scrolling-threshold = 10;
             on-scroll-up = "playerctl next";
             on-scroll-down = "playerctl previous";
-            exec = "mediaplayer";
+            exec = "mediaplayer 2> /dev/null";
           };
         "idle_inhibitor" = {
           format = "{icon}";
