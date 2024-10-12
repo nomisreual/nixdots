@@ -28,6 +28,7 @@
     teams-for-linux
     libreoffice
     naps2
+    vlc
 
     gotop
     yazi
