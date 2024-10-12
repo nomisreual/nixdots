@@ -13,6 +13,12 @@
     # Hyprcursor Theme
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
 
+    # Mediaplayer
+    mediaplayer = {
+      url = "github:nomisreual/mediaplayer";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =
