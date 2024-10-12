@@ -39,6 +39,7 @@
     (import ./scripts/tmux_select_directory.nix { inherit pkgs; })
 
     inputs.mediaplayer.packages.${pkgs.system}.default
+    playerctl
   ];
 
 

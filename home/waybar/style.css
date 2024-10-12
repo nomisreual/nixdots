@@ -249,18 +249,18 @@ label:focus {
 }
 
 #custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
+    background-color: @base;
+    color: @text;
     min-width: 100px;
 }
 
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
-}
+/*#custom-media.custom-spotify {*/
+/*    background-color: #66cc99;*/
+/*}*/
+/**/
+/*#custom-media.custom-vlc {*/
+/*    background-color: #ffa000;*/
+/*}*/
 
 #temperature {
     /* background-color: #f0932b; */
