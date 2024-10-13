@@ -35,6 +35,8 @@
     fzf
     fd
 
+    uv
+
     pavucontrol
 
     (import ./scripts/tmux_select_directory.nix { inherit pkgs; })

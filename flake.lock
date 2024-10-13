@@ -62,6 +62,26 @@
         "type": "github"
       }
     },
+    "nix-darwin": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1728769175,
+        "narHash": "sha256-KtE4F2wTzIpE6fI9diD5dDkUgGAt7IG80TnFqkCD8Ws=",
+        "owner": "LnL7",
+        "repo": "nix-darwin",
+        "rev": "fd0e3ed30b75ddf7f3d94829d80a078b413b6244",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LnL7",
+        "repo": "nix-darwin",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1728492678,
@@ -98,6 +118,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "mediaplayer": "mediaplayer",
+        "nix-darwin": "nix-darwin",
         "nixpkgs": "nixpkgs",
         "rose-pine-hyprcursor": "rose-pine-hyprcursor"
       }
