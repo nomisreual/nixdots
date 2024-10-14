@@ -23,23 +23,23 @@
 
   environment.systemPackages =
     with pkgs; [
-      mise
-      vim
-      htop
-      neovim
-      poetry
-      tmux
-      wget
-      tree-sitter
-      gnupg
-      stow
-      starship
-      zoxide
-      fd
-      ripgrep
-      fzf
-      bat
-      yazi
+      #mise
+      #vim
+      #htop
+      #neovim
+      #poetry
+      #tmux
+      #wget
+      #tree-sitter
+      #gnupg
+      #stow
+      #starship
+      #zoxide
+      #fd
+      #ripgrep
+      #fzf
+      #bat
+      #yazi
     ];
   # Fonts
   fonts.packages = with pkgs; [
@@ -51,34 +51,23 @@
   homebrew = {
     enable = true;
     casks = [
-      "visual-studio-code"
-      "spotify"
-      "google-chrome"
-      "docker"
-      "tower"
       "1password"
-      "postman"
-      "dbeaver-community"
-      "kitty"
-      "slack"
+      "brave-browser"
       "thunderbird"
-      "zed"
-      "brave-browser"
-      "firefox"
-      "obsidian"
-      "warp"
-      "brave-browser"
-      "pdf-expert"
+      "steam"
+      "spotify"
     ];
     brews = [
     ];
     taps = [
     ];
     onActivation = {
-      autoUpdate = false;
-      cleanup = "none";
+      autoUpdate = true;
+      cleanup = "zap";
     };
   };
+
+
 
 
   # Used for backwards compatibility, please read the changelog before changing.

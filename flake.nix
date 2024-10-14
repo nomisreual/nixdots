@@ -39,7 +39,7 @@
       linux = "x86_64-linux";
       mac = "x86_64-darwin";
       pkgs = nixpkgs.legacyPackages.${linux};
-      mac-pkgs = nixpkgs.legacyPackages.${mac};
+      mac_pkgs = nixpkgs.legacyPackages.${mac};
     in
     {
       nixosConfigurations = {
@@ -54,9 +54,9 @@
       };
 
       darwinConfigurations."mac" = nix-darwin.lib.darwinSystem {
-        inherit mac-pkgs;
+        pkgs = mac_pkgs;
         modules = [
-          ./configuration.nix
+          ./system/macbook/configuration.nix
         ];
       };
 
@@ -64,6 +64,16 @@
         inherit pkgs;
 
         modules = [ ./home/desktop.nix ];
+
+        extraSpecialArgs = {
+          inherit inputs;
+        };
+      };
+
+      homeConfigurations."simon@mac" = home-manager.lib.homeManagerConfiguration {
+        pkgs = mac_pkgs;
+
+        modules = [ ./home/macbook.nix ];
 
         extraSpecialArgs = {
           inherit inputs;
