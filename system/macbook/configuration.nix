@@ -21,26 +21,12 @@
   # Create /etc/zshrc that loads the nix-darwin environment.
   programs.zsh.enable = true;
 
-  environment.systemPackages =
-    with pkgs; [
-      #mise
-      #vim
-      #htop
-      #neovim
-      #poetry
-      #tmux
-      #wget
-      #tree-sitter
-      #gnupg
-      #stow
-      #starship
-      #zoxide
-      #fd
-      #ripgrep
-      #fzf
-      #bat
-      #yazi
-    ];
+  environment.systemPackages = with pkgs; [
+    gnupg
+
+    yazi
+  ];
+
   # Fonts
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "FantasqueSansMono" "Hack" ]; })
@@ -53,9 +39,10 @@
     casks = [
       "1password"
       "brave-browser"
-      "thunderbird"
-      "steam"
+      "thunderbird@esr"
       "spotify"
+      "slack"
+      "obsidian"
     ];
     brews = [
     ];
@@ -64,9 +51,15 @@
     onActivation = {
       autoUpdate = true;
       cleanup = "zap";
+      upgrade = true;
     };
   };
 
+
+  system.keyboard = {
+    enableKeyMapping = true;
+    remapCapsLockToEscape = true;
+  };
 
 
 

@@ -30,28 +30,12 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    # pkgs.hello
-    fastfetch
     rustc
     cargo
     uv
-    # _1password-gui currently marked as broken
-    # brave only on arm
 
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+    rustlings
 
-    # # You can also create simple shell scripts directly inside your
-    # # configuration. For example, this adds a command 'my-hello' to your
-    # # environment:
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
   ];
 
   programs.kitty = {
@@ -59,7 +43,7 @@
     font = {
       package = (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; });
       name = "FantasqueSansM Nerd Font Mono";
-      size = 16;
+      size = 20;
     };
     # themeFile = "SpaceGray_Eighties";
     themeFile = "rose-pine-moon";
@@ -92,6 +76,11 @@
     ];
 
     extraConfig = ''
+
+      # make tmux on mac happy
+      set-option -g default-shell /bin/zsh
+      set-option -g default-command "exec zsh -l"
+
       set-option -sa terminal-features ',xterm-kitty:RGB'
 
       # don't rename windows automatically

@@ -29,8 +29,12 @@
 
     };
     initExtra = ''
-      if [[ -z $TMUX ]]; then
-        fastfetch
+        # if [[ -z $TMUX ]]; then
+        #   fastfetch
+        # fi
+
+      if [[ -z $TMUX && "$(uname)" != "Darwin" ]]; then
+          fastfetch
       fi
     '';
   };
