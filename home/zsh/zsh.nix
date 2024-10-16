@@ -36,6 +36,9 @@
       if [[ -z $TMUX && "$(uname)" != "Darwin" ]]; then
           fastfetch
       fi
+      if [[ "$(uname)" == "Darwin" ]]; then
+        export PATH=/usr/local/bin:$PATH
+      fi
     '';
   };
 }

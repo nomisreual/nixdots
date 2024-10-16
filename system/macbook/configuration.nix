@@ -24,7 +24,19 @@
   environment.systemPackages = with pkgs; [
     gnupg
 
+    uv
+    nodejs_22
+    python3
+
+    ripgrep
+    fzf
+    fd
+    wget
+    neovim
+    tmux
     yazi
+    starship
+    zoxide
   ];
 
   # Fonts
@@ -43,6 +55,7 @@
       "spotify"
       "slack"
       "obsidian"
+      "kitty"
     ];
     brews = [
     ];

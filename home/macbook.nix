@@ -36,6 +36,7 @@
 
     rustlings
 
+    (import ./scripts/tmux_select_directory.nix { inherit pkgs; })
   ];
 
   programs.kitty = {
@@ -78,8 +79,7 @@
     extraConfig = ''
 
       # make tmux on mac happy
-      set-option -g default-shell /bin/zsh
-      set-option -g default-command "exec zsh -l"
+      set -g default-shell /bin/zsh
 
       set-option -sa terminal-features ',xterm-kitty:RGB'
 
