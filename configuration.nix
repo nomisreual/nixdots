@@ -6,7 +6,7 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
     ];
 
@@ -46,10 +46,10 @@
   };
 
   # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
+  # services.xserver.xkb = {
+  #   layout = "us";
+  #   variant = "";
+  # };
 
   # Hyprland Window Manager
   programs.hyprland.enable = true;
@@ -62,34 +62,51 @@
     packages = with pkgs; [];
   };
 
+  # Enable nh
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d --keep 6";
+    flake = "/home/simon/.nixdots";
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  firefox
-  thunderbird
-  brave
-  wofi
-  git
-  vim
-  neovim
-  fzf
-  ripgrep
-  fd
-  wl-clipboard
-  kitty
-  waybar
-  stow
-  hyprpaper
-  hypridle
-  hyprlock
-  swaynotificationcenter
-  pyprland
-  rose-pine-hyprcursor
 
-  pavucontrol
+  # web browsers
+  firefox
+  brave
+
+  thunderbird  # mail client
+
+  git  # no need for an introduction
+  vim  # the classic
+
+  # for neovim
+  neovim  # text editor
+  fzf  # fuzzy finder
+  ripgrep  # grep on steroids
+  fd  # goated find
+  wl-clipboard  # clipboard
+
+  stow  # for managing dotfiles
+
+  kitty  # terminal
+
+  # For Hyprland
+  waybar  # panel
+  wofi  # app launcher
+  hyprpaper  # wallpaper daemon
+  hypridle  # idle daemon
+  hyprlock  # lock screen
+  swaynotificationcenter  # notifications
+  pyprland  # plugins (scratchpads)
+  rose-pine-hyprcursor  # cursor theme
+  pavucontrol  # gui for audio devices
   ];
 
   fonts.packages = with pkgs; [
