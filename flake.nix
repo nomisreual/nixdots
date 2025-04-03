@@ -23,7 +23,6 @@
 
     homeConfigurations."simon" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
-
       modules = [ ./home/home.nix ];
     };
 
