@@ -4,6 +4,7 @@
     extraPackages = with pkgs; [
       nixd
       alejandra
+      package-version-server
     ];
     extensions = ["nix"];
     userSettings = {
