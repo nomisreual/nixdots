@@ -77,6 +77,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 
+  gcc
+
   # web browsers
   firefox
   brave
