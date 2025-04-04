@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -97,7 +97,11 @@
 
   kitty  # terminal
 
+  #
+  inputs.mediaplayer.packages.${pkgs.system}.default
+
   # For Hyprland
+  hyprsunset  # night light
   waybar  # panel
   wofi  # app launcher
   hyprpaper  # wallpaper daemon

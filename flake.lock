@@ -20,6 +20,26 @@
         "type": "github"
       }
     },
+    "mediaplayer": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1728746772,
+        "narHash": "sha256-kRmNmXVXsAToYJuYhI1fhP9muZ0EUhGFZaahLvnUP1M=",
+        "owner": "nomisreual",
+        "repo": "mediaplayer",
+        "rev": "6de30dedf364762b44070bdc456dfce691ee392e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nomisreual",
+        "repo": "mediaplayer",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1743448293,
@@ -39,6 +59,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "mediaplayer": "mediaplayer",
         "nixpkgs": "nixpkgs"
       }
     }
