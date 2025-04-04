@@ -60,14 +60,19 @@
     };
     userKeymaps = [
       {
-        context = "Dock || Terminal || Editor ";
+        context = "Dock || Terminal || Editor";
         bindings = {
-          "space e" = "workspace::ToggleLeftDock";
-          "space f" = "project_panel::ToggleFocus";
           ctrl-h = "workspace::ActivatePaneLeft";
           ctrl-l = "workspace::ActivatePaneRight";
           ctrl-k = "workspace::ActivatePaneUp";
           ctrl-j = "workspace::ActivatePaneDown";
+        };
+      }
+      {
+        context = "Editor && VimControl && !VimWaiting && !menu";
+        bindings = {
+          "space e" = "workspace::ToggleLeftDock";
+          "space f" = "project_panel::ToggleFocus";
         };
       }
     ];
