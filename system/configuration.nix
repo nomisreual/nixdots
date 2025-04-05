@@ -1,25 +1,18 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, inputs, ... }:
 
 {
+  # Import other modules
   imports =
     [
       ./hardware-configuration.nix
     ];
 
-  # Bootloader.
+  # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  # Hostname
+  networking.hostName = "nixos";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -27,10 +20,10 @@
   # Enable Flakes and Nix command
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Set your time zone.
+  # Time zone
   time.timeZone = "Europe/Berlin";
 
-  # Select internationalisation properties.
+  # Internationalisation
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -45,11 +38,8 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
-  # Configure keymap in X11
-  # services.xserver.xkb = {
-  #   layout = "us";
-  #   variant = "";
-  # };
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
 
   # Hyprland Window Manager
   programs.hyprland.enable = true;
@@ -69,9 +59,6 @@
     clean.extraArgs = "--keep-since 4d --keep 6";
     flake = "/home/simon/.nixdots";
   };
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -97,10 +84,10 @@
 
   stow  # for managing dotfiles
 
-  kitty  # terminal
 
-  #
+  # For media controls from within waybar
   inputs.mediaplayer.packages.${pkgs.system}.default
+  playerctl
 
   # For Hyprland
   hyprsunset  # night light
@@ -113,6 +100,7 @@
   pyprland  # plugins (scratchpads)
   rose-pine-hyprcursor  # cursor theme
   pavucontrol  # gui for audio devices
+  kitty  # terminal
   ];
 
   fonts.packages = with pkgs; [
