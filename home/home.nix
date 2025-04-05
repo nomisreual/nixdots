@@ -9,7 +9,7 @@
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    ./zed.nix
+    # ./zed.nix
   ];
 
   # Packages

@@ -5,6 +5,10 @@
       nixd
       alejandra
       package-version-server
+      # pyright
+      ruff
+      python312
+      python312Packages.python-lsp-server
     ];
     extensions = ["nix"];
     userSettings = {
@@ -48,12 +52,32 @@
             };
           };
         };
+        python = {
+          language_servers = ["ruff"];
+          format_on_save = "on";
+          formatter = {
+            external = {
+              command = "ruff";
+              arguments = ["format"];
+            };
+          };
+        };
       };
       lsp = {
         nixd = {
           settings = {
             diagnostic = {
               suppress = ["sema-extra-with"];
+            };
+          };
+        };
+        ruff = {
+          initialization_options = {
+            settings = {
+              lineLength = 80;
+              lint = {
+                extendSelect = ["I"];
+              };
             };
           };
         };
