@@ -5,11 +5,15 @@
   imports =
     [
       ./hardware-configuration.nix
+      ./steam.nix
     ];
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  # Splash Screen
+  boot.plymouth.enable = true;
 
   # Hostname
   networking.hostName = "nixos";
@@ -43,6 +47,9 @@
 
   # Hyprland Window Manager
   programs.hyprland.enable = true;
+
+  # Cosmic Display Manager
+  services.displayManager.cosmic-greeter.enable = true;
 
   # Define users
   users.users.simon = {
