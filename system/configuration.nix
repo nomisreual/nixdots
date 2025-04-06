@@ -1,12 +1,14 @@
-{ config, pkgs, inputs, ... }:
-
 {
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   # Import other modules
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./steam.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    ./steam.nix
+  ];
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
@@ -22,7 +24,7 @@
   networking.networkmanager.enable = true;
 
   # Enable Flakes and Nix command
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Time zone
   time.timeZone = "Europe/Berlin";
@@ -43,7 +45,7 @@
   };
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  # nixpkgs.config.allowUnfree = true;
 
   # Hyprland Window Manager
   programs.hyprland.enable = true;
@@ -55,7 +57,7 @@
   users.users.simon = {
     isNormalUser = true;
     description = "Simon Antonius Lauer";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [];
   };
 
@@ -70,36 +72,35 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    gcc
 
-  gcc
+    # web browsers
+    firefox
+    brave
 
-  # web browsers
-  firefox
-  brave
+    thunderbird # mail client
 
-  thunderbird  # mail client
+    git # no need for an introduction
+    vim # the classic
 
-  git  # no need for an introduction
-  vim  # the classic
+    stow # for managing dotfiles
 
-  stow  # for managing dotfiles
+    # For media controls from within waybar
+    inputs.mediaplayer.packages.${pkgs.system}.default
+    playerctl
 
-  # For media controls from within waybar
-  inputs.mediaplayer.packages.${pkgs.system}.default
-  playerctl
-
-  # For Hyprland
-  hyprsunset  # night light
-  waybar  # panel
-  wofi  # app launcher
-  hyprpaper  # wallpaper daemon
-  hypridle  # idle daemon
-  hyprlock  # lock screen
-  swaynotificationcenter  # notifications
-  pyprland  # plugins (scratchpads)
-  rose-pine-hyprcursor  # cursor theme
-  pavucontrol  # gui for audio devices
-  kitty  # terminal
+    # For Hyprland
+    hyprsunset # night light
+    waybar # panel
+    wofi # app launcher
+    hyprpaper # wallpaper daemon
+    hypridle # idle daemon
+    hyprlock # lock screen
+    swaynotificationcenter # notifications
+    pyprland # plugins (scratchpads)
+    rose-pine-hyprcursor # cursor theme
+    pavucontrol # gui for audio devices
+    kitty # terminal
   ];
 
   fonts.packages = with pkgs; [
@@ -132,5 +133,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
-
 }

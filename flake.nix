@@ -19,10 +19,13 @@
     home-manager,
     ...
   } @ inputs: let
-    system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
+    linux = "x86_64-linux";
   in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      pkgs = import nixpkgs {
+        system = linux;
+        config.allowUnfree = true;
+      };
       specialArgs = {inherit inputs;};
       modules = [
         ./system/configuration.nix
@@ -30,7 +33,10 @@
     };
 
     homeConfigurations."simon" = home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
+      pkgs = import nixpkgs {
+        system = linux;
+        config.allowUnfree = true;
+      };
       modules = [./home/home.nix];
     };
   };

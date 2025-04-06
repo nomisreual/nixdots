@@ -6,7 +6,7 @@
   home.stateVersion = "24.11";
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  # nixpkgs.config.allowUnfree = true;
 
   imports = [
     ./homeModules/theme.nix
@@ -25,24 +25,23 @@
   programs.neovim = {
     enable = true;
     extraPackages = with pkgs; [
-      fzf  # fuzzy finder
-      wl-clipboard  # clipboard provider
-      ripgrep  # grep on steroids
-      fd  # goated find
+      fzf # fuzzy finder
+      wl-clipboard # clipboard provider
+      ripgrep # grep on steroids
+      fd # goated find
 
       # LSPs and formatters:
 
-      stylua  # lua formatter
-      luajitPackages.lua-lsp  # lua lsp
+      stylua # lua formatter
+      luajitPackages.lua-lsp # lua lsp
 
-      nixd  # nix lsp
-      alejandra  # nix formatter
+      nixd # nix lsp
+      alejandra # nix formatter
 
-      ruff  # linter and formatter
-      pyright  # python lsp
+      ruff # linter and formatter
+      pyright # python lsp
     ];
   };
-
 
   programs.bash.enable = true;
 
