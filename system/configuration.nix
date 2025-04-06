@@ -84,10 +84,10 @@
 
   # for neovim
   neovim  # text editor
-  fzf  # fuzzy finder
+  # fzf  # fuzzy finder
   ripgrep  # grep on steroids
   fd  # goated find
-  wl-clipboard  # clipboard
+  # wl-clipboard  # clipboard
 
   stow  # for managing dotfiles
 

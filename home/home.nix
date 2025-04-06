@@ -21,6 +21,23 @@
   home.file = {
   };
 
+  programs.neovim = {
+    enable = true;
+    extraPackages = with pkgs; [
+      fzf
+      wl-clipboard
+
+      # LSPs and formatters:
+
+      stylua  # lua formatter
+      luajitPackages.lua-lsp  # lua lsp
+
+      nixd  # nix lsp
+      alejandra  # nix formatter
+    ];
+  };
+
+
   programs.bash.enable = true;
 
   programs.starship = {
