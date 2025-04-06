@@ -24,8 +24,10 @@
   programs.neovim = {
     enable = true;
     extraPackages = with pkgs; [
-      fzf
-      wl-clipboard
+      fzf  # fuzzy finder
+      wl-clipboard  # clipboard provider
+      ripgrep  # grep on steroids
+      fd  # goated find
 
       # LSPs and formatters:
 

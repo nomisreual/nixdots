@@ -82,15 +82,7 @@
   git  # no need for an introduction
   vim  # the classic
 
-  # for neovim
-  neovim  # text editor
-  # fzf  # fuzzy finder
-  ripgrep  # grep on steroids
-  fd  # goated find
-  # wl-clipboard  # clipboard
-
   stow  # for managing dotfiles
-
 
   # For media controls from within waybar
   inputs.mediaplayer.packages.${pkgs.system}.default
