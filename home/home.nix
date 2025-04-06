@@ -9,7 +9,8 @@
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    ./theme.nix
+    ./homeModules/theme.nix
+    ./homeModules/tmux
   ];
 
   # Packages
@@ -36,6 +37,9 @@
 
       nixd  # nix lsp
       alejandra  # nix formatter
+
+      ruff  # linter and formatter
+      pyright  # python lsp
     ];
   };
 
@@ -72,7 +76,7 @@
   # Environmental Variables
 
   home.sessionVariables = {
-    EDITOR = "vim";
+    EDITOR = "nvim";
   };
 
   # Let Home Manager install and manage itself.
