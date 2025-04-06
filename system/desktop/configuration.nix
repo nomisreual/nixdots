@@ -7,7 +7,7 @@
   # Import other modules
   imports = [
     ./hardware-configuration.nix
-    ./steam.nix
+    ../systemModules/steam.nix
   ];
 
   # Bootloader
