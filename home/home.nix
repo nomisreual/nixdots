@@ -64,7 +64,7 @@
         defaultbranch = "main";
       };
       core = {
-        editor = "vim";
+        editor = "nvim";
       };
     };
   };
