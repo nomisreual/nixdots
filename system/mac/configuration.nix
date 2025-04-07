@@ -1,8 +1,4 @@
-{
-  self,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   nix.enable = true;
   ids.gids.nixbld = 350;
 
