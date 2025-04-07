@@ -18,6 +18,10 @@
     _1password-gui
     yazi
     obsidian
+    vlc
+    asunder
+    lollypop
+    easytag
   ];
 
   home.file = {
