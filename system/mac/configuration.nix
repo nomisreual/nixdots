@@ -57,7 +57,7 @@
       "ghostty"
       "signal"
       "vlc"
-      "zed"
+      # "zed"
       "microsoft-office"
       "slack"
       "balenaetcher"

@@ -53,7 +53,15 @@
         system = linux;
         config.allowUnfree = true;
       };
-      modules = [./home/home.nix];
+      modules = [./home/homeonnixos.nix];
+    };
+
+    homeConfigurations."simon@mac" = home-manager.lib.homeManagerConfiguration {
+      pkgs = import nixpkgs {
+        system = mac;
+        config.allowUnfree = true;
+      };
+      modules = [./home/homeonmac.nix];
     };
   };
 }
