@@ -22,7 +22,7 @@
     fd
     wget
     neovim
-    tmux
+    # tmux
     yazi
     starship
     zoxide
