@@ -17,6 +17,7 @@
   home.packages = with pkgs; [
     _1password-gui
     yazi
+    obsidian
   ];
 
   home.file = {
