@@ -16,6 +16,7 @@
     ./homeModules/waybar
     ./homeModules/hyprland
     ./homeModules/wofi
+    ./homeModules/common
   ];
 
   # Packages
@@ -52,35 +53,6 @@
       ruff # linter and formatter
       pyright # python lsp
     ];
-  };
-
-  programs.bash.enable = true;
-
-  programs.starship = {
-    enable = true;
-    enableBashIntegration = true;
-  };
-
-  programs.zoxide = {
-    enable = true;
-    enableBashIntegration = true;
-    options = [
-      "--cmd cd"
-    ];
-  };
-
-  programs.git = {
-    enable = true;
-    userName = "Simon Antonius Lauer";
-    userEmail = "simon.lauer@posteo.de";
-    extraConfig = {
-      init = {
-        defaultbranch = "main";
-      };
-      core = {
-        editor = "nvim";
-      };
-    };
   };
 
   # Environmental Variables
