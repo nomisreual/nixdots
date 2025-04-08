@@ -11,6 +11,7 @@
   imports = [
     ./homeModules/theme.nix
     ./homeModules/tmux
+    ./homeModules/kitty
     ./homeModules/waybar
     ./homeModules/hyprland
   ];
