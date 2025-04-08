@@ -49,6 +49,7 @@ in {
       #################
       exec-once = [
         "pypr --debug /tmp/pypr.log &"
+        "swaync &"
       ];
 
       #####################

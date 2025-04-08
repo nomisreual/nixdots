@@ -1,5 +1,4 @@
 {pkgs, ...}: {
-  # Packages
   home.packages = with pkgs; [
     pyprland
   ];
