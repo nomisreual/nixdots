@@ -8,6 +8,7 @@
   imports = [
     ./hardware-configuration.nix
     ../systemModules/steam.nix
+    ../systemModules/hyprland
   ];
 
   # Bootloader
@@ -48,7 +49,7 @@
   # nixpkgs.config.allowUnfree = true;
 
   # Hyprland Window Manager
-  programs.hyprland.enable = true;
+  # programs.hyprland.enable = true;
 
   # Cosmic Display Manager
   services.displayManager.cosmic-greeter.enable = true;
@@ -90,17 +91,17 @@
     playerctl
 
     # For Hyprland
-    hyprsunset # night light
-    waybar # panel
-    wofi # app launcher
-    hyprpaper # wallpaper daemon
-    hypridle # idle daemon
-    hyprlock # lock screen
-    swaynotificationcenter # notifications
-    pyprland # plugins (scratchpads)
-    rose-pine-hyprcursor # cursor theme
-    pavucontrol # gui for audio devices
-    kitty # terminal
+    # hyprsunset # night light
+    # waybar # panel
+    # wofi # app launcher
+    # hyprpaper # wallpaper daemon
+    # hypridle # idle daemon
+    # hyprlock # lock screen
+    # swaynotificationcenter # notifications
+    # pyprland # plugins (scratchpads)
+    # rose-pine-hyprcursor # cursor theme
+    # pavucontrol # gui for audio devices
+    # kitty # terminal
   ];
 
   fonts.packages = with pkgs; [
