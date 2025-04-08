@@ -44,6 +44,13 @@ in {
         "HYPRCURSOR_SIZE,24"
       ];
 
+      #################
+      ### AUTOSTART ###
+      #################
+      exec-once = [
+        "pypr --debug /tmp/pypr.log &"
+      ];
+
       #####################
       ### LOOK AND FEEL ###
       #####################
