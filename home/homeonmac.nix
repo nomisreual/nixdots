@@ -20,6 +20,9 @@
   imports = [
     ./homeModules/zed.nix
     ./homeModules/tmux
+    ./homeModules/kitty
+    # ./homeModules/ghostty
+    ./homeModules/common
   ];
 
   # The home.packages option allows you to install Nix packages into your
@@ -74,8 +77,9 @@
   #
   #  /etc/profiles/per-user/simon/etc/profile.d/hm-session-vars.sh
   #
+
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nvim";
   };
 
   # Let Home Manager install and manage itself.
