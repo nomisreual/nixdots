@@ -12,6 +12,7 @@
     ./homeModules/theme.nix
     ./homeModules/tmux
     ./homeModules/waybar
+    ./homeModules/hyprland
   ];
 
   # Packages
