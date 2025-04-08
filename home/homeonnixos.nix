@@ -14,6 +14,7 @@
     ./homeModules/kitty
     ./homeModules/waybar
     ./homeModules/hyprland
+    ./homeModules/wofi
   ];
 
   # Packages
