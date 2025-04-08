@@ -24,6 +24,7 @@
     asunder
     lollypop
     easytag
+    hyprshot
   ];
 
   home.file = {
