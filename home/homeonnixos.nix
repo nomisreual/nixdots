@@ -12,6 +12,7 @@
     ./homeModules/theme.nix
     ./homeModules/tmux
     ./homeModules/kitty
+    ./homeModules/ghostty
     ./homeModules/waybar
     ./homeModules/hyprland
     ./homeModules/wofi
