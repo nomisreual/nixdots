@@ -1,0 +1,351 @@
+@define-color base            #232136;
+@define-color surface         #2a273f;
+@define-color overlay         #393552;
+
+@define-color muted           #6e6a86;
+@define-color subtle          #908caa;
+@define-color text            #e0def4;
+
+@define-color love            #eb6f92;
+@define-color gold            #f6c177;
+@define-color rose            #ea9a97;
+@define-color pine            #3e8fb0;
+@define-color foam            #9ccfd8;
+@define-color iris            #c4a7e7;
+
+@define-color highlightLow    #2a283e;
+@define-color highlightMed    #44415a;
+@define-color highlightHigh   #56526e;
+
+* {
+    font-family: "FantasqueSansM Nerd Font", sans-serif;
+    font-size: 20px;
+}
+
+window#waybar {
+     background-color: @base; 
+    /*background-color: transparent;*/
+    border: 0px solid @base; 
+    /*border: 1px solid transparent;*/
+    color: @text;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-radius: 8px;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 8px;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+/* you can set a style on hover for any module like this */
+/* #pulseaudio:hover { */
+/*     background-color: @highlightLow; */
+/* } */
+/* #memory:hover { */
+/*     background-color: @highlightLow; */
+/* } */
+
+#workspaces button {
+    padding: 5px 5px;
+    background-color: @base;
+    color: @text;
+}
+
+#workspaces button:hover {
+    background: @highlightLow;
+}
+
+#workspaces button.active {
+    background-color: @highlightLow;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.urgent {
+    background-color: @love;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#language,
+#custom-power,
+#mpd {
+    padding: 0 10px;
+    color: @text;
+    border-radius: 8px;
+}
+
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+    background-color: @base;
+}
+
+#custom-do_not_disturb {
+    background-color: @base;
+}
+
+#battery {
+    background-color: @base;
+    color: #000000;
+}
+
+#battery.charging, #battery.plugged {
+    color: @text;
+    background-color: @base;
+}
+
+@keyframes blink {
+    to {
+        background-color: @base;
+        color: @text;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#power-profiles-daemon {
+    padding-right: 15px;
+}
+
+#power-profiles-daemon.performance {
+    background-color: #f53c3c;
+    color: #ffffff;
+}
+
+#power-profiles-daemon.balanced {
+    background-color: #2980b9;
+    color: #ffffff;
+}
+
+#power-profiles-daemon.power-saver {
+    background-color: #2ecc71;
+    color: #000000;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#cpu {
+    color: @gold;
+    background-color: @base;
+}
+
+#memory {
+    color: @iris;
+    background-color: @base;
+}
+
+#disk {
+    background-color: @base;
+}
+
+#backlight {
+    background-color: @base;
+}
+
+#network {
+    color: @foam;
+    background-color: @base;
+}
+
+#network.disconnected {
+    background-color: @base;
+    color: @love;
+}
+
+#pulseaudio {
+    background-color: @base;
+    color: @pine;
+}
+
+#pulseaudio.muted {
+    background-color: @base;
+    color: @love;
+}
+
+#wireplumber {
+    background-color: @base;
+    color: @text;
+}
+
+#wireplumber.muted {
+    background-color: @base;
+}
+
+#custom-media {
+    background-color: @base;
+    color: @text;
+    min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+    background-color: @base;
+}
+
+#custom-media.custom-vlc {
+    background-color: @base;
+}
+
+#temperature {
+    color: @gold;
+    background-color: @base;
+}
+
+#temperature.critical {
+    background-color: @base;
+}
+
+#tray {
+    background-color: @base;
+}
+
+#custom-power {
+    color: @love;
+    background-color: @base;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#idle_inhibitor {
+    color: @text;
+    background-color: @base;
+}
+
+#idle_inhibitor.activated {
+    color: @love;
+}
+
+#mpd {
+    background-color: @base;
+    color: @pine;
+}
+
+#mpd.disconnected {
+    background-color: @base;
+}
+
+#mpd.stopped {
+    background-color: @base;
+}
+
+#mpd.paused {
+    background-color: @base;
+}
+
+#language {
+    background-color: @base;
+    color: @pine;
+}
+
+#keyboard-state {
+    background: @base;
+    color: @text;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+	background-color: transparent;
+}
+
+#privacy {
+    padding: 0;
+}
+
+#privacy-item {
+    padding: 0 5px;
+    color: @text;
+}
+
+#privacy-item.screenshare {
+    background-color: @base;
+}
+
+#privacy-item.audio-in {
+    background-color: @base;
+}
+
+#privacy-item.audio-out {
+    background-color: @base;
+}
