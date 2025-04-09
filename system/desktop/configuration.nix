@@ -9,6 +9,7 @@
     ./hardware-configuration.nix
     ../systemModules/steam.nix
     ../systemModules/hyprland
+    ../systemModules/scan.nix
   ];
 
   # Bootloader
@@ -52,7 +53,7 @@
   users.users.simon = {
     isNormalUser = true;
     description = "Simon Antonius Lauer";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "scanner" "lp"];
     packages = with pkgs; [];
   };
 
