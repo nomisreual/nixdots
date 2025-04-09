@@ -9,24 +9,27 @@
   programs.zsh.enable = true;
 
   environment.systemPackages = with pkgs; [
-    nixd
-    nil
-    alejandra
-    nodejs_22
-    python313
+    # web browsers
+    firefox
+    brave
+
+    # nixd
+    # nil
+    # alejandra
+    # nodejs_22
+    # python313
     gnupg
     direnv
     uv
-    ripgrep
-    fzf
-    fd
+    # ripgrep
+    # fzf
+    # fd
     wget
-    neovim
-    # tmux
+    # neovim
     yazi
-    starship
-    zoxide
-    stow
+    # starship
+    # zoxide
+    # stow
     lazygit
     gh
   ];
@@ -44,7 +47,7 @@
       "filen"
       "obs"
       "1password"
-      "brave-browser"
+      # "brave-browser"
       "thunderbird@esr"
       "spotify"
       "slack"
@@ -57,7 +60,7 @@
       "microsoft-office"
       "slack"
       "balenaetcher"
-      "firefox"
+      # "firefox"
       "zen-browser"
     ];
     brews = [

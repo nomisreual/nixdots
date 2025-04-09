@@ -14,6 +14,7 @@
     ./homeModules/hyprland
     ./homeModules/wofi
     ./homeModules/common
+    ./homeModules/nvim
   ];
 
   # Kitty on
@@ -21,6 +22,7 @@
 
   # Packages
   home.packages = with pkgs; [
+    wl-clipboard
     _1password-gui
     yazi
     obsidian
@@ -32,27 +34,6 @@
   ];
 
   home.file = {
-  };
-
-  programs.neovim = {
-    enable = true;
-    extraPackages = with pkgs; [
-      fzf # fuzzy finder
-      wl-clipboard # clipboard provider
-      ripgrep # grep on steroids
-      fd # goated find
-
-      # LSPs and formatters:
-
-      stylua # lua formatter
-      luajitPackages.lua-lsp # lua lsp
-
-      nixd # nix lsp
-      alejandra # nix formatter
-
-      ruff # linter and formatter
-      pyright # python lsp
-    ];
   };
 
   # Environmental Variables
