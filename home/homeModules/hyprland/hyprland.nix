@@ -20,6 +20,9 @@
   terminal = "kitty";
   menu = "wofi --show drun";
 
+  hyprshot = "${pkgs.hyprshot}/bin/hyprshot";
+  pypr = "${pkgs.pyprland}/bin/pypr";
+
   myMonitor = "DP-2, 1920x1080@165, 0x0, 1";
 
   switchworkspace = builtins.genList (x: "$mainMod, ${builtins.toString (x + 1)}, workspace, ${builtins.toString (x + 1)}") 8;
@@ -48,7 +51,7 @@ in {
       ### AUTOSTART ###
       #################
       exec-once = [
-        "pypr --debug /tmp/pypr.log &"
+        "${pypr} --debug /tmp/pypr.log &"
         "swaync &"
       ];
 
@@ -186,11 +189,11 @@ in {
         # Hyprshot Keybinds
         ++ [
           # Region (only clipboard)
-          "$mainMod, Print, exec, hyprshot -m region --clipboard-only"
+          "$mainMod, Print, exec, ${hyprshot} -m region --clipboard-only"
           # Region (saved to disk)
-          "$mainMod SHIFT, Print, exec, hyprshot -m region"
+          "$mainMod SHIFT, Print, exec, ${hyprshot} -m region"
           # Active window (saved to disk)
-          "$mainMod ALT, Print, exec, hyprshot -m window -m active"
+          "$mainMod ALT, Print, exec, ${hyprshot} -m window -m active"
         ]
         # Pyprland Keybinds
         ++ [

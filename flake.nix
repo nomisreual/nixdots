@@ -54,6 +54,9 @@
         config.allowUnfree = true;
       };
       modules = [./home/homeonnixos.nix];
+      extraSpecialArgs = {
+        inherit inputs;
+      };
     };
 
     homeConfigurations."simon@mac" = home-manager.lib.homeManagerConfiguration {

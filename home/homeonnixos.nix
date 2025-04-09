@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   # User information
   home.username = "simon";
   home.homeDirectory = "/home/simon";
@@ -22,15 +26,32 @@
 
   # Packages
   home.packages = with pkgs; [
+    # Here for now:
     wl-clipboard
-    _1password-gui
+
+    # File Manager
     yazi
+
+    # Notes
     obsidian
-    vlc
-    asunder
-    lollypop
-    easytag
+
+    # Media
+    vlc # media player
+    asunder # ripper
+    lollypop # music library management
+    easytag # manage metadata of music files
+
     hyprshot
+
+    # Password Manager
+    _1password-gui
+
+    # Web Browsers
+    firefox
+    brave
+
+    # Mail
+    thunderbird
   ];
 
   home.file = {

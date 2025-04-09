@@ -64,25 +64,10 @@
     flake = "/home/simon/.nixdots";
   };
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  # System wide packages
   environment.systemPackages = with pkgs; [
-    gcc
-
-    # web browsers
-    firefox
-    brave
-
-    thunderbird # mail client
-
-    git # no need for an introduction
-    vim # the classic
-
-    stow # for managing dotfiles
-
-    # For media controls from within waybar
-    inputs.mediaplayer.packages.${pkgs.system}.default
-    playerctl
+    git
+    vim
   ];
 
   fonts.packages = with pkgs; [

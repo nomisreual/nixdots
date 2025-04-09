@@ -1,4 +1,11 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: let
+  playerctl = "${pkgs.playerctl}/bin/playerctl";
+  mediaplayer = inputs.mediaplayer.packages.${pkgs.system}.default;
+in {
   programs.waybar = {
     enable = true;
     systemd.enable = true;
@@ -86,12 +93,12 @@
           escape = true;
           "return-type" = "json";
           "max-length" = 40;
-          "on-click" = "playerctl play-pause";
-          "on-click-right" = "playerctl stop";
+          "on-click" = "${playerctl} play-pause";
+          "on-click-right" = "${playerctl} stop";
           "smooth-scrolling-threshold" = 10;
-          "on-scroll-up" = "playerctl next";
-          "on-scroll-down" = "playerctl previous";
-          exec = "mediaplayer 2> /dev/null";
+          "on-scroll-up" = "${playerctl} next";
+          "on-scroll-down" = "${playerctl} previous";
+          exec = "${mediaplayer}/bin/mediaplayer 2> /dev/null";
         };
         "hyprland-language" = {
           "format" = "{}";
