@@ -10,6 +10,7 @@
     ../systemModules/steam.nix
     ../systemModules/hyprland
     ../systemModules/scan.nix
+    ../systemModules/print.nix
   ];
 
   # Bootloader
