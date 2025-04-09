@@ -25,6 +25,9 @@
     ./homeModules/common
   ];
 
+  # Kitty on NixOS Desktop
+  programs.kitty.font.size = 22;
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [

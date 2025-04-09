@@ -5,19 +5,19 @@
 
   home.stateVersion = "24.11";
 
-  # Allow unfree packages
-  # nixpkgs.config.allowUnfree = true;
-
   imports = [
     ./homeModules/theme.nix
     ./homeModules/tmux
     ./homeModules/kitty
-    ./homeModules/ghostty
+    # ./homeModules/ghostty
     ./homeModules/waybar
     ./homeModules/hyprland
     ./homeModules/wofi
     ./homeModules/common
   ];
+
+  # Kitty on
+  programs.kitty.font.size = 18;
 
   # Packages
   home.packages = with pkgs; [

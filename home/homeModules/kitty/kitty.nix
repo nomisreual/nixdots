@@ -1,10 +1,15 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   programs.kitty = {
     enable = true;
     font = {
       name = "FantasqueSansM Nerd Font Mono";
       package = pkgs.nerd-fonts.fantasque-sans-mono;
-      size = 18;
+      # size is left to default value
+      # override in home configuration
     };
     settings = {
       foreground = "#e0def4";
