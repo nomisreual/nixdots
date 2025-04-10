@@ -13,12 +13,10 @@
     ./homeModules/theme.nix
     ./homeModules/tmux
     ./homeModules/kitty
-    # ./homeModules/ghostty
     ./homeModules/waybar
     ./homeModules/hyprland
     ./homeModules/wofi
     ./homeModules/common
-    ./homeModules/nvim
   ];
 
   # Kitty on
@@ -52,6 +50,9 @@
 
     # Mail
     thunderbird
+
+    # Neovim
+    inputs.nixvim.packages.${system}.default
   ];
 
   home.file = {
