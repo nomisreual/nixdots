@@ -69,6 +69,9 @@
         config.allowUnfree = true;
       };
       modules = [./home/homeonmac.nix];
+      extraSpecialArgs = {
+        inherit inputs;
+      };
     };
   };
 }

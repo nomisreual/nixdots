@@ -1,8 +1,11 @@
 {
   config,
   pkgs,
+  inputs,
   ...
-}: {
+}: let
+  system = "x86_64-darwin";
+in {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "simon";
@@ -21,7 +24,7 @@
     ./homeModules/zed.nix
     ./homeModules/tmux
     ./homeModules/kitty
-    ./homeModules/nvim
+    # ./homeModules/nvim
     # ./homeModules/ghostty
     ./homeModules/common
   ];
@@ -32,6 +35,8 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
+    # Neovim
+    inputs.nixvim.packages.${system}.default
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
