@@ -17,6 +17,7 @@
     ./homeModules/hyprland
     ./homeModules/wofi
     ./homeModules/common
+    ./homeModules/nvim
   ];
 
   # Kitty on
@@ -52,7 +53,7 @@
     thunderbird
 
     # Neovim
-    inputs.nixvim.packages.${system}.default
+    # inputs.nixvim.packages.${system}.default
   ];
 
   home.file = {

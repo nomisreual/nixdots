@@ -3,9 +3,10 @@
     enable = true;
     extraPackages = with pkgs; [
       gcc
+      tree-sitter
 
       fzf # fuzzy finder
-      # wl-clipboard # clipboard provider
+      wl-clipboard # clipboard provider
       ripgrep # grep on steroids
       fd # goated find
 
