@@ -11,6 +11,7 @@
     ../systemModules/hyprland
     ../systemModules/scan.nix
     ../systemModules/print.nix
+    ../systemModules/postgresql.nix
   ];
 
   # Bootloader
