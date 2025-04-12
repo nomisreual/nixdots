@@ -12,6 +12,7 @@
     ../systemModules/scan.nix
     ../systemModules/print.nix
     ../systemModules/postgresql.nix
+    ../systemModules/gnome.nix
   ];
 
   # Bootloader
@@ -49,13 +50,13 @@
   };
 
   # Cosmic Display Manager
-  services.displayManager.cosmic-greeter.enable = true;
+  # services.displayManager.cosmic-greeter.enable = true;
 
   # Define users
   users.users.simon = {
     isNormalUser = true;
     description = "Simon Antonius Lauer";
-    extraGroups = ["networkmanager" "wheel" "scanner" "lp"];
+    extraGroups = ["networkmanager" "wheel" "scanner" "lp" "cdrom"];
     packages = with pkgs; [];
   };
 
