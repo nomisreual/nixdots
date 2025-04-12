@@ -13,6 +13,7 @@
     ../systemModules/print.nix
     ../systemModules/postgresql.nix
     ../systemModules/gnome.nix
+    ../systemModules/virtmanager.nix
   ];
 
   # Bootloader
