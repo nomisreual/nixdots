@@ -24,7 +24,7 @@ in {
     ./homeModules/zed.nix
     ./homeModules/tmux
     ./homeModules/kitty
-    # ./homeModules/nvim
+    ./homeModules/nvim
     # ./homeModules/ghostty
     ./homeModules/common
   ];
@@ -36,7 +36,7 @@ in {
   # environment.
   home.packages = [
     # Neovim
-    inputs.nixvim.packages.${system}.default
+    # inputs.nixvim.packages.${system}.default
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
