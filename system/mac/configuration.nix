@@ -1,6 +1,9 @@
 {pkgs, ...}: {
   nix.enable = true;
   ids.gids.nixbld = 350;
+  imports = [
+    ../systemModules/postgresdarwin.nix
+  ];
 
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
