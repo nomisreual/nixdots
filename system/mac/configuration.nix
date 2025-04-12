@@ -47,23 +47,16 @@
   homebrew = {
     enable = true;
     casks = [
-      "filen"
       "obs"
       "1password"
-      # "brave-browser"
       "thunderbird@esr"
       "spotify"
       "slack"
       "obsidian"
-      # "kitty"
-      # "ghostty"
       "signal"
       "vlc"
-      # "zed"
       "microsoft-office"
-      "slack"
       "balenaetcher"
-      # "firefox"
       "zen-browser"
     ];
     brews = [
