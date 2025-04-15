@@ -12,7 +12,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixvim = {
-      url = "github:nomisreual/nixvim";
+      url = "github:nomisreual/nixvim/v2";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     mediaplayer = {
