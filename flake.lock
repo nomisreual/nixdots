@@ -58,6 +58,26 @@
         "type": "github"
       }
     },
+    "git_alert": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1744973705,
+        "narHash": "sha256-wyqWYoq4ua5gCrRlnJTzTVV/MWybE/HSK6rIqPwYbCc=",
+        "owner": "nomisreual",
+        "repo": "git_alert",
+        "rev": "7127549a191041f2250703c0768c547d27fd5f09",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nomisreual",
+        "repo": "git_alert",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -263,6 +283,7 @@
     },
     "root": {
       "inputs": {
+        "git_alert": "git_alert",
         "home-manager": "home-manager",
         "mediaplayer": "mediaplayer",
         "nix-darwin": "nix-darwin",

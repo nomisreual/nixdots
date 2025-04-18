@@ -54,6 +54,9 @@
 
     # Neovim
     inputs.nixvim.packages.${system}.default
+
+    # Git Alert
+    inputs.git_alert.packages."x86_64-linux".default
   ];
 
   home.file = {

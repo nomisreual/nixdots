@@ -19,6 +19,10 @@
       url = "github:nomisreual/mediaplayer";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    git_alert = {
+      url = "github:nomisreual/git_alert";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
