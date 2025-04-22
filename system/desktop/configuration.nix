@@ -14,6 +14,7 @@
     ../systemModules/postgresql.nix
     ../systemModules/gnome.nix
     ../systemModules/virtmanager.nix
+    ../systemModules/distrobox.nix
   ];
 
   # Bootloader
