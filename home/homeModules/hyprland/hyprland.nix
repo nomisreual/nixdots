@@ -1,20 +1,6 @@
 {pkgs, ...}: let
-  # Rosé Pine Moon Color Palette:
-  iris = "0xffc4a7e7";
-  muted = "0xff6e6a86";
-  base = "0xff232136";
-  surface = "0xff2a273f";
-  overlay = "0xff393552";
-  subtle = "0xff908caa";
-  text = "0xffe0def4";
-  love = "0xffeb6f92";
-  gold = "0xfff6c177";
-  rose = "0xffea9a97";
-  pine = "0xff3e8fb0";
-  foam = "0xff9ccfd8";
-  highlightLow = "0xff2a283e";
-  highlightMed = "0xff44415a";
-  highlightHigh = "0xff56526e";
+  # Import colors
+  colors = import ./colors.nix;
 
   # My programs
   terminal = "kitty";
@@ -66,8 +52,9 @@ in {
 
         # Window Borders
         border_size = 2;
-        "col.active_border" = iris;
-        "col.inactive_border" = muted;
+
+        "col.active_border" = colors.catppuccin.mocha.lavender;
+        "col.inactive_border" = colors.catppuccin.mocha.base;
 
         resize_on_border = true;
 
