@@ -1,4 +1,8 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  lib,
+  ...
+}: let
   # Import colors
   colors = import ./colors.nix;
 
@@ -6,7 +10,6 @@
   terminal = "kitty";
   menu = "wofi --show drun";
 
-  hyprshot = "${pkgs.hyprshot}/bin/hyprshot";
   pypr = "${pkgs.pyprland}/bin/pypr";
 
   myMonitor = "DP-2, 1920x1080@165, 0x0, 1";
@@ -150,7 +153,35 @@ in {
 
       "$mainMod" = "SUPER";
 
-      bind =
+      bind = let
+        region_cb_only = pkgs.writeShellApplication {
+          name = "region_cb_only";
+          runtimeInputs = [
+            pkgs.hyprshot
+          ];
+          text = ''
+            hyprshot -m region --clipboard-only
+          '';
+        };
+        region = pkgs.writeShellApplication {
+          name = "region";
+          runtimeInputs = [
+            pkgs.hyprshot
+          ];
+          text = ''
+            hyprshot -m region
+          '';
+        };
+        active_window = pkgs.writeShellApplication {
+          name = "active_window";
+          runtimeInputs = [
+            pkgs.hyprshot
+          ];
+          text = ''
+            hyprshot -m window -m active
+          '';
+        };
+      in
         [
           "$mainMod, M, exit"
           "$mainMod, C, killactive"
@@ -176,11 +207,11 @@ in {
         # Hyprshot Keybinds
         ++ [
           # Region (only clipboard)
-          "$mainMod, Print, exec, ${hyprshot} -m region --clipboard-only"
+          "$mainMod, Print, exec, ${lib.getExe region_cb_only}"
           # Region (saved to disk)
-          "$mainMod SHIFT, Print, exec, ${hyprshot} -m region"
+          "$mainMod SHIFT, Print, exec,${lib.getExe region}"
           # Active window (saved to disk)
-          "$mainMod ALT, Print, exec, ${hyprshot} -m window -m active"
+          "$mainMod ALT, Print, exec, ${lib.getExe active_window}"
         ]
         # Pyprland Keybinds
         ++ [
