@@ -25,9 +25,6 @@
 
   # Packages
   home.packages = with pkgs; [
-    # Here for now:
-    wl-clipboard
-
     # File Manager
     yazi
 
@@ -39,8 +36,6 @@
     asunder # ripper
     lollypop # music library management
     easytag # manage metadata of music files
-
-    hyprshot
 
     # Password Manager
     _1password-gui
