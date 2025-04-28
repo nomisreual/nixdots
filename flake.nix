@@ -28,6 +28,10 @@
       # only if nixpkgs unstable is in use
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    sessionizer = {
+      url = "github:nomisreual/sessionizer";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
