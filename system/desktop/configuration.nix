@@ -23,6 +23,7 @@
 
   # Splash Screen
   boot.plymouth.enable = true;
+  programs.fish.enable = true;
 
   # Hostname
   networking.hostName = "nixos";
@@ -60,6 +61,7 @@
     description = "Simon Antonius Lauer";
     extraGroups = ["networkmanager" "wheel" "scanner" "lp" "cdrom"];
     packages = with pkgs; [];
+    shell = pkgs.fish;
   };
 
   # Enable nh
