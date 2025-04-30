@@ -82,5 +82,7 @@
     nerd-fonts.fantasque-sans-mono
   ];
 
+  programs.gnupg.agent.enable = true;
+
   system.stateVersion = "24.11";
 }
