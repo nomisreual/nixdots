@@ -35,6 +35,10 @@
 
       # Status Bar on top
       set-option -g status-position top
+
+      # Resize panes
+      bind j resize-pane -D 5
+      bind k resize-pane -U 5
     '';
   };
 }
