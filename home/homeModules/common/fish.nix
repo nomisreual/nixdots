@@ -18,7 +18,7 @@
           if set -q TMUX;
             echo ""
           else
-            ${lib.getExe pkgs.microfetch}
+            ${lib.getExe pkgs.fortune} | ${lib.getExe pkgs.cowsay}
           end
         '';
     };
