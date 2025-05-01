@@ -21,12 +21,12 @@ in {
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
   imports = [
-    ./homeModules/zed.nix
-    ./homeModules/tmux
-    ./homeModules/kitty
+    ../homeModules/zed.nix
+    ../homeModules/tmux
+    ../homeModules/kitty
     # ./homeModules/nvim
     # ./homeModules/ghostty
-    ./homeModules/common
+    ../homeModules/common
   ];
 
   # Kitty on NixOS Desktop

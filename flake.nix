@@ -65,12 +65,12 @@
       ];
     };
 
-    homeConfigurations."simon" = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations."simon@desktop" = home-manager.lib.homeManagerConfiguration {
       pkgs = import nixpkgs {
         system = linux;
         config.allowUnfree = true;
       };
-      modules = [./home/homeonnixos.nix];
+      modules = [./home/desktop/home.nix];
       extraSpecialArgs = {
         inherit inputs;
       };
@@ -81,7 +81,7 @@
         system = mac;
         config.allowUnfree = true;
       };
-      modules = [./home/homeonmac.nix];
+      modules = [./home/mac/home.nix];
       extraSpecialArgs = {
         inherit inputs;
       };

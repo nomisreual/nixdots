@@ -10,14 +10,13 @@
   home.stateVersion = "24.11";
 
   imports = [
-    ./homeModules/theme.nix
-    ./homeModules/tmux
-    ./homeModules/kitty
-    ./homeModules/waybar
-    ./homeModules/hyprland
-    ./homeModules/wofi
-    ./homeModules/common
-    # ./homeModules/nvim
+    ../homeModules/theme.nix
+    ../homeModules/tmux
+    ../homeModules/kitty
+    ../homeModules/waybar
+    ../homeModules/hyprland
+    ../homeModules/wofi
+    ../homeModules/common
   ];
 
   # Kitty on
@@ -36,6 +35,7 @@
     asunder # ripper
     lollypop # music library management
     easytag # manage metadata of music files
+    mpv # media player
 
     # Password Manager
     _1password-gui
