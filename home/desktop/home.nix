@@ -65,6 +65,7 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
+    NH_FLAKE = "/home/simon/nixdots";
   };
 
   # Let Home Manager install and manage itself.

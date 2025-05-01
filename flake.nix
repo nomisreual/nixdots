@@ -65,7 +65,7 @@
       ];
     };
 
-    homeConfigurations."simon@desktop" = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations."simon" = home-manager.lib.homeManagerConfiguration {
       pkgs = import nixpkgs {
         system = linux;
         config.allowUnfree = true;

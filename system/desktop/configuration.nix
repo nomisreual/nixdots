@@ -69,7 +69,7 @@
     enable = true;
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 6";
-    flake = "/home/simon/nixdots";
+    # flake = "/home/simon/nixdots";
   };
 
   # System wide packages
