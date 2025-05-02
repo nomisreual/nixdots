@@ -48,6 +48,9 @@
     # Mail
     thunderbird
 
+    # Office
+    libreoffice-fresh
+
     # Neovim
     inputs.nixvim.packages.${system}.default
 
