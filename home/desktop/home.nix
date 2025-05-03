@@ -39,6 +39,7 @@
 
     # Password Manager
     _1password-gui
+    proton-pass
 
     # Web Browsers
     firefox
