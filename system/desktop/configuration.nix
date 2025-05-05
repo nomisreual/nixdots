@@ -23,7 +23,6 @@
 
   # Splash Screen
   boot.plymouth.enable = true;
-  programs.fish.enable = true;
 
   # Hostname
   networking.hostName = "nixos";
@@ -52,8 +51,8 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
-  # Cosmic Display Manager
-  # services.displayManager.cosmic-greeter.enable = true;
+  # Add fish to /etc/shells
+  programs.fish.enable = true;
 
   # Define users
   users.users.simon = {
@@ -69,7 +68,6 @@
     enable = true;
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 6";
-    # flake = "/home/simon/nixdots";
   };
 
   # System wide packages
@@ -82,6 +80,7 @@
     nerd-fonts.fantasque-sans-mono
   ];
 
+  # GnuPG
   programs.gnupg.agent.enable = true;
 
   system.stateVersion = "24.11";
