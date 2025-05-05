@@ -27,6 +27,10 @@
     # File Manager
     yazi
 
+    # Devenv
+    direnv
+    nix-direnv
+
     # Notes
     obsidian
 
