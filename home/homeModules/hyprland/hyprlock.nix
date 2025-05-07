@@ -4,7 +4,7 @@
     settings = {
       background = {
         # monitor =
-        path = "/home/simon/Pictures/Wallpapers/girlsitting.jpg";
+        path = "/home/simon/Pictures/Wallpapers/ruffy.jpg";
         blur_passes = 0;
         blur_size = 7;
         noise = 0.0117;

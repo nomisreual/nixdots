@@ -3,11 +3,11 @@
     enable = true;
     settings = {
       preload = [
-        "/home/simon/Pictures/Wallpapers/girlsitting.jpg"
+        "/home/simon/Pictures/Wallpapers/ruffy.jpg"
       ];
 
       wallpaper = [
-        "DP-2, /home/simon/Pictures/Wallpapers/girlsitting.jpg"
+        "DP-2, /home/simon/Pictures/Wallpapers/ruffy.jpg"
       ];
     };
   };
