@@ -34,6 +34,9 @@
     # Notes
     obsidian
 
+    # API
+    postman
+
     # Media
     vlc # media player
     asunder # ripper
