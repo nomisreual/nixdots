@@ -17,6 +17,7 @@ in {
         margin = "1";
         spacing = "4";
         modules-left = [
+          "custom/start"
           "hyprland/workspaces"
         ];
         modules-center = [
@@ -34,6 +35,14 @@ in {
           "tray"
           "custom/power"
         ];
+        "custom/start" = {
+          on-click = "wofi --show drun";
+          tooltip = false;
+          format = "{icon}";
+          format-icons = {
+            default = "󱄅 ";
+          };
+        };
         idle_inhibitor = {
           format = "{icon}";
           format-icons = {

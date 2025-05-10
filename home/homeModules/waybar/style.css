@@ -102,6 +102,7 @@ button:hover {
 #pulseaudio,
 #wireplumber,
 #custom-media,
+#custom-start,
 #tray,
 #mode,
 #idle_inhibitor,
@@ -134,10 +135,6 @@ button:hover {
 #clock {
     background-color: @base;
     color: @lavender;
-}
-
-#custom-do_not_disturb {
-    background-color: @base;
 }
 
 #battery {
@@ -250,6 +247,12 @@ label:focus {
 
 #custom-media.custom-vlc {
     background-color: @base;
+}
+
+#custom-start {
+    background-color: @base;
+    color: @blue;
+    font-size: 30px;
 }
 
 #temperature {
