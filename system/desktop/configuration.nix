@@ -7,12 +7,13 @@
   # Import other modules
   imports = [
     ./hardware-configuration.nix
+    ./greetd.nix
     ../systemModules/steam.nix
     ../systemModules/hyprland
     ../systemModules/scan.nix
     ../systemModules/print.nix
     ../systemModules/postgresql.nix
-    ../systemModules/gnome.nix
+    # ../systemModules/gnome.nix
     ../systemModules/virtmanager.nix
     ../systemModules/distrobox.nix
   ];
@@ -22,7 +23,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Splash Screen
-  boot.plymouth.enable = true;
+  # boot.plymouth.enable = true;
 
   # Hostname
   networking.hostName = "nixos";
