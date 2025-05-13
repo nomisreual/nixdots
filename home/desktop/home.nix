@@ -22,6 +22,13 @@
   # Kitty on
   programs.kitty.font.size = 18;
 
+  xdg.desktopEntries = {
+    "fish" = {
+      name = "fish";
+      noDisplay = true;
+    };
+  };
+
   # Packages
   home.packages = with pkgs; [
     # File Manager
