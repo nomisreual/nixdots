@@ -103,6 +103,7 @@ button:hover {
 #wireplumber,
 #custom-media,
 #custom-start,
+#custom-notification,
 #tray,
 #mode,
 #idle_inhibitor,
@@ -253,6 +254,11 @@ label:focus {
     background-color: @base;
     color: @blue;
     font-size: 30px;
+}
+
+#custom-notification {
+    background-color: @base;
+    color: @blue;
 }
 
 #temperature {

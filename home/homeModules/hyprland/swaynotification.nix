@@ -1,5 +1,10 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [
-    swaynotificationcenter
-  ];
+  services.swaync = {
+    enable = true;
+    style = ''
+      * {
+       font-family: FantasqueSansM Nerd Font Mono;
+      }
+    '';
+  };
 }
