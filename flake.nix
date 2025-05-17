@@ -25,7 +25,6 @@
     };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
-      # only if nixpkgs unstable is in use
       inputs.nixpkgs.follows = "nixpkgs";
     };
     sessionizer = {
@@ -41,49 +40,51 @@
     home-manager,
     ...
   } @ inputs: let
-    linux = "x86_64-linux";
-    mac = "x86_64-darwin";
+    architectures = {
+      linux = "x86_64-linux";
+      mac = "x86_64-darwin";
+    };
+    pkgs_for_system = architecture: (
+      import nixpkgs {
+        system = architecture;
+        config.allowUnfree = true;
+      }
+    );
   in {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      pkgs = import nixpkgs {
-        system = linux;
-        config.allowUnfree = true;
-      };
-      specialArgs = {inherit inputs;};
-      modules = [
-        ./system/desktop/configuration.nix
-      ];
-    };
-
-    darwinConfigurations."mac" = nix-darwin.lib.darwinSystem {
-      pkgs = import nixpkgs {
-        system = mac;
-        config.allowUnfree = true;
-      };
-      modules = [
-        ./system/mac/configuration.nix
-      ];
-    };
-
-    homeConfigurations."simon" = home-manager.lib.homeManagerConfiguration {
-      pkgs = import nixpkgs {
-        system = linux;
-        config.allowUnfree = true;
-      };
-      modules = [./home/desktop/home.nix];
-      extraSpecialArgs = {
-        inherit inputs;
+    nixosConfigurations = {
+      desktop = nixpkgs.lib.nixosSystem {
+        pkgs = pkgs_for_system architectures.linux;
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./system/desktop/configuration.nix
+        ];
       };
     };
 
-    homeConfigurations."simon@mac" = home-manager.lib.homeManagerConfiguration {
-      pkgs = import nixpkgs {
-        system = mac;
-        config.allowUnfree = true;
+    darwinConfigurations = {
+      macbook = nix-darwin.lib.darwinSystem {
+        pkgs = pkgs_for_system architectures.mac;
+        modules = [
+          ./system/mac/configuration.nix
+        ];
       };
-      modules = [./home/mac/home.nix];
-      extraSpecialArgs = {
-        inherit inputs;
+    };
+
+    homeConfigurations = {
+      "simon@desktop" = home-manager.lib.homeManagerConfiguration {
+        pkgs = pkgs_for_system architectures.linux;
+        modules = [./home/desktop/home.nix];
+        extraSpecialArgs = {
+          inherit inputs;
+        };
+      };
+
+      "simon@mac" = home-manager.lib.homeManagerConfiguration {
+        pkgs = pkgs_for_system architectures.mac;
+        modules = [./home/mac/home.nix];
+        extraSpecialArgs = {
+          inherit inputs;
+        };
       };
     };
   };
