@@ -12,6 +12,8 @@
   programs.zsh.enable = true;
   programs.fish.enable = true;
 
+  nixpkgs.config.allowUnfree = true;
+
   environment.systemPackages = with pkgs; [
     # web browsers
     firefox

@@ -47,13 +47,11 @@
     pkgs_for_system = architecture: (
       import nixpkgs {
         system = architecture;
-        config.allowUnfree = true;
       }
     );
   in {
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
-        pkgs = pkgs_for_system architectures.linux;
         specialArgs = {inherit inputs;};
         modules = [
           ./system/desktop/configuration.nix
@@ -63,7 +61,6 @@
 
     darwinConfigurations = {
       macbook = nix-darwin.lib.darwinSystem {
-        pkgs = pkgs_for_system architectures.mac;
         modules = [
           ./system/mac/configuration.nix
         ];
