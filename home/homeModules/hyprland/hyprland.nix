@@ -41,7 +41,7 @@ in {
       #################
       exec-once = [
         "${pypr} --debug /tmp/pypr.log &"
-        # "swaync &"
+        "hyprsunset"
 
         "[workspace 1 silent] kitty"
         "[workspace 2 silent] zen-beta"
