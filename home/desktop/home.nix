@@ -31,6 +31,22 @@
     };
   };
 
+  # Declare here, so hyprland.nix is more easy to share
+  wayland.windowManager.hyprland = {
+    settings = {
+      monitor = "DP-2, 1920x1080@165, 0x0, 1";
+    };
+  };
+
+  # same for hyprpaper
+  services.hyprpaper = {
+    settings = {
+      wallpaper = [
+        "DP-2, /home/simon/Pictures/Wallpapers/ruffy.jpg"
+      ];
+    };
+  };
+
   # Packages
   home.packages = with pkgs; [
     # File Manager

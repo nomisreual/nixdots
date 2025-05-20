@@ -12,7 +12,7 @@
 
   pypr = "${pkgs.pyprland}/bin/pypr";
 
-  myMonitor = "DP-2, 1920x1080@165, 0x0, 1";
+  # myMonitor = "DP-2, 1920x1080@165, 0x0, 1";
 
   switchworkspace = builtins.genList (x: "$mainMod, ${builtins.toString (x + 1)}, workspace, ${builtins.toString (x + 1)}") 8;
 
@@ -21,7 +21,7 @@ in {
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
-      monitor = myMonitor;
+      # monitor = myMonitor;
 
       #############################
       ### ENVIRONMENT VARIABLES ###
