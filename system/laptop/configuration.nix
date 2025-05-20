@@ -24,6 +24,8 @@
   boot.loader.grub.useOSProber = true;
 
   nixpkgs.config.allowUnfree = true;
+
+  # Nvidia
   nixpkgs.config.nvidia.acceptLicense = true;
 
   hardware.graphics.enable = true;
@@ -34,7 +36,13 @@
   hardware.nvidia.prime = {
     intelBusId = "PCI:0:2:0";
     nvidiaBusId = "PCI:2:0:0";
+    offload = {
+      enable = true;
+      enableOffloadCmd = true;
+    };
   };
+
+  # power save
 
   services.tlp = {
     enable = true;
