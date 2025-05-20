@@ -57,6 +57,13 @@
           ./system/desktop/configuration.nix
         ];
       };
+
+      laptop = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./system/laptop/configuration.nix
+        ];
+      };
     };
 
     darwinConfigurations = {
@@ -71,6 +78,14 @@
       "simon@desktop" = home-manager.lib.homeManagerConfiguration {
         pkgs = pkgs_for_system architectures.linux;
         modules = [./home/desktop/home.nix];
+        extraSpecialArgs = {
+          inherit inputs;
+        };
+      };
+
+      "simon@laptop" = home-manager.lib.homeManagerConfiguration {
+        pkgs = pkgs_for_system architectures.linux;
+        modules = [./home/laptop/home.nix];
         extraSpecialArgs = {
           inherit inputs;
         };

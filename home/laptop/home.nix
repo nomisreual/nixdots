@@ -22,6 +22,8 @@
   # Kitty on
   programs.kitty.font.size = 20;
 
+  nixpkgs.config.allowUnfree = true;
+
   xdg.desktopEntries = {
     "fish" = {
       name = "fish";
