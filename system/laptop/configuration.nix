@@ -8,12 +8,13 @@
   imports = [
     ./hardware-configuration.nix
     ./greetd.nix
+    ./nvidia.nix
+    ./tlp.nix
     ../systemModules/steam.nix
     ../systemModules/hyprland
     ../systemModules/scan.nix
     ../systemModules/print.nix
     ../systemModules/postgresql.nix
-    # ../systemModules/gnome.nix
     ../systemModules/virtmanager.nix
     ../systemModules/distrobox.nix
   ];
@@ -24,45 +25,6 @@
   boot.loader.grub.useOSProber = true;
 
   nixpkgs.config.allowUnfree = true;
-
-  # Nvidia
-  nixpkgs.config.nvidia.acceptLicense = true;
-
-  hardware.graphics.enable = true;
-  services.xserver.videoDrivers = ["nvidia"];
-  hardware.nvidia.open = false;
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
-
-  hardware.nvidia.prime = {
-    intelBusId = "PCI:0:2:0";
-    nvidiaBusId = "PCI:2:0:0";
-    offload = {
-      enable = true;
-      enableOffloadCmd = true;
-    };
-  };
-
-  # power save
-
-  services.tlp = {
-    enable = true;
-    settings = {
-      CPU_SCALING_GOVERNOR_ON_AC = "performance";
-      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-
-      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
-      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
-
-      CPU_MIN_PERF_ON_AC = 0;
-      CPU_MAX_PERF_ON_AC = 100;
-      CPU_MIN_PERF_ON_BAT = 0;
-      CPU_MAX_PERF_ON_BAT = 20;
-
-      #Optional helps save long term battery health
-      START_CHARGE_THRESH_BAT0 = 40; # 40 and below it starts to charge
-      STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
-    };
-  };
 
   # Hostname
   networking.hostName = "nixos";

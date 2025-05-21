@@ -148,7 +148,6 @@ in {
           };
         };
         battery = {
-          # bat = "BAT2";
           interval = 60;
           states = {
             warning = 30;
