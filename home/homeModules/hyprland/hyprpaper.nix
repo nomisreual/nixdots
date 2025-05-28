@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       preload = [
-        "/home/simon/Pictures/Wallpapers/ruffy.jpg"
+        "/home/simon/Pictures/Wallpapers/penguin.jpg"
       ];
     };
   };

@@ -42,7 +42,7 @@
   services.hyprpaper = {
     settings = {
       wallpaper = [
-        "DP-2, /home/simon/Pictures/Wallpapers/ruffy.jpg"
+        "DP-2, /home/simon/Pictures/Wallpapers/penguin.jpg"
       ];
     };
   };
