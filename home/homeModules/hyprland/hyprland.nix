@@ -12,8 +12,6 @@
 
   pypr = "${pkgs.pyprland}/bin/pypr";
 
-  # myMonitor = "DP-2, 1920x1080@165, 0x0, 1";
-
   switchworkspace = builtins.genList (x: "$mainMod, ${builtins.toString (x + 1)}, workspace, ${builtins.toString (x + 1)}") 8;
 
   movetoworkspace = builtins.genList (x: "$mainMod SHIFT, ${builtins.toString (x + 1)}, movetoworkspace, ${builtins.toString (x + 1)}") 8;
@@ -21,8 +19,6 @@ in {
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
-      # monitor = myMonitor;
-
       #############################
       ### ENVIRONMENT VARIABLES ###
       #############################
@@ -41,7 +37,6 @@ in {
       #################
       exec-once = [
         "${pypr} --debug /tmp/pypr.log &"
-        "hyprsunset"
 
         "[workspace 1 silent] kitty"
         "[workspace 2 silent] zen-beta"
@@ -110,8 +105,8 @@ in {
           "fadeLayersIn, 1, 1.79, almostLinear"
           "fadeLayersOut, 1, 1.39, almostLinear"
           "workspaces, 1, 1.94, almostLinear, fade"
-          "workspacesIn, 1, 1.21, almostLinear, fade"
-          "workspacesOut, 1, 1.94, almostLinear, fade"
+          # "workspacesIn, 1, 1.21, almostLinear, fade"
+          # "workspacesOut, 1, 1.94, almostLinear, fade"
         ];
       };
 

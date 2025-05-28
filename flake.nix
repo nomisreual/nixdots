@@ -77,7 +77,9 @@
     homeConfigurations = {
       "simon@desktop" = home-manager.lib.homeManagerConfiguration {
         pkgs = pkgs_for_system architectures.linux;
-        modules = [./home/desktop/home.nix];
+        modules = [
+          ./home/desktop/home.nix
+        ];
         extraSpecialArgs = {
           inherit inputs;
         };

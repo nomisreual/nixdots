@@ -24,8 +24,6 @@ in {
     ../homeModules/zed.nix
     ../homeModules/tmux
     ../homeModules/kitty
-    # ./homeModules/nvim
-    # ./homeModules/ghostty
     ../homeModules/common
   ];
 
