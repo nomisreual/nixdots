@@ -13,29 +13,18 @@
   programs.fish.enable = true;
 
   nixpkgs.config.allowUnfree = true;
+  system.primaryUser = "simon";
 
   environment.systemPackages = with pkgs; [
     # web browsers
     firefox
     brave
 
-    # nixd
-    # nil
-    # alejandra
-    # nodejs_22
-    # python313
     gnupg
     direnv
     uv
-    # ripgrep
-    # fzf
-    # fd
     wget
-    # neovim
     yazi
-    # starship
-    # zoxide
-    # stow
     lazygit
     gh
   ];
@@ -50,17 +39,14 @@
   homebrew = {
     enable = true;
     casks = [
-      "obs"
       "1password"
       "thunderbird@esr"
       "spotify"
-      "slack"
       "obsidian"
       "signal"
       "vlc"
       "microsoft-office"
-      "balenaetcher"
-      "zen-browser"
+      "proton-drive"
     ];
     brews = [
     ];
