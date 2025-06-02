@@ -192,6 +192,12 @@ in {
           "$mainMod, L, movefocus, r"
           "$mainMod, K, movefocus, u"
           "$mainMod, J, movefocus, d"
+
+          # swap windows
+          "$mainMod SHIFT, H, swapwindow, l"
+          "$mainMod SHIFT, L, swapwindow, r"
+          "$mainMod SHIFT, K, swapwindow, u"
+          "$mainMod SHIFT, J, swapwindow, d"
         ]
         # Switch to specified workspace
         ++ switchworkspace
