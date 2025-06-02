@@ -81,6 +81,9 @@
     # Mail
     thunderbird
 
+    # Chat
+    discord
+
     # Office
     libreoffice-fresh
 
