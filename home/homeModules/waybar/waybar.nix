@@ -102,7 +102,8 @@ in {
         };
         pulseaudio = {
           scroll-step = 1;
-          format = "{volume}% {icon} {format_source}";
+          # format = "{volume}% {icon} {format_source}";
+          format = "{volume}% {icon}";
           format-bluetooth = "{volume}% {icon} {format_source}";
           format-bluetooth-muted = "󰝟 {icon} {format_source}";
           format-muted = "󰝟 {format_source}";
@@ -131,7 +132,7 @@ in {
           on-scroll-down = "${playerctl} previous";
           exec = "${mediaplayer}/bin/mediaplayer 2> /dev/null";
         };
-        "hyprland-language" = {
+        hyprland-language = {
           format = "{}";
           format-en = "en";
           format-de = "de";
