@@ -93,7 +93,7 @@
         };
       };
 
-      "simon@mac" = home-manager.lib.homeManagerConfiguration {
+      "simon@macbook" = home-manager.lib.homeManagerConfiguration {
         pkgs = pkgs_for_system architectures.mac;
         modules = [./home/mac/home.nix];
         extraSpecialArgs = {

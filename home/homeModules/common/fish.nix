@@ -19,7 +19,6 @@
             echo ""
           else
             ${lib.getExe pkgs.fortune} | ${lib.getExe pkgs.cowsay}
-            # ${lib.getExe pkgs.microfetch}
           end
         '';
     };
