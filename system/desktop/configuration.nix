@@ -14,6 +14,7 @@
     ../systemModules/print.nix
     ../systemModules/postgresql.nix
     # ../systemModules/gnome.nix
+    ../systemModules/qtile.nix
     ../systemModules/virtmanager.nix
     ../systemModules/distrobox.nix
   ];
