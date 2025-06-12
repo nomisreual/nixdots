@@ -185,6 +185,7 @@ in {
           "$mainMod, C, killactive"
           "$mainMod, Q, exec, ${terminal}"
           "$mainMod, V, togglefloating"
+          "$mainMod, F, fullscreen"
           "$mainMod, R, exec, ${menu}"
 
           # Move focus with mainMod + hjkl
