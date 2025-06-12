@@ -62,6 +62,8 @@
     # API
     postman
 
+    quickemu
+
     # Media
     vlc # media player
     asunder # ripper
