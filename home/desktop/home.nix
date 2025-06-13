@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  lib,
   ...
 }: {
   # User information
@@ -28,6 +29,22 @@
     "fish" = {
       name = "fish";
       noDisplay = true;
+    };
+  };
+
+  programs.fish = {
+    functions = {
+      fish_greeting =
+        /*
+        fish
+        */
+        ''
+          if set -q TMUX;
+            echo ""
+          else
+            ${lib.getExe pkgs.microfetch}
+          end
+        '';
     };
   };
 
