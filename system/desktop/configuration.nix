@@ -16,6 +16,7 @@
     # ../systemModules/gnome.nix
     ../systemModules/virtmanager.nix
     ../systemModules/distrobox.nix
+    ../systemModules/qtile.nix
   ];
 
   # Bootloader
