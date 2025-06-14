@@ -14,7 +14,6 @@
     ../systemModules/print.nix
     ../systemModules/postgresql.nix
     # ../systemModules/gnome.nix
-    ../systemModules/qtile.nix
     ../systemModules/virtmanager.nix
     ../systemModules/distrobox.nix
   ];
@@ -23,6 +22,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # Splash Screen
