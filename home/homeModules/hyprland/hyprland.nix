@@ -199,6 +199,10 @@ in {
           "$mainMod SHIFT, L, swapwindow, r"
           "$mainMod SHIFT, K, swapwindow, u"
           "$mainMod SHIFT, J, swapwindow, d"
+
+          # swaynotificationcenter
+          "$mainMod, N, exec, swaync-client --toggle-panel"
+          "$mainMod SHIFT, N, exec, swaync-client --close-all"
         ]
         # Switch to specified workspace
         ++ switchworkspace
