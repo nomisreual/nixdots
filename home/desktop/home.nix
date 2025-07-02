@@ -64,10 +64,18 @@
     };
   };
 
+  # Game launcher
+  programs.lutris = {
+    enable = true;
+  };
+
   # Packages
   home.packages = with pkgs; [
     # File Manager
     yazi
+
+    ausweisapp
+    pcsc-cyberjack
 
     # Devenv
     direnv
@@ -79,7 +87,10 @@
     # API
     postman
 
-    quickemu
+    # Utilities
+    quickemu # easy VMs
+    htop
+    btop
 
     # Media
     vlc # media player
@@ -105,6 +116,7 @@
 
     # Office
     libreoffice-fresh
+    simple-scan
 
     # Neovim
     inputs.nixvim.packages.${system}.default

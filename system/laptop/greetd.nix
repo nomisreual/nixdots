@@ -14,6 +14,7 @@
 
   environment.etc."greetd/environments".text = ''
     Hyprland
+    qtile -b wayland
     fish
     bash
   '';

@@ -28,6 +28,12 @@
 
   # Splash Screen
   # boot.plymouth.enable = true;
+  services.pcscd.enable = true;
+
+  services.jellyfin = {
+    enable = true;
+    openFirewall = true;
+  };
 
   # Hostname
   networking.hostName = "nixos";
