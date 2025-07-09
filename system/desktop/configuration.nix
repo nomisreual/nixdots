@@ -17,6 +17,7 @@
     ../systemModules/virtmanager.nix
     ../systemModules/distrobox.nix
     ../systemModules/qtile.nix
+    ../systemModules/sway/sway.nix
   ];
 
   # Bootloader
@@ -25,6 +26,11 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  # bluetooth
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true;
+  services.blueman.enable = true;
 
   # Splash Screen
   # boot.plymouth.enable = true;
