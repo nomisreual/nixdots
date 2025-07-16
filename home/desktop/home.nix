@@ -74,6 +74,7 @@
     # File Manager
     yazi
 
+    # Card reader
     ausweisapp
     pcsc-cyberjack
 

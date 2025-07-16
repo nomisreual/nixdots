@@ -7,7 +7,8 @@
   # Import other modules
   imports = [
     ./hardware-configuration.nix
-    ./greetd.nix
+    # ./greetd.nix
+    ../systemModules/sddm
     ../systemModules/steam.nix
     ../systemModules/hyprland
     ../systemModules/scan.nix
@@ -17,7 +18,7 @@
     ../systemModules/virtmanager.nix
     ../systemModules/distrobox.nix
     ../systemModules/qtile.nix
-    ../systemModules/sway/sway.nix
+    ../systemModules/sway
   ];
 
   # Bootloader
