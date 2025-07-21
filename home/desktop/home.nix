@@ -21,6 +21,14 @@
     ../homeModules/wofi
     ../homeModules/common
   ];
+  programs.tealdeer = {
+    enable = true;
+    settings = {
+      display = {
+        use_pager = true;
+      };
+    };
+  };
 
   # Kitty on
   programs.kitty.font.size = 18;
@@ -136,7 +144,7 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
-    NH_FLAKE = "/home/simon/nixdots";
+    MANPAGER = "nvim +Man!";
   };
 
   # Let Home Manager install and manage itself.
