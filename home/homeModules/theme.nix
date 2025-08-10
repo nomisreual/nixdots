@@ -11,9 +11,3 @@
     };
   };
 }
-# some other themes:
-# theme.name = "rose-pine-moon";
-# theme.package = pkgs.rose-pine-gtk-theme;
-# theme.name = "Nordic";
-# theme.package = pkgs.nordic;
-
