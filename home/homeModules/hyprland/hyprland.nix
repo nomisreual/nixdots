@@ -183,8 +183,8 @@ in {
       in
         [
           "$mainMod, M, exit"
-          "$mainMod, C, killactive"
-          "$mainMod, Q, exec, ${terminal}"
+          "$mainMod, Q, killactive"
+          "$mainMod, RETURN, exec, ${terminal}"
           "$mainMod, V, togglefloating"
           "$mainMod, F, fullscreen"
           "$mainMod, R, exec, ${menu}"
