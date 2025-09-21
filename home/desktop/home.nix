@@ -84,9 +84,9 @@
 
     # Card reader
     ausweisapp
-    pcsc-cyberjack
+    pcsc-cyberjack # user space driver for Reiner SCT chipcard reader
 
-    # Devenv
+    # Direnv
     direnv
     nix-direnv
 
@@ -110,12 +110,10 @@
 
     # Password Manager
     _1password-gui
-    proton-pass
 
     # Web Browsers
     firefox
     brave
-    # inputs.zen-browser.packages."${system}".default
 
     # Mail
     thunderbird

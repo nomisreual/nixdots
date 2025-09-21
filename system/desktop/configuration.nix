@@ -4,7 +4,6 @@
   inputs,
   ...
 }: {
-  # Import other modules
   imports = [
     ./hardware-configuration.nix
     ../systemModules/plasma
@@ -24,15 +23,19 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # bluetooth
-  hardware.bluetooth.enable = true; # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot = true;
+  # Bluetooth
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+
+  # Blueman - a bluetooth manager
   services.blueman.enable = true;
 
-  # Splash Screen
-  # boot.plymouth.enable = true;
+  # Enable PCSC-Lite daemon, to access smart cards using SCard API (PC/SC)
   services.pcscd.enable = true;
 
+  # Media server
   services.jellyfin = {
     enable = true;
     openFirewall = true;
