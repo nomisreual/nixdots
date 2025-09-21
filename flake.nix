@@ -51,6 +51,7 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./system/desktop/configuration.nix
+          ./system/desktop/greetd.nix
         ];
       };
 
