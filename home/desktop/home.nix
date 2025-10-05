@@ -3,7 +3,13 @@
   inputs,
   lib,
   ...
-}: {
+}: let
+  libbluray = pkgs.libbluray.override {
+    withAACS = true;
+    withBDplus = true;
+  };
+  vlc = pkgs.vlc.override {inherit libbluray;};
+in {
   # User information
   home.username = "simon";
   home.homeDirectory = "/home/simon";
@@ -103,6 +109,7 @@
 
     # Media
     vlc # media player
+    makemkv # dvd/ bd ripper
     asunder # ripper
     lollypop # music library management
     easytag # manage metadata of music files

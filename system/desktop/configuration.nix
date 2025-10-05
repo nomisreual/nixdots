@@ -20,6 +20,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Kernel
+  boot.kernelModules = ["sg"]; # required by MakeMKV for accessing BR drive.
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
