@@ -22,6 +22,7 @@
 
   # Kernel
   boot.kernelModules = ["sg"]; # required by MakeMKV for accessing BR drive.
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
