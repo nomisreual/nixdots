@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   gtk = {
-    enable = true;
+    enable = false;
     theme.package = pkgs.catppuccin-gtk.override {
       variant = "mocha";
     };

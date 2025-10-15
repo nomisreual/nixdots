@@ -18,7 +18,7 @@ in {
         spacing = "4";
         modules-left = [
           "custom/start"
-          "hyprland/workspaces"
+          "niri/workspaces"
         ];
         modules-center = [
           "custom/media"
@@ -31,7 +31,7 @@ in {
           "memory"
           "temperature"
           "battery"
-          "hyprland/language"
+          "niri/language"
           "clock"
           "tray"
           "custom/power"

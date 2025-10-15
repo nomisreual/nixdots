@@ -7,7 +7,7 @@
           --time \
           --asterisks \
           --user-menu \
-          --cmd Hyprland
+          --cmd niri-session
       '';
     };
   };

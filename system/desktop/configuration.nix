@@ -14,6 +14,7 @@
     ../systemModules/postgresql.nix
     ../systemModules/virtmanager.nix
     ../systemModules/distrobox.nix
+    ../systemModules/niri
   ];
 
   # Bootloader
@@ -38,12 +39,6 @@
 
   # Enable PCSC-Lite daemon, to access smart cards using SCard API (PC/SC)
   services.pcscd.enable = true;
-
-  # Media server
-  services.jellyfin = {
-    enable = true;
-    openFirewall = true;
-  };
 
   # Hostname
   networking.hostName = "nixos";

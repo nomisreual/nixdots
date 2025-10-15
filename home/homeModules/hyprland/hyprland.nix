@@ -142,10 +142,6 @@ in {
         };
       };
 
-      gestures = {
-        workspace_swipe = false;
-      };
-
       ###################
       ### KEYBINDINGS ###
       ###################

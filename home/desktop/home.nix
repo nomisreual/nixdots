@@ -81,10 +81,15 @@ in {
   # Game launcher
   programs.lutris = {
     enable = true;
+    extraPackages = [
+      pkgs.gamescope
+    ];
   };
 
   # Packages
   home.packages = with pkgs; [
+    fuzzel
+
     # File Manager
     yazi
 
@@ -132,6 +137,9 @@ in {
     libreoffice-fresh
     simple-scan
 
+    #
+    banana-cursor
+
     # Neovim
     inputs.nixvim.packages.${system}.default
 
@@ -143,6 +151,10 @@ in {
   ];
 
   home.file = {
+    "config.kdl" = {
+      source = ../homeModules/niri/config.kdl;
+      target = "/.config/niri/config.kdl";
+    };
   };
 
   # Environmental Variables
