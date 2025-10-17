@@ -144,7 +144,7 @@ in {
     inputs.nixvim.packages.${system}.default
 
     # Git Alert
-    # inputs.git_alert.packages."x86_64-linux".default
+    inputs.git_alert.packages."x86_64-linux".default
 
     # Tmux sessionizer
     inputs.sessionizer.packages."x86_64-linux".default

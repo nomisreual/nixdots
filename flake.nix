@@ -21,7 +21,7 @@
     };
     git_alert = {
       url = "github:nomisreual/git_alert";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
     sessionizer = {
       url = "github:nomisreual/sessionizer";
