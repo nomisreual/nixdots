@@ -81,8 +81,16 @@ in {
   # Game launcher
   programs.lutris = {
     enable = true;
-    extraPackages = [
-      pkgs.gamescope
+    extraPackages = with pkgs; [
+      gamescope
+      gamemode
+      mangohud
+    ];
+    winePackages = with pkgs; [
+      wineWow64Packages.full
+    ];
+    protonPackages = with pkgs; [
+      proton-ge-bin
     ];
   };
 
