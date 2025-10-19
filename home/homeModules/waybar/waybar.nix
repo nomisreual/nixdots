@@ -14,7 +14,9 @@ in {
       mainBar = {
         layer = "top";
         position = "top";
-        margin = "1";
+        margin-left = 7;
+        margin-right = 7;
+        margin-top = 8;
         spacing = "4";
         modules-left = [
           "custom/start"
@@ -38,7 +40,7 @@ in {
           "custom/notification"
         ];
         "custom/start" = {
-          on-click = "wofi --show drun";
+          on-click = "fuzzel";
           tooltip = false;
           format = "{icon}";
           format-icons = {
