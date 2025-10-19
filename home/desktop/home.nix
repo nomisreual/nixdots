@@ -27,14 +27,6 @@ in {
     ../homeModules/wofi
     ../homeModules/common
   ];
-  programs.tealdeer = {
-    enable = true;
-    settings = {
-      display = {
-        use_pager = true;
-      };
-    };
-  };
 
   # Kitty on
   programs.kitty.font.size = 18;
@@ -96,6 +88,7 @@ in {
 
   # Packages
   home.packages = with pkgs; [
+    # App launcher
     fuzzel
 
     # File Manager
@@ -137,6 +130,9 @@ in {
 
     # Mail
     thunderbird
+
+    # Messanger
+    signal-desktop
 
     # Chat
     discord
