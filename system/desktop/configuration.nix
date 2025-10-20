@@ -35,7 +35,7 @@
   };
 
   # Blueman - a bluetooth manager
-  services.blueman.enable = true;
+  # services.blueman.enable = true;
 
   # Enable PCSC-Lite daemon, to access smart cards using SCard API (PC/SC)
   services.pcscd.enable = true;
@@ -45,6 +45,10 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+
+  nix.settings = {
+    auto-optimise-store = true;
+  };
 
   # Enable Flakes and Nix command
   nix.settings.experimental-features = ["nix-command" "flakes"];
