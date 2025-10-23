@@ -11,8 +11,8 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nomisreual/nixvim";
+    nomisvim = {
+      url = "github:nomisreual/nomisvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     mediaplayer = {

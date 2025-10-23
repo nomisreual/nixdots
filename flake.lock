@@ -21,7 +21,7 @@
     "flake-parts_2": {
       "inputs": {
         "nixpkgs-lib": [
-          "nixvim",
+          "nomisvim",
           "nixvim",
           "nixpkgs"
         ]
@@ -99,13 +99,13 @@
     "ixx": {
       "inputs": {
         "flake-utils": [
-          "nixvim",
+          "nomisvim",
           "nixvim",
           "nuschtosSearch",
           "flake-utils"
         ],
         "nixpkgs": [
-          "nixvim",
+          "nomisvim",
           "nixvim",
           "nuschtosSearch",
           "nixpkgs"
@@ -231,28 +231,6 @@
     },
     "nixvim": {
       "inputs": {
-        "flake-parts": "flake-parts",
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "nixvim": "nixvim_2"
-      },
-      "locked": {
-        "lastModified": 1761112076,
-        "narHash": "sha256-7xNwAPUT3H0HWkf1fSKjSq7SAZ5MfcRhYWMpf3JsggE=",
-        "owner": "nomisreual",
-        "repo": "nixvim",
-        "rev": "6082f3de7e6b2376ccb0efe8a25dc1a86760b8dd",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nomisreual",
-        "repo": "nixvim",
-        "type": "github"
-      }
-    },
-    "nixvim_2": {
-      "inputs": {
         "flake-parts": "flake-parts_2",
         "nixpkgs": "nixpkgs_3",
         "nuschtosSearch": "nuschtosSearch",
@@ -272,12 +250,34 @@
         "type": "github"
       }
     },
+    "nomisvim": {
+      "inputs": {
+        "flake-parts": "flake-parts",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "nixvim": "nixvim"
+      },
+      "locked": {
+        "lastModified": 1761112076,
+        "narHash": "sha256-7xNwAPUT3H0HWkf1fSKjSq7SAZ5MfcRhYWMpf3JsggE=",
+        "owner": "nomisreual",
+        "repo": "nomisvim",
+        "rev": "6082f3de7e6b2376ccb0efe8a25dc1a86760b8dd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nomisreual",
+        "repo": "nomisvim",
+        "type": "github"
+      }
+    },
     "nuschtosSearch": {
       "inputs": {
         "flake-utils": "flake-utils",
         "ixx": "ixx",
         "nixpkgs": [
-          "nixvim",
+          "nomisvim",
           "nixvim",
           "nixpkgs"
         ]
@@ -303,7 +303,7 @@
         "mediaplayer": "mediaplayer",
         "nix-darwin": "nix-darwin",
         "nixpkgs": "nixpkgs_2",
-        "nixvim": "nixvim",
+        "nomisvim": "nomisvim",
         "sessionizer": "sessionizer"
       }
     },

@@ -146,7 +146,7 @@ in {
     banana-cursor
 
     # Neovim
-    inputs.nixvim.packages.${system}.default
+    inputs.nomisvim.packages.${system}.default
 
     # Git Alert
     inputs.git_alert.packages."x86_64-linux".default
