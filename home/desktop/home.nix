@@ -140,6 +140,7 @@ in {
     # Office
     libreoffice-fresh
     simple-scan
+    evince
 
     #
     banana-cursor
