@@ -28,6 +28,13 @@ in {
     ../homeModules/common
   ];
 
+  # gammastep
+  services.gammastep = {
+    enable = true;
+    provider = "geoclue2";
+    tray = true;
+  };
+
   # Kitty on
   programs.kitty.font.size = 18;
 

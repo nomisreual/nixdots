@@ -100,6 +100,10 @@
     nerd-fonts.fantasque-sans-mono
   ];
 
+  services.geoclue2 = {
+    enable = true;
+  };
+
   # GnuPG
   programs.gnupg.agent.enable = true;
 
