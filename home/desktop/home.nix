@@ -174,6 +174,7 @@ in {
   home.sessionVariables = {
     EDITOR = "nvim";
     MANPAGER = "nvim +Man!";
+    PROJECT_ROOT = "/home/simon/Projects";
   };
 
   # Let Home Manager install and manage itself.
