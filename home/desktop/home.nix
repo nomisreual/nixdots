@@ -72,7 +72,7 @@ in {
   services.hyprpaper = {
     settings = {
       wallpaper = [
-        "DP-2, /home/simon/Pictures/Wallpapers/animegirl.jpg"
+        "DP-2, /home/simon/Pictures/Wallpapers/nix-wallpaper-binary-black.png"
       ];
     };
   };
