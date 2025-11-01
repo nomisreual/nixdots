@@ -33,7 +33,7 @@ in {
           "cpu"
           "memory"
           "temperature"
-          "battery"
+          # "battery"
           "hyprland/language"
           "tray"
           "custom/notification"
