@@ -159,7 +159,19 @@ in {
     inputs.git_alert.packages."x86_64-linux".default
 
     # Tmux sessionizer
-    inputs.sessionizer.packages."x86_64-linux".default
+    (
+      pkgs.symlinkJoin
+      {
+        name = "sessionizer";
+        buildInputs = [pkgs.makeWrapper];
+        paths = [inputs.sessionizer.packages."x86_64-linux".default];
+        postBuild = ''
+          wrapProgram $out/bin/sessionizer \
+          --set PROJECT_ROOT "/home/simon/Projects"
+        '';
+      }
+    )
+    # inputs.sessionizer.packages."x86_64-linux".default
   ];
 
   home.file = {
@@ -174,7 +186,6 @@ in {
   home.sessionVariables = {
     EDITOR = "nvim";
     MANPAGER = "nvim +Man!";
-    PROJECT_ROOT = "/home/simon/Projects";
   };
 
   # Let Home Manager install and manage itself.
