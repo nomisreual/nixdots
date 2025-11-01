@@ -11,6 +11,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    wrappers.url = "github:lassulus/wrappers";
     nomisvim = {
       url = "github:nomisreual/nomisvim";
       inputs.nixpkgs.follows = "nixpkgs";
