@@ -141,6 +141,7 @@ in {
     quickemu # easy VMs
     htop
     btop
+    ghostty
 
     # Media
     vlc # media player
