@@ -78,7 +78,7 @@ in {
           spacing = 10;
         };
         clock = {
-          format = "{:%b. %d - %H:%m}";
+          format = "{:%b. %d - %H:%M}";
           timezone = "Europe/Berlin";
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
           format-alt = "{:%Y-%m-%d}";
