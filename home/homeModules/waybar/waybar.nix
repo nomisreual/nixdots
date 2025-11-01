@@ -21,9 +21,10 @@ in {
         modules-left = [
           "custom/start"
           "hyprland/workspaces"
+          # "custom/media"
         ];
         modules-center = [
-          "custom/media"
+          "clock"
         ];
         modules-right = [
           "idle_inhibitor"
@@ -33,11 +34,10 @@ in {
           "memory"
           "temperature"
           "battery"
-          "niri/language"
-          "clock"
+          "hyprland/language"
           "tray"
-          "custom/power"
           "custom/notification"
+          "custom/power"
         ];
         "custom/start" = {
           on-click = "fuzzel";
@@ -78,6 +78,7 @@ in {
           spacing = 10;
         };
         clock = {
+          format = "{:%b. %d - %H:%m}";
           timezone = "Europe/Berlin";
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
           format-alt = "{:%Y-%m-%d}";
@@ -123,7 +124,7 @@ in {
           on-click = "pavucontrol";
         };
         "custom/media" = {
-          format = "{icon} {}";
+          format = "{text}";
           escape = true;
           return-type = "json";
           max-length = 40;

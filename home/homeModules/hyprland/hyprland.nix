@@ -50,7 +50,7 @@ in {
       general = {
         # Gaps
         gaps_in = 2;
-        gaps_out = 2;
+        gaps_out = 8;
 
         # Window Borders
         border_size = 2;
