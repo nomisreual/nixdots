@@ -20,7 +20,7 @@ in {
         spacing = "4";
         modules-left = [
           "custom/start"
-          "niri/workspaces"
+          "hyprland/workspaces"
         ];
         modules-center = [
           "custom/media"

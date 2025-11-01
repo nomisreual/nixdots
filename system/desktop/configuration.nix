@@ -14,7 +14,8 @@
     ../systemModules/postgresql.nix
     ../systemModules/virtmanager.nix
     ../systemModules/distrobox.nix
-    ../systemModules/niri
+    # ../systemModules/niri
+    ../systemModules/hyprland
   ];
 
   # Bootloader

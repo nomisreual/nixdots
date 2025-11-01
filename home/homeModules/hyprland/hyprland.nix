@@ -8,7 +8,7 @@
 
   # My programs
   terminal = "kitty";
-  menu = "wofi --show drun";
+  menu = "fuzzel";
 
   pypr = "${pkgs.pyprland}/bin/pypr";
 
