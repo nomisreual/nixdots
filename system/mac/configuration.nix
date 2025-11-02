@@ -15,14 +15,6 @@
   nixpkgs.config.allowUnfree = true;
   system.primaryUser = "simon";
 
-  services.yabai = {
-    enable = true;
-    enableScriptingAddition = true;
-    config = {
-      layout = "bsp";
-    };
-  };
-
   environment.systemPackages = with pkgs; [
     # web browsers
     firefox
