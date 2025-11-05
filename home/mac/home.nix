@@ -79,6 +79,7 @@ in {
 
   home.sessionVariables = {
     EDITOR = "nvim";
+    PROJECT_ROOT = "/Users/simon/Projects";
   };
 
   # Let Home Manager install and manage itself.
