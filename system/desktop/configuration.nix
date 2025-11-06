@@ -108,5 +108,10 @@
   # GnuPG
   programs.gnupg.agent.enable = true;
 
+  # SSH Agent
+  programs.ssh = {
+    startAgent = true;
+  };
+
   system.stateVersion = "24.11";
 }
