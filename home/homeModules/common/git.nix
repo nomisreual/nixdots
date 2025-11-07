@@ -1,19 +1,21 @@
 {pkgs, ...}: {
   programs.git = {
     enable = true;
-    userName = "Simon Antonius Lauer";
-    userEmail = "nomisreual@proton.me";
-    signing = {
-      format = "openpgp";
-      key = "AFA7BD5B3FF3E367";
-      signByDefault = true;
-    };
-    extraConfig = {
+    settings = {
+      user = {
+        name = "Simon Antonius Lauer";
+        email = "nomisreual@proton.me";
+      };
       init = {
         defaultbranch = "main";
       };
       core = {
         editor = "nvim";
+      };
+      signing = {
+        format = "openpgp";
+        key = "AFA7BD5B3FF3E367";
+        signByDefault = true;
       };
     };
   };
