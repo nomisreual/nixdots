@@ -6,24 +6,20 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ../systemModules/plasma
-    # ../systemModules/steam.nix
-    ../systemModules/hyprland
-    # ../systemModules/scan.nix
-    ../systemModules/print.nix
-    ../systemModules/postgresql.nix
-    # ../systemModules/virtmanager.nix
-    # ../systemModules/distrobox.nix
-    # ../systemModules/niri
-    ../systemModules/hyprland
   ];
 
   # Custom system Modules
   steam.enable = true;
   virtmanager.enable = true;
-  scan.enable = true;
   qtile.enable = false;
   distrobox.enable = true;
+  printing.enable = true;
+  scan.enable = true;
+  hyprland.enable = true;
+  plasma.enable = false;
+  niri.enable = false;
+  greetd.enable = false;
+  postgres.enable = true;
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
