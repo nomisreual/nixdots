@@ -65,7 +65,9 @@ in {
         "${lib.getExe pkgs.waybar} &"
         "${lib.getExe pkgs.swaynotificationcenter} &"
 
-        "[workspace 1 silent] kitty"
+        "[workspace 1 silent] ${lib.getExe pkgs.kitty}"
+        "[workspace 2 silent] ${lib.getExe pkgs.brave}"
+        "[workspace 3 silent] ${lib.getExe pkgs.thunderbird}"
       ];
 
       #####################
