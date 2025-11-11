@@ -4,7 +4,7 @@
   inputs,
   ...
 }: let
-  playerctl = "${pkgs.playerctl}/bin/playerctl";
+  playerctl = lib.getExe pkgs.playerctl;
   mediaplayer = inputs.mediaplayer.packages.${pkgs.system}.default;
 in {
   programs.waybar = {
