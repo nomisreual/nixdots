@@ -1,5 +1,6 @@
 {
   pkgs,
+  inputs,
   lib,
   ...
 }: let
@@ -7,10 +8,34 @@
   colors = import ./colors.nix;
 
   # My programs
-  terminal = "kitty";
-  menu = "fuzzel";
+  terminal = lib.getExe pkgs.kitty;
+  menu =
+    lib.getExe
+    (
+      inputs.wrappers.wrapperModules.fuzzel.apply
+      {
+        inherit pkgs;
+        settings = {
+          border.radius = 6;
+          colors = {
+            background = "1e1e2edd";
+            text = "cdd6f4ff";
+            prompt = "bac2deff";
+            placeholder = "7f849cff";
+            input = "cdd6f4ff";
+            match = "b4befeff";
+            selection = "585b70ff";
+            selection-text = "cdd6f4ff";
+            selection-match = "b4befeff";
+            counter = "7f849cff";
+            border = "b4befeff";
+          };
+        };
+      }
+    ).wrapper;
 
-  pypr = "${pkgs.pyprland}/bin/pypr";
+  # pypr = "${pkgs.pyprland}/bin/pypr";
+  pypr = lib.getExe pkgs.pyprland;
 
   switchworkspace = builtins.genList (x: "$mainMod, ${builtins.toString (x + 1)}, workspace, ${builtins.toString (x + 1)}") 8;
 

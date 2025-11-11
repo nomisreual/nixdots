@@ -96,7 +96,6 @@ in {
   # Packages
   home.packages = with pkgs; [
     # App launcher
-    # fuzzel
     (
       inputs.wrappers.wrapperModules.fuzzel.apply
       {
