@@ -16,16 +16,8 @@
       url = "github:nomisreual/nomisvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    mediaplayer = {
-      url = "github:nomisreual/mediaplayer";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    git_alert = {
-      url = "github:nomisreual/git_alert";
-      # inputs.nixpkgs.follows = "nixpkgs";
-    };
-    sessionizer = {
-      url = "github:nomisreual/sessionizer";
+    nomispkgs = {
+      url = "github:nomisreual/nomispkgs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

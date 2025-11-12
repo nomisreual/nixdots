@@ -5,7 +5,7 @@
   ...
 }: let
   playerctl = lib.getExe pkgs.playerctl;
-  mediaplayer = inputs.mediaplayer.packages.${pkgs.system}.default;
+  mediaplayer = inputs.nomispkgs.packages.${pkgs.system}.mediaplayer;
 in {
   programs.waybar = {
     enable = true;

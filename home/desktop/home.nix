@@ -95,6 +95,8 @@ in {
 
   # Packages
   home.packages = with pkgs; [
+    # Git Alert
+    inputs.nomispkgs.packages."x86_64-linux".git_alert
     # App launcher
     (
       inputs.wrappers.wrapperModules.fuzzel.apply
@@ -177,23 +179,19 @@ in {
     # Neovim
     inputs.nomisvim.packages.${system}.default
 
-    # Git Alert
-    inputs.git_alert.packages."x86_64-linux".default
-
     # Tmux sessionizer
     (
       pkgs.symlinkJoin
       {
         name = "sessionizer";
         buildInputs = [pkgs.makeWrapper];
-        paths = [inputs.sessionizer.packages."x86_64-linux".default];
+        paths = [inputs.nomispkgs.packages.${system}.sessionizer];
         postBuild = ''
           wrapProgram $out/bin/sessionizer \
           --set PROJECT_ROOT "/home/simon/Projects"
         '';
       }
     )
-    # inputs.sessionizer.packages."x86_64-linux".default
   ];
 
   home.file = {
