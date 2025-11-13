@@ -27,6 +27,7 @@
     nixpkgs,
     nix-darwin,
     home-manager,
+    nomispkgs,
     ...
   } @ inputs: let
     architectures = {
@@ -38,10 +39,15 @@
         system = architecture;
       }
     );
+    nomispkgs_for_system = architecture: (
+      nomispkgs.packages.${architecture}
+    );
   in {
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
+        specialArgs = {
+          inherit inputs;
+        };
         modules = [
           ./system/desktop/configuration.nix
           ./systemModules
@@ -72,6 +78,7 @@
         ];
         extraSpecialArgs = {
           inherit inputs;
+          nomispkgs = nomispkgs_for_system architectures.linux;
         };
       };
 

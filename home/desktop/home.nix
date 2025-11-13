@@ -2,6 +2,7 @@
   pkgs,
   inputs,
   lib,
+  nomispkgs,
   ...
 }: let
   libbluray = pkgs.libbluray.override {
@@ -94,105 +95,107 @@ in {
   };
 
   # Packages
-  home.packages = with pkgs; [
-    # Git Alert
-    inputs.nomispkgs.packages."x86_64-linux".git_alert
-    # App launcher
-    (
-      inputs.wrappers.wrapperModules.fuzzel.apply
-      {
-        inherit pkgs;
-        settings = {
-          border.radius = 6;
-          colors = {
-            background = "1e1e2edd";
-            text = "cdd6f4ff";
-            prompt = "bac2deff";
-            placeholder = "7f849cff";
-            input = "cdd6f4ff";
-            match = "b4befeff";
-            selection = "585b70ff";
-            selection-text = "cdd6f4ff";
-            selection-match = "b4befeff";
-            counter = "7f849cff";
-            border = "b4befeff";
+  home.packages = with pkgs;
+    [
+      # App launcher
+      (
+        inputs.wrappers.wrapperModules.fuzzel.apply
+        {
+          inherit pkgs;
+          settings = {
+            border.radius = 6;
+            colors = {
+              background = "1e1e2edd";
+              text = "cdd6f4ff";
+              prompt = "bac2deff";
+              placeholder = "7f849cff";
+              input = "cdd6f4ff";
+              match = "b4befeff";
+              selection = "585b70ff";
+              selection-text = "cdd6f4ff";
+              selection-match = "b4befeff";
+              counter = "7f849cff";
+              border = "b4befeff";
+            };
           };
-        };
-      }
-    ).wrapper
+        }
+      ).wrapper
 
-    # File Manager
-    yazi
+      # File Manager
+      yazi
 
-    # Card reader
-    ausweisapp
-    pcsc-cyberjack # user space driver for Reiner SCT chipcard reader
+      # Card reader
+      ausweisapp
+      pcsc-cyberjack # user space driver for Reiner SCT chipcard reader
 
-    # Direnv
-    direnv
-    nix-direnv
+      # Direnv
+      direnv
+      nix-direnv
 
-    # Notes
-    obsidian
+      # Notes
+      obsidian
 
-    # API
-    postman
+      # API
+      postman
 
-    # Utilities
-    quickemu # easy VMs
-    htop
-    btop
-    ghostty
+      # Utilities
+      quickemu # easy VMs
+      htop
+      btop
+      ghostty
 
-    # Media
-    vlc # media player
-    makemkv # dvd/ bd ripper
-    asunder # ripper
-    lollypop # music library management
-    easytag # manage metadata of music files
-    mpv # media player
+      # Media
+      vlc # media player
+      makemkv # dvd/ bd ripper
+      asunder # ripper
+      lollypop # music library management
+      easytag # manage metadata of music files
+      mpv # media player
 
-    # Password Manager
-    _1password-gui
+      # Password Manager
+      _1password-gui
 
-    # Web Browsers
-    firefox
-    brave
+      # Web Browsers
+      firefox
+      brave
 
-    # Mail
-    thunderbird
+      # Mail
+      thunderbird
 
-    # Messanger
-    signal-desktop
+      # Messanger
+      signal-desktop
 
-    # Chat
-    discord
+      # Chat
+      discord
 
-    # Office
-    libreoffice-fresh
-    simple-scan
-    evince
+      # Office
+      libreoffice-fresh
+      simple-scan
+      evince
 
-    #
-    banana-cursor
+      #
+      banana-cursor
 
-    # Neovim
-    inputs.nomisvim.packages.${system}.default
+      # Neovim
+      inputs.nomisvim.packages.${system}.default
+    ]
+    ++ [
+      nomispkgs.git_alert
 
-    # Tmux sessionizer
-    (
-      pkgs.symlinkJoin
-      {
-        name = "sessionizer";
-        buildInputs = [pkgs.makeWrapper];
-        paths = [inputs.nomispkgs.packages.${system}.sessionizer];
-        postBuild = ''
-          wrapProgram $out/bin/sessionizer \
-          --set PROJECT_ROOT "/home/simon/Projects"
-        '';
-      }
-    )
-  ];
+      # Tmux sessionizer
+      (
+        pkgs.symlinkJoin
+        {
+          name = "sessionizer";
+          buildInputs = [pkgs.makeWrapper];
+          paths = [nomispkgs.sessionizer];
+          postBuild = ''
+            wrapProgram $out/bin/sessionizer \
+            --set PROJECT_ROOT "/home/simon/Projects"
+          '';
+        }
+      )
+    ];
 
   home.file = {
     "config.kdl" = {
