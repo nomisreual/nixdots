@@ -21,10 +21,15 @@
   niri.enable = false;
   greetd.enable = false;
   postgres.enable = true;
-
-  # Bootloader
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  systemdboot.enable = true;
+  locales = {
+    enable = true;
+    settings = {
+      locale = "en_US.UTF-8";
+      extraLocale = "de_DE.UTF-8";
+      timeZone = "Europe/Berlin";
+    };
+  };
 
   # Kernel
   boot.kernelModules = ["sg"]; # required by MakeMKV for accessing BR drive.
@@ -58,23 +63,23 @@
   # Enable Flakes and Nix command
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  # Time zone
-  time.timeZone = "Europe/Berlin";
-
-  # Internationalisation
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "de_DE.UTF-8";
-    LC_IDENTIFICATION = "de_DE.UTF-8";
-    LC_MEASUREMENT = "de_DE.UTF-8";
-    LC_MONETARY = "de_DE.UTF-8";
-    LC_NAME = "de_DE.UTF-8";
-    LC_NUMERIC = "de_DE.UTF-8";
-    LC_PAPER = "de_DE.UTF-8";
-    LC_TELEPHONE = "de_DE.UTF-8";
-    LC_TIME = "de_DE.UTF-8";
-  };
+  # # Time zone
+  # time.timeZone = "Europe/Berlin";
+  #
+  # # Internationalisation
+  # i18n.defaultLocale = "en_US.UTF-8";
+  #
+  # i18n.extraLocaleSettings = {
+  #   LC_ADDRESS = "de_DE.UTF-8";
+  #   LC_IDENTIFICATION = "de_DE.UTF-8";
+  #   LC_MEASUREMENT = "de_DE.UTF-8";
+  #   LC_MONETARY = "de_DE.UTF-8";
+  #   LC_NAME = "de_DE.UTF-8";
+  #   LC_NUMERIC = "de_DE.UTF-8";
+  #   LC_PAPER = "de_DE.UTF-8";
+  #   LC_TELEPHONE = "de_DE.UTF-8";
+  #   LC_TIME = "de_DE.UTF-8";
+  # };
 
   # Add fish to /etc/shells
   programs.fish.enable = true;
@@ -111,11 +116,6 @@
 
   # GnuPG
   programs.gnupg.agent.enable = true;
-
-  # # SSH Agent
-  # programs.ssh = {
-  #   startAgent = true;
-  # };
 
   system.stateVersion = "24.11";
 }
