@@ -9,7 +9,12 @@
   };
 
   config = lib.mkIf config.virtmanager.enable {
-    virtualisation.libvirtd.enable = true;
+    virtualisation.libvirtd = {
+      enable = true;
+      qemu = {
+        swtpm.enable = true;
+      };
+    };
     programs.virt-manager.enable = true;
     # TODO: get hardcoded user out
     users.users."simon".extraGroups = ["libvirtd"];
