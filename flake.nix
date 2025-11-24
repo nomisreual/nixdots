@@ -58,6 +58,7 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./system/laptop/configuration.nix
+          ./systemModules
         ];
       };
     };

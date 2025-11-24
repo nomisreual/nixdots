@@ -10,15 +10,20 @@
     ./greetd.nix
     ./nvidia.nix
     ./tlp.nix
-    ../systemModules/steam.nix
-    ../systemModules/hyprland
-    ../systemModules/scan.nix
-    ../systemModules/print.nix
-    ../systemModules/postgresql.nix
-    ../systemModules/virtmanager.nix
-    ../systemModules/distrobox.nix
-    ../systemModules/qtile.nix
   ];
+
+  # Custom system Modules
+  steam.enable = true;
+  virtmanager.enable = false;
+  qtile.enable = false;
+  distrobox.enable = true;
+  printing.enable = true;
+  scan.enable = true;
+  hyprland.enable = true;
+  plasma.enable = false;
+  niri.enable = false;
+  greetd.enable = false;
+  postgres.enable = false;
 
   # Bootloader.
   boot.loader.grub.enable = true;
