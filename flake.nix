@@ -88,6 +88,7 @@
         modules = [./home/laptop/home.nix];
         extraSpecialArgs = {
           inherit inputs;
+          nomispkgs = nomispkgs_for_system architectures.linux;
         };
       };
 

@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  nomispkgs,
   ...
 }: {
   # User information
@@ -47,50 +48,62 @@
     };
   };
   # Packages
-  home.packages = with pkgs; [
-    # File Manager
-    yazi
+  home.packages = with pkgs;
+    [
+      # File Manager
+      yazi
 
-    # Devenv
-    direnv
-    nix-direnv
+      # Devenv
+      direnv
+      nix-direnv
 
-    # Notes
-    obsidian
+      # Notes
+      obsidian
 
-    # API
-    postman
+      # API
+      postman
 
-    # Media
-    vlc # media player
-    asunder # ripper
-    lollypop # music library management
-    easytag # manage metadata of music files
-    mpv # media player
+      # Media
+      vlc # media player
+      asunder # ripper
+      lollypop # music library management
+      easytag # manage metadata of music files
+      mpv # media player
 
-    # Password Manager
-    _1password-gui
-    proton-pass
+      # Password Manager
+      _1password-gui
+      proton-pass
 
-    # Web Browsers
-    firefox
-    brave
+      # Web Browsers
+      firefox
+      brave
 
-    # Mail
-    thunderbird
+      # Mail
+      thunderbird
 
-    # Office
-    libreoffice-fresh
+      # Office
+      libreoffice-fresh
 
-    # Neovim
-    inputs.nomisvim.packages.${system}.default
+      # Neovim
+      inputs.nomisvim.packages.${system}.default
+    ]
+    ++ [
+      nomispkgs.git_alert
 
-    # Git Alert
-    inputs.git_alert.packages."x86_64-linux".default
-
-    # Tmux sessionizer
-    inputs.sessionizer.packages."x86_64-linux".default
-  ];
+      # Tmux sessionizer
+      (
+        pkgs.symlinkJoin
+        {
+          name = "sessionizer";
+          buildInputs = [pkgs.makeWrapper];
+          paths = [nomispkgs.sessionizer];
+          postBuild = ''
+            wrapProgram $out/bin/sessionizer \
+            --set PROJECT_ROOT "/home/simon/Projects"
+          '';
+        }
+      )
+    ];
 
   home.file = {
   };
