@@ -85,7 +85,10 @@
 
       "simon@laptop" = home-manager.lib.homeManagerConfiguration {
         pkgs = pkgs_for_system architectures.linux;
-        modules = [./home/laptop/home.nix];
+        modules = [
+          ./home/laptop/home.nix
+          ./homeModules
+        ];
         extraSpecialArgs = {
           inherit inputs;
           nomispkgs = nomispkgs_for_system architectures.linux;

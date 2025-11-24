@@ -14,7 +14,7 @@
     ../homeModules/theme.nix
     ../homeModules/tmux
     ../homeModules/kitty
-    ../homeModules/waybar
+    # ../homeModules/waybar
     ../homeModules/hyprland
     ../homeModules/wofi
     ../homeModules/common
@@ -24,6 +24,11 @@
   programs.kitty.font.size = 20;
 
   nixpkgs.config.allowUnfree = true;
+
+  waybar = {
+    enable = true;
+    settings.battery = true;
+  };
 
   xdg.desktopEntries = {
     "fish" = {
