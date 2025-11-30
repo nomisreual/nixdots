@@ -9,11 +9,10 @@
   };
   config = lib.mkIf config.qtile.enable {
     services.xserver.windowManager.qtile = {
-      enable = false;
+      enable = true;
     };
     environment.systemPackages = with pkgs; [
-      # wlr-randr # xrandr for wayland
-      # rofi # app launcher X11
+      wlr-randr # xrandr for wayland
     ];
     services.xserver = {
       enable = false;

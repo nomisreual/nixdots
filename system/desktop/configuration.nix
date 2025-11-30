@@ -12,7 +12,7 @@
   # Custom system Modules
   steam.enable = true;
   virtmanager.enable = true;
-  qtile.enable = false;
+  qtile.enable = true;
   distrobox.enable = true;
   printing.enable = true;
   scan.enable = true;
