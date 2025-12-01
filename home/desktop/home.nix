@@ -22,12 +22,19 @@ in {
   imports = [
     ../homeModules/theme.nix
     ../homeModules/tmux
-    ../homeModules/kitty
-    ../homeModules/waybar
     ../homeModules/hyprland
     ../homeModules/wofi
     ../homeModules/common
   ];
+
+  waybar = {
+    enable = true;
+    settings.battery = false;
+  };
+  nomisos.kitty = {
+    enable = true;
+    settings.font.size = 18;
+  };
 
   # gammastep
   services.gammastep = {
@@ -37,7 +44,7 @@ in {
   };
 
   # Kitty on
-  programs.kitty.font.size = 18;
+  # programs.kitty.font.size = 18;
 
   xdg.desktopEntries = {
     "fish" = {

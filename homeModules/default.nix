@@ -1,1 +1,1 @@
-{imports = [./waybar];}
+{imports = [./waybar ./kitty];}

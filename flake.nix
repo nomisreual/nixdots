@@ -76,6 +76,7 @@
         pkgs = pkgs_for_system architectures.linux;
         modules = [
           ./home/desktop/home.nix
+          ./homeModules
         ];
         extraSpecialArgs = {
           inherit inputs;
