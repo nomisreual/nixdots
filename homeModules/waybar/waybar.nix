@@ -25,7 +25,7 @@ in {
       };
     };
   };
-  config = lib.mkIf config.waybar.enable {
+  config = lib.mkIf config.nomisos.waybar.enable {
     programs.waybar = {
       enable = true;
       systemd.enable = false;
@@ -55,7 +55,7 @@ in {
               "memory"
               "temperature"
             ]
-            ++ lib.lists.optionals config.waybar.settings.battery ["battery"]
+            ++ lib.lists.optionals config.nomisos.waybar.settings.battery ["battery"]
             ++ [
               "hyprland/language"
               "tray"
