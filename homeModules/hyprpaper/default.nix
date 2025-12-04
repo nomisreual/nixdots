@@ -1,0 +1,1 @@
+{imports = [./hyprpaper.nix];}

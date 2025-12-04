@@ -39,6 +39,13 @@ in {
     enable = true;
     settings.screen = "DP-2, 1920x1080@165, 0x0, 1";
   };
+  nomisos.hyprpaper = {
+    enable = true;
+    settings = {
+      wallpaper = "/home/simon/Pictures/Wallpapers/nix-wallpaper-binary-black.png";
+      display = "DP-2";
+    };
+  };
 
   # gammastep
   services.gammastep = {
@@ -46,9 +53,6 @@ in {
     provider = "geoclue2";
     tray = true;
   };
-
-  # Kitty on
-  # programs.kitty.font.size = 18;
 
   xdg.desktopEntries = {
     "fish" = {
@@ -73,21 +77,14 @@ in {
     };
   };
 
-  # # Declare here, so hyprland.nix is more easy to share
-  # wayland.windowManager.hyprland = {
+  # same for hyprpaper
+  # services.hyprpaper = {
   #   settings = {
-  #     monitor = "DP-2, 1920x1080@165, 0x0, 1";
+  #     wallpaper = [
+  #       "DP-2, /home/simon/Pictures/Wallpapers/nix-wallpaper-binary-black.png"
+  #     ];
   #   };
   # };
-
-  # same for hyprpaper
-  services.hyprpaper = {
-    settings = {
-      wallpaper = [
-        "DP-2, /home/simon/Pictures/Wallpapers/nix-wallpaper-binary-black.png"
-      ];
-    };
-  };
 
   # Game launcher
   programs.lutris = {
