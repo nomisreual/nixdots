@@ -20,7 +20,6 @@ in {
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    ../homeModules/theme.nix
     ../homeModules/tmux
     ../homeModules/hyprland
     ../homeModules/wofi
@@ -45,6 +44,7 @@ in {
       };
     };
     swaynotificationcenter.enable = true;
+    gtk.enable = true;
   };
 
   # gammastep

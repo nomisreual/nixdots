@@ -1,1 +1,1 @@
-{imports = [./waybar ./kitty ./hyprland ./hyprpaper ./swaynotificationcenter];}
+{imports = [./waybar ./kitty ./hyprland ./hyprpaper ./swaynotificationcenter ./gtk];}
