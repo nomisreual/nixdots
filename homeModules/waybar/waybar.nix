@@ -9,16 +9,19 @@
   mediaplayer = inputs.nomispkgs.packages.${pkgs.system}.mediaplayer;
 in {
   options = {
-    waybar.enable = lib.mkEnableOption "Enable Waybar";
+    nomisos.waybar = {
+      enable = lib.mkEnableOption "Enable Waybar";
 
-    waybar.settings = lib.mkOption {
-      type = lib.types.submodule {
-        options = {
-          battery = lib.mkOption {
-            type = lib.types.bool;
-            default = false;
+      settings = lib.mkOption {
+        type = lib.types.submodule {
+          options = {
+            battery = lib.mkOption {
+              type = lib.types.bool;
+              default = false;
+            };
           };
         };
+        default = {};
       };
     };
   };

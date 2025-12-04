@@ -85,7 +85,7 @@
         exec-once = [
           "${pypr} --debug /tmp/pypr.log &"
           "${lib.getExe pkgs.waybar} &"
-          "${lib.getExe pkgs.swaynotificationcenter} &"
+          # "${lib.getExe pkgs.swaynotificationcenter} &"
 
           "[workspace 1 silent] ${lib.getExe pkgs.kitty}"
           "[workspace 2 silent] ${lib.getExe pkgs.brave}"

@@ -27,11 +27,8 @@ in {
     ../homeModules/common
   ];
 
-  waybar = {
-    enable = true;
-    settings.battery = false;
-  };
   nomisos = {
+    waybar.enable = true;
     kitty = {
       enable = true;
       settings.font.size = 18;
@@ -47,6 +44,7 @@ in {
         display = "DP-2";
       };
     };
+    swaynotificationcenter.enable = true;
   };
 
   # gammastep
