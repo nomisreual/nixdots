@@ -35,6 +35,10 @@ in {
     enable = true;
     settings.font.size = 18;
   };
+  nomisos.hyprland = {
+    enable = true;
+    settings.screen = "DP-2, 1920x1080@165, 0x0, 1";
+  };
 
   # gammastep
   services.gammastep = {
@@ -69,12 +73,12 @@ in {
     };
   };
 
-  # Declare here, so hyprland.nix is more easy to share
-  wayland.windowManager.hyprland = {
-    settings = {
-      monitor = "DP-2, 1920x1080@165, 0x0, 1";
-    };
-  };
+  # # Declare here, so hyprland.nix is more easy to share
+  # wayland.windowManager.hyprland = {
+  #   settings = {
+  #     monitor = "DP-2, 1920x1080@165, 0x0, 1";
+  #   };
+  # };
 
   # same for hyprpaper
   services.hyprpaper = {

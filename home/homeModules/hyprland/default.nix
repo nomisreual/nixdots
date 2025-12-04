@@ -1,1 +1,1 @@
-{imports = [./hyprland.nix ./hyprpaper.nix ./hypridle.nix ./hyprlock.nix ./pyprland.nix ./swaynotification.nix];}
+{imports = [./hyprpaper.nix ./hypridle.nix ./hyprlock.nix ./pyprland.nix ./swaynotification.nix];}
