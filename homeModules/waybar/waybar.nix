@@ -5,8 +5,8 @@
   inputs,
   ...
 }: let
-  playerctl = lib.getExe pkgs.playerctl;
-  mediaplayer = inputs.nomispkgs.packages.${pkgs.system}.mediaplayer;
+  # playerctl = lib.getExe pkgs.playerctl;
+  # mediaplayer = inputs.nomispkgs.packages.${pkgs.system}.mediaplayer;
 in {
   options = {
     nomisos.waybar = {
@@ -169,18 +169,18 @@ in {
             };
             on-click = "pavucontrol";
           };
-          "custom/media" = {
-            format = "{text}";
-            escape = true;
-            return-type = "json";
-            max-length = 40;
-            on-click = "${playerctl} play-pause";
-            on-click-right = "${playerctl} stop";
-            smooth-scrolling-threshold = 10;
-            on-scroll-up = "${playerctl} next";
-            on-scroll-down = "${playerctl} previous";
-            exec = "${mediaplayer}/bin/mediaplayer 2> /dev/null";
-          };
+          # "custom/media" = {
+          #   format = "{text}";
+          #   escape = true;
+          #   return-type = "json";
+          #   max-length = 40;
+          #   on-click = "${playerctl} play-pause";
+          #   on-click-right = "${playerctl} stop";
+          #   smooth-scrolling-threshold = 10;
+          #   on-scroll-up = "${playerctl} next";
+          #   on-scroll-down = "${playerctl} previous";
+          #   exec = "${mediaplayer}/bin/mediaplayer 2> /dev/null";
+          # };
           hyprland-language = {
             format = "{}";
             format-en = "en";

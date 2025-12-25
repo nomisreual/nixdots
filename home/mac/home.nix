@@ -42,7 +42,7 @@ in {
     # inputs.git_alert.packages."x86_64-linux".default
 
     # Tmux sessionizer
-    inputs.sessionizer.packages."x86_64-darwin".default
+    # inputs.sessionizer.packages."x86_64-darwin".default
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
