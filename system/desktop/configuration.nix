@@ -106,9 +106,12 @@
     vim
   ];
 
-  fonts.packages = with pkgs; [
-    nerd-fonts.fantasque-sans-mono
-  ];
+  fonts = {
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      nerd-fonts.fantasque-sans-mono
+    ];
+  };
 
   services.geoclue2 = {
     enable = true;
