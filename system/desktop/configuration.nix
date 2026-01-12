@@ -19,7 +19,7 @@
   hyprland.enable = true;
   plasma.enable = false;
   niri.enable = false;
-  greetd.enable = false;
+  greetd.enable = true;
   postgres.enable = true;
   systemdboot.enable = true;
   locales = {

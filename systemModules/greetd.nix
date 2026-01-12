@@ -16,15 +16,15 @@
             --time \
             --asterisks \
             --user-menu \
-            --cmd niri-session
+            --cmd start-hyprland
         '';
       };
     };
-
-    environment.etc."greetd/environments".text = ''
-      Hyprland
-      fish
-      bash
-    '';
+    #
+    # environment.etc."greetd/environments".text = ''
+    #   Hyprland
+    #   fish
+    #   bash
+    # '';
   };
 }
