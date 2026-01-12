@@ -5,11 +5,11 @@
   nomispkgs,
   ...
 }: let
-  libbluray = pkgs.libbluray.override {
-    withAACS = true;
-    withBDplus = true;
-  };
-  vlc = pkgs.vlc.override {inherit libbluray;};
+  # libbluray = pkgs.libbluray.override {
+  #   withAACS = true;
+  #   withBDplus = true;
+  # };
+  # vlc-custom = pkgs.vlc.override {inherit libbluray;};
 in {
   # User information
   home.username = "simon";
@@ -144,7 +144,7 @@ in {
       ghostty
 
       # Media
-      vlc # media player
+      # vlc-custom # media player
       makemkv # dvd/ bd ripper
       asunder # ripper
       lollypop # music library management
