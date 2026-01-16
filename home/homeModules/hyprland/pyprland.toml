@@ -1,13 +1,6 @@
 [pyprland]
 plugins = [
- # "expose",
- # "fetch_client_menu",
- # "lost_windows",
- # "magnify",
  "scratchpads",
- # "shift_monitors",
- # "toggle_special",
- # "workspaces_follow_focus",
 ]
 
 # using variables for demonstration purposes (not needed)
@@ -16,7 +9,9 @@ term_classed = "kitty --class"
 
 [scratchpads.term]
 animation = "fromTop"
-command = "[term_classed] main-dropterm"
-class = "main-dropterm"
+# command = "[term_classed] main-dropterm"
+command = "kitty"
+# class = "main-dropterm"
+class = "kitty"
 size = "75% 60%"
 max_size = "1920px 100%"

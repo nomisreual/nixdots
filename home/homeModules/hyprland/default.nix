@@ -1,1 +1,1 @@
-{imports = [./hypridle.nix ./hyprlock.nix ./pyprland.nix];}
+{imports = [./hypridle.nix ./hyprlock.nix];}
