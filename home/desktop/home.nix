@@ -160,6 +160,7 @@ in {
 
       # Mail
       thunderbird
+      protonmail-bridge-gui
 
       # Messanger
       signal-desktop
@@ -171,9 +172,6 @@ in {
       libreoffice-fresh
       simple-scan
       evince
-
-      #
-      banana-cursor
 
       # Neovim
       inputs.nomisvim.packages.${system}.default
