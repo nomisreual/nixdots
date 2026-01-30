@@ -18,6 +18,14 @@
             type = lib.types.str;
             default = "";
           };
+          fit_mode = lib.mkOption {
+            type = lib.types.str;
+            default = "cover";
+          };
+          splash = lib.mkOption {
+            type = lib.types.bool;
+            default = false;
+          };
         };
       };
       default = {};
@@ -30,11 +38,13 @@
     in {
       enable = true;
       settings = {
-        preload = [
-          "${settings.wallpaper}"
-        ];
+        splash = settings.splash;
         wallpaper = [
-          "${settings.display}, ${settings.wallpaper}"
+          {
+            monitor = "${settings.display}";
+            path = "${settings.wallpaper}";
+            fit_mode = "${settings.fit_mode}";
+          }
         ];
       };
     };
