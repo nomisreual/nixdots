@@ -297,15 +297,11 @@
         ### WINDOWS AND WORKSPACES ###
         ##############################
 
-        windowrulev2 = [
-          # Ignore maximize requests from apps. You'll probably like this.
-          "suppressevent maximize, class:.*"
-          # Fix some dragging issues with XWayland
-          "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+        windowrule = [
+          # Fix pinentry losing focus
+          "match:class (pinentry-)(.*), stay_focused on"
           # Kitty:
-          "opacity 0.8 0.8, class:^(kitty)$"
-          # 1Password
-          "float, class:^(1Password)"
+          "opacity 0.8 0.8, match:class kitty"
         ];
       };
     };
