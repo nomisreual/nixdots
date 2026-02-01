@@ -20,8 +20,6 @@ in {
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    # ../homeModules/tmux
-    ../homeModules/common
   ];
 
   nomisos = {
@@ -194,13 +192,6 @@ in {
         }
       )
     ];
-
-  home.file = {
-    "config.kdl" = {
-      source = ../homeModules/niri/config.kdl;
-      target = "/.config/niri/config.kdl";
-    };
-  };
 
   # Environmental Variables
 
