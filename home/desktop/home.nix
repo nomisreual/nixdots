@@ -20,7 +20,7 @@ in {
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    ../homeModules/tmux
+    # ../homeModules/tmux
     ../homeModules/common
   ];
 
@@ -30,6 +30,7 @@ in {
       enable = true;
       settings.font.size = 18;
     };
+    tmux.enable = true;
     hyprland = {
       enable = true;
       settings.screen = "DP-2, 1920x1080@165, 0x0, 1";

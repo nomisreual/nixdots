@@ -1,1 +1,1 @@
-{imports = [./waybar ./kitty ./hyprland ./hypridle ./hyprlock ./hyprpaper ./swaynotificationcenter ./gtk];}
+{imports = [./waybar ./kitty ./tmux ./hyprland ./hypridle ./hyprlock ./hyprpaper ./swaynotificationcenter ./gtk];}
