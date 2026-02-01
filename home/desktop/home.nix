@@ -21,8 +21,6 @@ in {
 
   imports = [
     ../homeModules/tmux
-    ../homeModules/hyprland
-    ../homeModules/wofi
     ../homeModules/common
   ];
 
@@ -36,6 +34,8 @@ in {
       enable = true;
       settings.screen = "DP-2, 1920x1080@165, 0x0, 1";
     };
+    hypridle.enable = true;
+    hyprlock.enable = true;
     hyprpaper = {
       enable = true;
       settings = {
