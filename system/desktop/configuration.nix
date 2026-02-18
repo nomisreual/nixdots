@@ -1,10 +1,4 @@
-{
-  config,
-  pkgs,
-  inputs,
-  nomispkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
   ];
@@ -19,7 +13,7 @@
   hyprland.enable = true;
   plasma.enable = false;
   niri.enable = false;
-  # greetd.enable = true;
+  greetd.enable = false;
   nomisos.ly.enable = true;
   postgres.enable = true;
   systemdboot.enable = true;
@@ -45,9 +39,6 @@
     powerOnBoot = true;
   };
 
-  # Blueman - a bluetooth manager
-  # services.blueman.enable = true;
-
   # Enable PCSC-Lite daemon, to access smart cards using SCard API (PC/SC)
   services.pcscd.enable = true;
 
@@ -63,24 +54,6 @@
 
   # Enable Flakes and Nix command
   nix.settings.experimental-features = ["nix-command" "flakes"];
-
-  # # Time zone
-  # time.timeZone = "Europe/Berlin";
-  #
-  # # Internationalisation
-  # i18n.defaultLocale = "en_US.UTF-8";
-  #
-  # i18n.extraLocaleSettings = {
-  #   LC_ADDRESS = "de_DE.UTF-8";
-  #   LC_IDENTIFICATION = "de_DE.UTF-8";
-  #   LC_MEASUREMENT = "de_DE.UTF-8";
-  #   LC_MONETARY = "de_DE.UTF-8";
-  #   LC_NAME = "de_DE.UTF-8";
-  #   LC_NUMERIC = "de_DE.UTF-8";
-  #   LC_PAPER = "de_DE.UTF-8";
-  #   LC_TELEPHONE = "de_DE.UTF-8";
-  #   LC_TIME = "de_DE.UTF-8";
-  # };
 
   # Add fish to /etc/shells
   programs.fish.enable = true;
