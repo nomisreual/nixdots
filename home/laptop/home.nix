@@ -90,7 +90,7 @@
       libreoffice-fresh
 
       # Neovim
-      inputs.nomisvim.packages.${system}.default
+      inputs.nomisvim.packages.${stdenv.hostPlatform.system}.default
     ]
     ++ [
       nomispkgs.git_alert
