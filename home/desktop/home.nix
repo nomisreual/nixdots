@@ -144,7 +144,7 @@ in {
 
       # Media
       # vlc-custom # media player
-      makemkv # dvd/ bd ripper
+      # makemkv # dvd/ bd ripper
       asunder # ripper
       lollypop # music library management
       easytag # manage metadata of music files
