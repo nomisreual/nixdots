@@ -67,13 +67,6 @@
     shell = pkgs.fish;
   };
 
-  # Enable nh
-  programs.nh = {
-    enable = true;
-    clean.enable = true;
-    clean.extraArgs = "--keep-since 4d --keep 6";
-  };
-
   # System wide packages
   environment.systemPackages = with pkgs; [
     git
