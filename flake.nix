@@ -12,6 +12,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     wrappers.url = "github:lassulus/wrappers";
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nomisvim = {
       url = "github:nomisreual/nomisvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -28,6 +32,7 @@
     nix-darwin,
     home-manager,
     nomispkgs,
+    nix-index-database,
     ...
   } @ inputs: let
     architectures = {
@@ -51,6 +56,7 @@
         modules = [
           ./system/desktop/configuration.nix
           ./systemModules
+          nix-index-database.nixosModules.default
         ];
       };
 
