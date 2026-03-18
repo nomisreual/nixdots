@@ -5,7 +5,7 @@
     enableZshIntegration = true;
     enableFishIntegration = true;
     settings = {
-      scan_timeout = 10;
+      scan_timeout = 20;
     };
   };
 }
