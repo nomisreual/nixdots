@@ -172,6 +172,10 @@ in {
       simple-scan
       evince
 
+      # Repair
+      openboardview
+      inputs.pld-usbc-v6.packages.${stdenv.hostPlatform.system}.default
+
       # Neovim
       inputs.nomisvim.packages.${stdenv.hostPlatform.system}.default
     ]

@@ -20,6 +20,10 @@
       url = "github:nomisreual/nomisvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    pld-usbc-v6 = {
+      url = "github:nomisreual/pld_usbc_v6";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nomispkgs = {
       url = "github:nomisreual/nomispkgs";
       inputs.nixpkgs.follows = "nixpkgs";

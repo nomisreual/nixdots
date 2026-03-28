@@ -62,7 +62,7 @@
   users.users.simon = {
     isNormalUser = true;
     description = "Simon Antonius Lauer";
-    extraGroups = ["networkmanager" "wheel" "scanner" "lp" "cdrom"];
+    extraGroups = ["networkmanager" "wheel" "scanner" "lp" "cdrom" "dialout"];
     packages = with pkgs; [];
     shell = pkgs.fish;
   };
