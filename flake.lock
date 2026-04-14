@@ -314,11 +314,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1773747524,
-        "narHash": "sha256-FWxKM5kv4NaMbB+kincwelU04mhEsNC7HdGMr4oqBAY=",
+        "lastModified": 1774706149,
+        "narHash": "sha256-Z1JDvxAztuFzSJWjutWtsVe0RwKhBXWYqPXLDJIqF0s=",
         "owner": "nomisreual",
         "repo": "pld_usbc_v6",
-        "rev": "e490573d7e9534d9c10129f228e5874962bbfeba",
+        "rev": "143dfc895ab4440e4cb9f4c0991bcd056f1bacbb",
         "type": "github"
       },
       "original": {
