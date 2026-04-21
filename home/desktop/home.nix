@@ -126,6 +126,8 @@ in {
       ausweisapp
       pcsc-cyberjack # user space driver for Reiner SCT chipcard reader
 
+      prismlauncher
+
       # Direnv
       direnv
       nix-direnv
