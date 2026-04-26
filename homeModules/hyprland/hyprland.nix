@@ -85,8 +85,10 @@
         exec-once = [
           "${lib.getExe pkgs.waybar} &"
 
+          "${lib.getExe pkgs.protonmail-bridge-gui} --no-window"
+
           "[workspace 1 silent] ${lib.getExe pkgs.kitty}"
-          "[workspace 2 silent] ${lib.getExe pkgs.brave}"
+          "[workspace 2 silent] ${lib.getExe pkgs.firefox}"
           "[workspace 3 silent] ${lib.getExe pkgs.thunderbird}"
         ];
 
