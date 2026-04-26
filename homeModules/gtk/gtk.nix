@@ -11,6 +11,7 @@
   config = lib.mkIf config.nomisos.gtk.enable {
     gtk = {
       enable = true;
+      gtk4.theme = null;
       theme.package = pkgs.catppuccin-gtk.override {
         variant = "mocha";
       };
