@@ -85,7 +85,8 @@
         exec-once = [
           "${lib.getExe pkgs.waybar} &"
 
-          "${lib.getExe pkgs.protonmail-bridge-gui} --no-window"
+          # "${lib.getExe pkgs.protonmail-bridge-gui} --no-window"
+          "${lib.getExe pkgs.protonmail-bridge} --noninteractive"
 
           "[workspace 1 silent] ${lib.getExe pkgs.kitty}"
           "[workspace 2 silent] ${lib.getExe pkgs.firefox}"

@@ -161,7 +161,6 @@ in {
 
       # Mail
       thunderbird
-      protonmail-bridge-gui
 
       # Messanger
       signal-desktop
