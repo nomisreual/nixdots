@@ -31,7 +31,8 @@ in {
     tmux.enable = true;
     hyprland = {
       enable = true;
-      settings.screen = "DP-2, 1920x1080@165, 0x0, 1";
+      # settings.screen = "DP-2, 1920x1080@165, 0x0, 1";
+      settings.screen = "HDMI-A-1, 1920x1080@144, 0x0, 1";
     };
     hypridle.enable = true;
     hyprlock.enable = true;
