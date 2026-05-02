@@ -31,7 +31,6 @@ in {
     tmux.enable = true;
     hyprland = {
       enable = true;
-      # settings.screen = "DP-2, 1920x1080@165, 0x0, 1";
       settings.screen = "HDMI-A-1, 1920x1080@144, 0x0, 1";
     };
     hypridle.enable = true;
@@ -40,7 +39,7 @@ in {
       enable = true;
       settings = {
         wallpaper = "/home/simon/Pictures/Wallpapers/nix-wallpaper-binary-black.png";
-        display = "DP-2";
+        display = "HDMI-A-1";
       };
     };
     swaynotificationcenter.enable = true;
