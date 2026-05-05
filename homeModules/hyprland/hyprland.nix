@@ -69,6 +69,19 @@
         ### Display ###
         monitor = map (m: m.monitor) config.nomisos.hyprland.settings.monitors;
 
+        ### Workspaces ###
+        workspace = [
+          "1, monitor:HDMI-A-1, default:true"
+          "2, monitor:HDMI-A-1"
+          "3, monitor:HDMI-A-1"
+          "4, monitor:HDMI-A-1"
+
+          "5, monitor:HDMI-A-2, default:true"
+          "6, monitor:HDMI-A-2"
+          "7, monitor:HDMI-A-2"
+          "8, monitor:HDMI-A-2"
+        ];
+
         #############################
         ### ENVIRONMENT VARIABLES ###
         #############################
@@ -89,11 +102,11 @@
         exec-once = [
           "${lib.getExe pkgs.waybar} &"
 
-          "${lib.getExe pkgs.protonmail-bridge} --noninteractive"
-
-          "[workspace 1 silent] ${lib.getExe pkgs.kitty}"
-          "[workspace 2 silent] ${lib.getExe pkgs.firefox}"
-          "[workspace 3 silent] ${lib.getExe pkgs.thunderbird}"
+          # "${lib.getExe pkgs.protonmail-bridge} --noninteractive"
+          #
+          # "[workspace 1 silent] ${lib.getExe pkgs.kitty}"
+          # "[workspace 2 silent] ${lib.getExe pkgs.firefox}"
+          # "[workspace 3 silent] ${lib.getExe pkgs.thunderbird}"
         ];
 
         #####################
