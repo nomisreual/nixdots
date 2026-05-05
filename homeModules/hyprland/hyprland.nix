@@ -11,9 +11,15 @@
     settings = lib.mkOption {
       type = lib.types.submodule {
         options = {
-          screen = lib.mkOption {
-            type = lib.types.str;
-            default = "";
+          monitors = lib.mkOption {
+            type = lib.types.listOf (lib.types.submodule {
+              options = {
+                monitor = lib.mkOption {
+                  type = lib.types.str;
+                };
+              };
+            });
+            default = [];
           };
         };
       };
@@ -53,17 +59,15 @@
           }
         ).wrapper;
 
-      pypr = lib.getExe pkgs.pyprland;
+      switchworkspace = builtins.genList (x: "$mainMod, ${toString (x + 1)}, workspace, ${toString (x + 1)}") 8;
 
-      switchworkspace = builtins.genList (x: "$mainMod, ${builtins.toString (x + 1)}, workspace, ${builtins.toString (x + 1)}") 8;
-
-      movetoworkspace = builtins.genList (x: "$mainMod SHIFT, ${builtins.toString (x + 1)}, movetoworkspace, ${builtins.toString (x + 1)}") 8;
+      movetoworkspace = builtins.genList (x: "$mainMod SHIFT, ${toString (x + 1)}, movetoworkspace, ${toString (x + 1)}") 8;
     in {
       enable = true;
 
       settings = {
         ### Display ###
-        monitor = config.nomisos.hyprland.settings.screen;
+        monitor = map (m: m.monitor) config.nomisos.hyprland.settings.monitors;
 
         #############################
         ### ENVIRONMENT VARIABLES ###
@@ -85,7 +89,6 @@
         exec-once = [
           "${lib.getExe pkgs.waybar} &"
 
-          # "${lib.getExe pkgs.protonmail-bridge-gui} --no-window"
           "${lib.getExe pkgs.protonmail-bridge} --noninteractive"
 
           "[workspace 1 silent] ${lib.getExe pkgs.kitty}"

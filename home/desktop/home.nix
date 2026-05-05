@@ -31,7 +31,10 @@ in {
     tmux.enable = true;
     hyprland = {
       enable = true;
-      settings.screen = "HDMI-A-1, 1920x1080@144, 0x0, 1";
+      settings.monitors = [
+        {monitor = "HDMI-A-1, 1920x1080@144, 1920x0, 1";}
+        {monitor = "HDMI-A-2, 1920x1080@144, 0x0, 1";}
+      ];
     };
     hypridle.enable = true;
     hyprlock.enable = true;
@@ -39,7 +42,7 @@ in {
       enable = true;
       settings = {
         wallpaper = "/home/simon/Pictures/Wallpapers/nix-wallpaper-binary-black.png";
-        display = "HDMI-A-1";
+        # display = "HDMI-A-1";
       };
     };
     swaynotificationcenter.enable = true;
