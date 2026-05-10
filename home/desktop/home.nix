@@ -81,7 +81,7 @@ in {
 
   # Game launcher
   programs.lutris = {
-    enable = true;
+    enable = false;
     extraPackages = with pkgs; [
       gamescope
       gamemode
