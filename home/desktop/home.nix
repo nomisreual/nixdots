@@ -51,7 +51,7 @@ in {
 
   # gammastep
   services.gammastep = {
-    enable = true;
+    enable = false;
     provider = "geoclue2";
     tray = true;
   };

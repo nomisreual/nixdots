@@ -81,7 +81,7 @@
   };
 
   services.geoclue2 = {
-    enable = true;
+    enable = false;
   };
 
   # GnuPG
