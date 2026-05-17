@@ -36,8 +36,8 @@ in {
         {monitor = "HDMI-A-2, 1920x1080@144, 1920x0, 1";}
       ];
     };
-    hypridle.enable = true;
-    hyprlock.enable = true;
+    hypridle.enable = false;
+    hyprlock.enable = false;
     hyprpaper = {
       enable = true;
       settings = {

@@ -44,7 +44,7 @@
           ];
           modules-right =
             [
-              "idle_inhibitor"
+              # "idle_inhibitor"
               "pulseaudio"
               "network"
               "cpu"
