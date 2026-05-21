@@ -71,6 +71,10 @@
   environment.systemPackages = with pkgs; [
     git
     vim
+    makemkv
+    libbluray
+    libaacs
+    libbdplus
   ];
 
   fonts = {
