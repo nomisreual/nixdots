@@ -18,6 +18,12 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  fileSystems."/mnt/media" = {
+    device = "/dev/disk/by-uuid/7eec5c88-ae73-4bf3-aa41-49c464da71eb";
+    fsType = "ext4";
+    options = [ "defaults" ];
+  };
+
   # Hostname
   networking.hostName = "nixos";
 
