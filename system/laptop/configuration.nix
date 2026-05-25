@@ -7,23 +7,9 @@
   # Import other modules
   imports = [
     ./hardware-configuration.nix
-    ./greetd.nix
     ./nvidia.nix
     ./tlp.nix
   ];
-
-  # Custom system Modules
-  steam.enable = true;
-  virtmanager.enable = false;
-  qtile.enable = false;
-  distrobox.enable = true;
-  printing.enable = true;
-  scan.enable = true;
-  hyprland.enable = true;
-  plasma.enable = false;
-  niri.enable = false;
-  greetd.enable = false;
-  postgres.enable = false;
 
   # Bootloader.
   boot.loader.grub.enable = true;
@@ -66,7 +52,7 @@
   users.users.simon = {
     isNormalUser = true;
     description = "Simon Antonius Lauer";
-    extraGroups = ["networkmanager" "wheel" "scanner" "lp" "cdrom"];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [];
     shell = pkgs.fish;
   };
@@ -75,13 +61,10 @@
   environment.systemPackages = with pkgs; [
     git
     vim
+    neovim
   ];
 
-  fonts.packages = with pkgs; [
-    nerd-fonts.fantasque-sans-mono
-  ];
-
-  # GnuPG
+  services.openssh.enable = true;
   programs.gnupg.agent.enable = true;
 
   system.stateVersion = "24.11";
