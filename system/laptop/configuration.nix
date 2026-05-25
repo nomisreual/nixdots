@@ -70,6 +70,12 @@
     neovim
   ];
 
+  services.jellyfin = {
+    enable = true;
+    openFirewall = true;
+    user = "simon";
+  };
+
   services.openssh.enable = true;
   programs.gnupg.agent.enable = true;
 
