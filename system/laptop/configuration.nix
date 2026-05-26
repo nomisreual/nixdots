@@ -23,22 +23,24 @@
     fsType = "ext4";
     options = [ "defaults" ];
   };
-  fileSystems."/export/media" = {
-    device = "/mnt/media";
-    fsType = "none";
-    options = [ "bind" ];
-  };
-  networking.firewall.allowedTCPPorts = [2049];
-  services.nfs.server = {
-    enable = true;
-    exports = ''
-      /export 192.168.0.62 (rw,fsid=0,no_subtree_check)
-      /export/media 192.168.0.62 (rw,nohide,insecure,no_subtree_check)
-    '';
-  };
+
+  # fileSystems."/export/media" = {
+  #   device = "/mnt/media";
+  #   fsType = "none";
+  #   options = [ "bind" ];
+  # };
+  # networking.firewall.allowedTCPPorts = [2049];
+  # services.nfs.server = {
+  #   enable = true;
+  #   exports = ''
+  #     /export 192.168.0.0/24 (rw,fsid=0,no_subtree_check))
+  #     /export/media 192.168.0.0/24 (rw,nohide,insecure,no_subtree_check)
+  #   '';
+  # };
   # ignore lid
+
   services.logind = {
-    lidSwitch = "ignore";
+    settings.Login.HandleLidSwitch = "ignore";
   };
 
   # Hostname
