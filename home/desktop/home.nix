@@ -185,6 +185,8 @@ in {
     ++ [
       nomispkgs.git_alert
 
+      kdePackages.kdenlive
+
       # Tmux sessionizer
       (
         pkgs.symlinkJoin

@@ -29,6 +29,12 @@
   # Kernel
   boot.kernelModules = ["sg"]; # required by MakeMKV for accessing BR drive.
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.supportedFilesystems = ["nfs"];
+
+  fileSystems."/mnt/media" = {
+    device = "192.168.0.69:/media";
+    fsType = "nfs";
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
