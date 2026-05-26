@@ -18,6 +18,10 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  nix.settings = {
+    auto-optimise-store = true;
+  };
+
   fileSystems."/mnt/media" = {
     device = "/dev/disk/by-uuid/7eec5c88-ae73-4bf3-aa41-49c464da71eb";
     fsType = "ext4";
