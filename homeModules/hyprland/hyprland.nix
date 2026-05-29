@@ -64,6 +64,7 @@
       movetoworkspace = builtins.genList (x: "$mainMod SHIFT, ${toString (x + 1)}, movetoworkspace, ${toString (x + 1)}") 8;
     in {
       enable = true;
+      configType = "hyprlang";
 
       settings = {
         ### Display ###
@@ -178,7 +179,6 @@
         };
 
         dwindle = {
-          pseudotile = true;
           preserve_split = true;
         };
 
