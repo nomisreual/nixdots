@@ -23,7 +23,7 @@ in {
   ];
 
   nomisos = {
-    waybar.enable = true;
+    waybar.enable = false;
     kitty = {
       enable = true;
       settings.font.size = 18;
@@ -39,13 +39,13 @@ in {
     hypridle.enable = false;
     hyprlock.enable = false;
     hyprpaper = {
-      enable = true;
+      enable = false;
       settings = {
         wallpaper = "/home/simon/Pictures/Wallpapers/nix-wallpaper-binary-black.png";
         # display = "HDMI-A-1";
       };
     };
-    swaynotificationcenter.enable = true;
+    swaynotificationcenter.enable = false;
     gtk.enable = true;
   };
 
@@ -62,6 +62,18 @@ in {
       noDisplay = true;
     };
   };
+  services.wayle = {
+    enable = true;
+    settings = {
+      modules = {
+        clock = {
+          format = "%H:%M:%S";
+          dropdown-show-seconds = false;
+        };
+      };
+    };
+  };
+  services.awww.enable = true;
 
   programs.fish = {
     functions = {
