@@ -85,6 +85,9 @@ in {
         font-sans = "FantasqueSansM Nerd Font Mono";
       };
       modules = {
+        notifications = {
+          label-show = false;
+        };
         clock = {
           icon-show = false;
           format = "%d.%m.%y %H:%M";
