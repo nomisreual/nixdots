@@ -71,8 +71,8 @@ in {
         inset-ends = 0.5;
         layout = [
           {
-            center = ["clock" "media"];
             left = ["hyprland-workspaces"];
+            center = ["clock"];
             monitor = "*";
             right = ["keyboard-input" "hyprsunset" "notifications" "systray" "dashboard"];
             show = true;
@@ -85,6 +85,10 @@ in {
         font-sans = "FantasqueSansM Nerd Font Mono";
       };
       modules = {
+        clock = {
+          icon-show = false;
+          format = "%d.%m.%y %H:%M";
+        };
         hyprsunset = {
           border-color = "yellow";
           border-show = false;
