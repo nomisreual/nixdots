@@ -71,10 +71,17 @@ in {
         inset-ends = 0.5;
         layout = [
           {
+            monitor = "HDMI-A-1";
             left = ["hyprland-workspaces"];
             center = ["clock"];
-            monitor = "*";
             right = ["keyboard-input" "hyprsunset" "notifications" "systray" "dashboard"];
+            show = true;
+          }
+          {
+            monitor = "HDMI-A-2";
+            left = ["hyprland-workspaces"];
+            center = [];
+            right = ["dashboard"];
             show = true;
           }
         ];
