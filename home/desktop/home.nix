@@ -80,7 +80,7 @@ in {
           {
             monitor = "HDMI-A-2";
             left = ["hyprland-workspaces"];
-            center = [];
+            center = ["clock"];
             right = ["dashboard"];
             show = true;
           }
