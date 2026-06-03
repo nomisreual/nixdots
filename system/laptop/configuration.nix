@@ -90,6 +90,7 @@
     git
     vim
     neovim
+    yazi
   ];
 
   services.jellyfin = {
