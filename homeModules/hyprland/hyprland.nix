@@ -261,9 +261,8 @@
             "$mainMod SHIFT, K, swapwindow, u"
             "$mainMod SHIFT, J, swapwindow, d"
 
-            # swaynotificationcenter
-            "$mainMod, N, exec, swaync-client --toggle-panel"
-            "$mainMod SHIFT, N, exec, swaync-client --close-all"
+            # wayle notify
+            "$mainMod SHIFT, N, exec, wayle notify dismiss-all"
           ]
           # Switch to specified workspace
           ++ switchworkspace
