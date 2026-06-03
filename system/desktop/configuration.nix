@@ -27,9 +27,22 @@
   };
 
   # Kernel
-  boot.kernelModules = ["sg"]; # required by MakeMKV for accessing BR drive.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.supportedFilesystems = ["nfs"];
+
+  boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
+    kernelModules = ["sg"]; # required by MakeMKV for accessing BR drive.
+    supportedFilesystems = ["nfs"];
+    # Silence text output
+    consoleLogLevel = 3;
+    initrd.verbose = false;
+    initrd.systemd.enable = true;
+    kernelParams = ["quiet" "splash" "rd.systemd.show_status=auto"];
+
+    # Enable Plymouth
+    plymouth = {
+      enable = true;
+    };
+  };
 
   fileSystems."/mnt/media" = {
     device = "192.168.0.69:/media";
@@ -61,8 +74,15 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  nix.settings = {
-    auto-optimise-store = true;
+  nix = {
+    settings = {
+      auto-optimise-store = true;
+    };
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 30d";
+    };
   };
 
   # Enable Flakes and Nix command
