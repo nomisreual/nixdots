@@ -118,7 +118,7 @@ in {
           right-click = "";
           scroll-down = "";
           scroll-up = "";
-          temperature = 5000;
+          temperature = 4000;
         };
         keyboard-input = {
           format = "{{ alias }}";
