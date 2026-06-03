@@ -226,6 +226,7 @@ in {
       pcsc-cyberjack # user space driver for Reiner SCT chipcard reader
 
       prismlauncher
+      modrinth-app
 
       # Direnv
       direnv
