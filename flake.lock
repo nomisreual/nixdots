@@ -1,5 +1,26 @@
 {
   "nodes": {
+    "awww-info_": {
+      "inputs": {
+        "nixpkgs": [
+          "nomispkgs",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1780589852,
+        "narHash": "sha256-2SkoXJERka1rJrLrZ+d1JJmu3AZ/eE4NvV+wny+ZDH8=",
+        "owner": "nomisreual",
+        "repo": "awww_info",
+        "rev": "c1ac534fb089b662a20545fd4fd9d52ed930a1fc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nomisreual",
+        "repo": "awww_info",
+        "type": "github"
+      }
+    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": "nixpkgs-lib"
@@ -263,6 +284,7 @@
     },
     "nomispkgs": {
       "inputs": {
+        "awww-info_": "awww-info_",
         "git_alert_": "git_alert_",
         "mediaplayer_": "mediaplayer_",
         "nixpkgs": [
@@ -271,11 +293,11 @@
         "sessionizer_": "sessionizer_"
       },
       "locked": {
-        "lastModified": 1773222381,
-        "narHash": "sha256-QtUNxbc3Dk8TYxuvneUcAvgT3K/vIYXZ3Nc7d61Ibk4=",
+        "lastModified": 1780589919,
+        "narHash": "sha256-EFtBjw+GyTbkx97Gt9ZfWMmPdwnOOL7p7Ux4KnGe1rs=",
         "owner": "nomisreual",
         "repo": "nomispkgs",
-        "rev": "71de40fa55be947fe51c04644adbd8165c4aeb2b",
+        "rev": "6d908364c5e62647efce31626164c5571ee44000",
         "type": "github"
       },
       "original": {

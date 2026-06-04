@@ -275,6 +275,7 @@
     ]
     ++ [
       nomispkgs.git_alert
+      nomispkgs.awww-info
 
       kdePackages.kdenlive
 
