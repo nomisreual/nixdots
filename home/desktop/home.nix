@@ -4,13 +4,7 @@
   lib,
   nomispkgs,
   ...
-}: let
-  # libbluray = pkgs.libbluray.override {
-  #   withAACS = true;
-  #   withBDplus = true;
-  # };
-  # vlc-custom = pkgs.vlc.override {inherit libbluray;};
-in {
+}: {
   # User information
   home.username = "simon";
   home.homeDirectory = "/home/simon";
@@ -36,13 +30,12 @@ in {
         {monitor = "HDMI-A-2, 1920x1080@144, 1920x0, 1";}
       ];
     };
-    hypridle.enable = false;
-    hyprlock.enable = false;
+    hypridle.enable = true;
+    hyprlock.enable = true;
     hyprpaper = {
       enable = false;
       settings = {
         wallpaper = "/home/simon/Pictures/Wallpapers/nix-wallpaper-binary-black.png";
-        # display = "HDMI-A-1";
       };
     };
     swaynotificationcenter.enable = false;
