@@ -150,6 +150,7 @@
       };
     };
   };
+  # used by wayle as wallpaper engine
   services.awww.enable = true;
 
   programs.fish = {
