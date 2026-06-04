@@ -65,6 +65,12 @@
     powerOnBoot = true;
   };
 
+  # Graphics
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
   # Enable PCSC-Lite daemon, to access smart cards using SCard API (PC/SC)
   services.pcscd.enable = true;
 
