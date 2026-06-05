@@ -36,7 +36,16 @@
     consoleLogLevel = 3;
     initrd.verbose = false;
     initrd.systemd.enable = true;
-    kernelParams = ["quiet" "splash" "rd.systemd.show_status=auto"];
+    kernelParams = [
+      # for plymouth
+      "quiet"
+      "splash"
+      "rd.systemd.show_status=auto"
+
+      # sleep issues
+      "mem_sleep_default=deep"
+      "amd_pstate=disable"
+    ];
 
     # Enable Plymouth
     plymouth = {
@@ -70,6 +79,9 @@
     enable = true;
     enable32Bit = true;
   };
+
+  #
+  hardware.enableRedistributableFirmware = true;
 
   # Enable PCSC-Lite daemon, to access smart cards using SCard API (PC/SC)
   services.pcscd.enable = true;

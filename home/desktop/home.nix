@@ -30,7 +30,7 @@
         {monitor = "HDMI-A-2, 1920x1080@144, 1920x0, 1";}
       ];
     };
-    hypridle.enable = true;
+    hypridle.enable = false;
     hyprlock.enable = true;
     hyprpaper = {
       enable = false;
@@ -254,6 +254,7 @@
 
       # Mail
       thunderbird
+      neomutt
 
       # Messanger
       signal-desktop
