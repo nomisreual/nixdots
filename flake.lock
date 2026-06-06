@@ -79,6 +79,24 @@
         "type": "github"
       }
     },
+    "flake-parts_4": {
+      "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib_3"
+      },
+      "locked": {
+        "lastModified": 1778716662,
+        "narHash": "sha256-m1Yf0wZ8j1OHjTc2UwHwyQRSnNeSgLJOd7q5Y45hzi4=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "f7c1a2d347e4c52d5fb8d10cb4d94b5884e546fb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
     "git_alert_": {
       "inputs": {
         "nixpkgs": [
@@ -222,6 +240,21 @@
         "owner": "nix-community",
         "repo": "nixpkgs.lib",
         "rev": "c185c7a5e5dd8f9add5b2f8ebeff00888b070742",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "type": "github"
+      }
+    },
+    "nixpkgs-lib_3": {
+      "locked": {
+        "lastModified": 1777168982,
+        "narHash": "sha256-GOkGPcboWE9BmGCRMLX3worL4EMnsnG8MyKmXNeYuhQ=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "f5901329dade4a6ea039af1433fb087bd9c1fe14",
         "type": "github"
       },
       "original": {
@@ -412,6 +445,7 @@
         "nomispkgs": "nomispkgs",
         "nomisvim": "nomisvim",
         "pld-usbc-v6": "pld-usbc-v6",
+        "wallrust-pkg": "wallrust-pkg",
         "wrappers": "wrappers"
       }
     },
@@ -476,6 +510,27 @@
       "original": {
         "owner": "pyproject-nix",
         "repo": "uv2nix",
+        "type": "github"
+      }
+    },
+    "wallrust-pkg": {
+      "inputs": {
+        "flake-parts": "flake-parts_4",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1780746230,
+        "narHash": "sha256-CBHowJbeCzaI5aHFryvWX0fSiaZv1EQcVQVnbehM0Gg=",
+        "owner": "nomisreual",
+        "repo": "wallrust-pkg",
+        "rev": "b73a9c47e984a776df6f53f148cd72da6ba18f00",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nomisreual",
+        "repo": "wallrust-pkg",
         "type": "github"
       }
     },

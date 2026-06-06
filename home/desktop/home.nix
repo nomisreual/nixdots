@@ -58,6 +58,10 @@
   services.wayle = {
     enable = true;
     settings = {
+      styling = {
+        theme-provider = "wallust";
+        theming-monitor = "HDMI-A-1";
+      };
       bar = {
         background-opacity = 60;
         inset-edge = 0.5;
@@ -270,6 +274,7 @@
       # Repair
       openboardview
       inputs.pld-usbc-v6.packages.${stdenv.hostPlatform.system}.default
+      inputs.wallrust-pkg.packages.${stdenv.hostPlatform.system}.default
 
       # Neovim
       inputs.nomisvim.packages.${stdenv.hostPlatform.system}.default

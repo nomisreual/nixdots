@@ -24,6 +24,10 @@
       url = "github:nomisreual/pld_usbc_v6";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    wallrust-pkg = {
+      url = "github:nomisreual/wallrust-pkg";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nomispkgs = {
       url = "github:nomisreual/nomispkgs";
       inputs.nixpkgs.follows = "nixpkgs";
