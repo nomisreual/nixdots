@@ -54,7 +54,7 @@
   };
 
   fileSystems."/mnt/media" = {
-    device = "192.168.0.69:/media";
+    device = "192.168.0.224:/media";
     options = ["rw"];
     fsType = "nfs4";
   };
@@ -90,7 +90,11 @@
   networking.hostName = "nixos";
 
   # Enable networking
-  networking.networkmanager.enable = true;
+  networking = {
+    networkmanager = {
+      enable = true;
+    };
+  };
 
   nix = {
     settings = {
@@ -105,6 +109,8 @@
 
   # Enable Flakes and Nix command
   nix.settings.experimental-features = ["nix-command" "flakes"];
+
+  # Make sure you don't have services.resolved.enable on.
 
   # Add fish to /etc/shells
   programs.fish.enable = true;

@@ -445,7 +445,7 @@
         "nomispkgs": "nomispkgs",
         "nomisvim": "nomisvim",
         "pld-usbc-v6": "pld-usbc-v6",
-        "wallust-pkg": "wallust-pkg",
+        "wallrust-pkg": "wallrust-pkg",
         "wrappers": "wrappers"
       }
     },
@@ -513,7 +513,7 @@
         "type": "github"
       }
     },
-    "wallust-pkg": {
+    "wallrust-pkg": {
       "inputs": {
         "flake-parts": "flake-parts_4",
         "nixpkgs": [
@@ -521,16 +521,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1780746230,
-        "narHash": "sha256-CBHowJbeCzaI5aHFryvWX0fSiaZv1EQcVQVnbehM0Gg=",
+        "lastModified": 1780762213,
+        "narHash": "sha256-6mvgMDWrrk+PbZqBslbGfGohbUS4VEU6pD80eN0r6cA=",
         "owner": "nomisreual",
-        "repo": "wallust-pkg",
-        "rev": "b73a9c47e984a776df6f53f148cd72da6ba18f00",
+        "repo": "wallrust-pkg",
+        "rev": "1a5fec1b90bbf978fcd77ec00afdad10d96689f1",
         "type": "github"
       },
       "original": {
         "owner": "nomisreual",
-        "repo": "wallust-pkg",
+        "repo": "wallrust-pkg",
         "type": "github"
       }
     },
