@@ -50,7 +50,7 @@
   networking.hostName = "nixos";
 
   # Enable networking
-  networking.networkmanager.enable = true;
+  # networking.networkmanager.enable = true;
 
   # Enable Flakes and Nix command
   nix.settings.experimental-features = ["nix-command" "flakes"];
