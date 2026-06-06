@@ -263,6 +263,8 @@
 
             # wayle notify
             "$mainMod SHIFT, N, exec, wayle notify dismiss-all"
+            # wayle next wallpaper
+            "$mainMod SHIFT, W, exec, wayle wallpaper next"
           ]
           # Switch to specified workspace
           ++ switchworkspace
