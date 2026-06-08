@@ -280,7 +280,7 @@
             # Region (only clipboard)
             "$mainMod, Print, exec, ${lib.getExe region_cb_only}"
             # Region (saved to disk)
-            "$mainMod SHIFT, Print, exec,${lib.getExe region}"
+            "$mainMod SHIFT, Print, exec, ${lib.getExe region}"
             # Active window (saved to disk)
             "$mainMod ALT, Print, exec, ${lib.getExe active_window}"
           ];
