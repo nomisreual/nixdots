@@ -291,10 +291,10 @@
         ];
         bindl = [
           # Requires playerctl
-          ", XF86AudioNext, exec, playerctl next"
-          ", XF86AudioPause, exec, playerctl play-pause"
-          ", XF86AudioPlay, exec, playerctl play-pause"
-          ", XF86AudioPrev, exec, playerctl previous"
+          ", XF86AudioNext, exec, ${lib.getExe pkgs.playerctl} next"
+          ", XF86AudioPause, exec, ${lib.getExe pkgs.playerctl} play-pause"
+          ", XF86AudioPlay, exec, ${lib.getExe pkgs.playerctl} play-pause"
+          ", XF86AudioPrev, exec, ${lib.getExe pkgs.playerctl} previous"
         ];
 
         bindel = [
