@@ -283,10 +283,6 @@
             "$mainMod SHIFT, Print, exec,${lib.getExe region}"
             # Active window (saved to disk)
             "$mainMod ALT, Print, exec, ${lib.getExe active_window}"
-          ]
-          # Pyprland Keybinds
-          ++ [
-            "$mainMod, A, exec, pypr toggle term"
           ];
         bindm = [
           # Move/resize windows with mainMod + LMB/RMB and dragging
