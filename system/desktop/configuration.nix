@@ -65,6 +65,11 @@
     options = ["defaults"];
   };
 
+  services.usbmuxd = {
+    enable = true;
+    # package = pkgs.usbmuxd2;
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -119,7 +124,7 @@
   users.users.simon = {
     isNormalUser = true;
     description = "Simon Antonius Lauer";
-    extraGroups = ["networkmanager" "wheel" "scanner" "lp" "cdrom" "dialout"];
+    extraGroups = ["networkmanager" "wheel" "scanner" "lp" "cdrom" "dialout" "usbmux"];
     packages = with pkgs; [];
     shell = pkgs.fish;
   };
@@ -132,6 +137,9 @@
     libbluray
     libaacs
     libbdplus
+
+    libimobiledevice
+    ifuse # optional, to mount using 'ifuse'
   ];
 
   fonts = {
