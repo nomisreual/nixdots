@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs_stable.url = "github:nixos/nixpkgs/nixos-26.05";
     nix-darwin = {
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,6 +38,7 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs_stable,
     nix-darwin,
     home-manager,
     nomispkgs,
@@ -49,6 +51,11 @@
     };
     pkgs_for_system = architecture: (
       import nixpkgs {
+        system = architecture;
+      }
+    );
+    pkgs_stable_for_system = architecture: (
+      import nixpkgs_stable {
         system = architecture;
       }
     );
@@ -95,6 +102,7 @@
         extraSpecialArgs = {
           inherit inputs;
           nomispkgs = nomispkgs_for_system architectures.linux;
+          pkgs_stable = pkgs_stable_for_system architectures.linux;
         };
       };
 

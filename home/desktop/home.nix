@@ -1,8 +1,10 @@
 {
   pkgs,
+  nixpkgs_stable,
   inputs,
   lib,
   nomispkgs,
+  pkgs_stable,
   ...
 }: {
   # User information
@@ -74,7 +76,8 @@
 
   # Game launcher
   programs.lutris = {
-    enable = false;
+    package = pkgs_stable.lutris;
+    enable = true;
     extraPackages = with pkgs; [
       gamescope
       gamemode
