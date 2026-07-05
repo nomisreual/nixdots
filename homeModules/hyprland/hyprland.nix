@@ -59,9 +59,9 @@
           }
         ).wrapper;
 
-      switchworkspace = builtins.genList (x: "$mainMod, ${toString (x + 1)}, workspace, ${toString (x + 1)}") 10;
+      switchworkspace = builtins.genList (x: "$mainMod, ${toString (x + 1)}, workspace, ${toString (x + 1)}") 9;
 
-      movetoworkspace = builtins.genList (x: "$mainMod SHIFT, ${toString (x + 1)}, movetoworkspace, ${toString (x + 1)}") 10;
+      movetoworkspace = builtins.genList (x: "$mainMod SHIFT, ${toString (x + 1)}, movetoworkspace, ${toString (x + 1)}") 9;
     in {
       enable = true;
       configType = "hyprlang";
@@ -82,7 +82,6 @@
           "7, monitor:HDMI-A-2"
           "8, monitor:HDMI-A-2"
           "9, monitor:HDMI-A-2"
-          "10, monitor:HDMI-A-2"
         ];
 
         #############################
