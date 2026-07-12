@@ -29,7 +29,7 @@
   # Kernel
 
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
+    # kernelPackages = pkgs.linuxPackages_latest;
     kernelModules = ["sg"]; # required by MakeMKV for accessing BR drive.
     supportedFilesystems = ["nfs"];
     # Silence text output
