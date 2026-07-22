@@ -142,6 +142,7 @@
     libbluray
     libaacs
     libbdplus
+    protonup-rs
 
     libimobiledevice
     ifuse # optional, to mount using 'ifuse'
