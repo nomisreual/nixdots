@@ -148,6 +148,8 @@
     ifuse # optional, to mount using 'ifuse'
   ];
 
+  services.flatpak.enable = true;
+
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
