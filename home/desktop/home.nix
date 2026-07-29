@@ -182,7 +182,7 @@
       inputs.nomisvim.packages.${stdenv.hostPlatform.system}.default
     ]
     ++ [
-      nomispkgs.git_alert
+      # nomispkgs.git_alert
       nomispkgs.awww-info
 
       kdePackages.kdenlive
