@@ -186,7 +186,8 @@
       nomispkgs.awww-info
 
       kdePackages.kdenlive
-      bottles
+
+      wowup-cf
 
       # Tmux sessionizer
       (
