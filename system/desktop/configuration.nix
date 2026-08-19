@@ -59,11 +59,11 @@
     fsType = "nfs4";
   };
 
-  fileSystems."/mnt/backups" = {
-    device = "/dev/disk/by-uuid/1724e2bc-215a-4a66-ab9d-7d0b4ed71fae";
-    fsType = "ext4";
-    options = ["defaults"];
-  };
+  # fileSystems."/mnt/backups" = {
+  #   device = "/dev/disk/by-uuid/1724e2bc-215a-4a66-ab9d-7d0b4ed71fae";
+  #   fsType = "ext4";
+  #   options = ["defaults"];
+  # };
 
   services.usbmuxd = {
     enable = true;
