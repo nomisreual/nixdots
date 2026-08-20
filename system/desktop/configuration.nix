@@ -6,7 +6,7 @@
   # Custom system Modules
   steam.enable = true;
   virtmanager.enable = true;
-  qtile.enable = true;
+  qtile.enable = false;
   distrobox.enable = true;
   printing.enable = true;
   scan.enable = true;
@@ -71,9 +71,9 @@
   };
 
   # Enable Plasma
-  services = {
-    desktopManager.plasma6.enable = true;
-  };
+  # services = {
+  #   desktopManager.plasma6.enable = true;
+  # };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
