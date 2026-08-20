@@ -150,9 +150,6 @@
       easytag # manage metadata of music files
       mpv # media player
 
-      # Password Manager
-      _1password-gui
-
       # Web Browsers
       firefox
       brave
