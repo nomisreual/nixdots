@@ -1,6 +1,11 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
+    inputs.nix-gaming.nixosModules.pipewireLowLatency
   ];
 
   # Custom system Modules
@@ -89,6 +94,25 @@
     enable = true;
     enable32Bit = true;
   };
+  ###############
+  # WoW Forever #
+
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    lowLatency = {
+      enable = true;
+      quantum = 64;
+      rate = 48000;
+    };
+  };
+  # make pipewire realtime capable
+  security.rtkit.enable = true;
+
+  #             #
+  ###############
 
   #
   hardware.enableRedistributableFirmware = true;
@@ -103,6 +127,14 @@
   networking = {
     networkmanager = {
       enable = true;
+    };
+  };
+
+  # Allow TCP ports
+  networking = {
+    firewall = {
+      allowedTCPPorts = [1119 3724]; # wow forever
+      checkReversePath = false; # for proton vpn
     };
   };
 
@@ -146,6 +178,8 @@
 
     libimobiledevice
     ifuse # optional, to mount using 'ifuse'
+
+    protonvpn-gui
   ];
 
   services.flatpak.enable = true;
@@ -154,6 +188,9 @@
     enableDefaultPackages = true;
     packages = with pkgs; [
       nerd-fonts.fantasque-sans-mono
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-color-emoji
     ];
   };
 

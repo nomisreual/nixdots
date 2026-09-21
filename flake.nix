@@ -33,6 +33,7 @@
       url = "github:nomisreual/nomispkgs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-gaming.url = "github:fufexan/nix-gaming";
   };
 
   outputs = {
