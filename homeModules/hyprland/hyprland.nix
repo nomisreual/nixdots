@@ -72,16 +72,16 @@
 
         ### Workspaces ###
         workspace = [
-          "1, monitor:HDMI-A-1, default:true, persistent:true"
-          "2, monitor:HDMI-A-1, persistent:true"
-          "3, monitor:HDMI-A-1, persistent:true"
-          "4, monitor:HDMI-A-1, persistent:true"
-          "5, monitor:HDMI-A-1, persistent:true"
+          "1, monitor:DP-1, default:true, persistent:true"
+          "2, monitor:DP-1, persistent:true"
+          "3, monitor:DP-1, persistent:true"
+          "4, monitor:DP-1, persistent:true"
+          "5, monitor:DP-1, persistent:true"
 
-          "6, monitor:HDMI-A-2"
-          "7, monitor:HDMI-A-2"
-          "8, monitor:HDMI-A-2"
-          "9, monitor:HDMI-A-2"
+          "6, monitor:HDMI-A-1"
+          "7, monitor:HDMI-A-1"
+          "8, monitor:HDMI-A-1"
+          "9, monitor:HDMI-A-1"
         ];
 
         #############################
@@ -107,6 +107,7 @@
           "[workspace 1 silent] ${lib.getExe pkgs.kitty}"
           "[workspace 2 silent] ${lib.getExe pkgs.brave}"
           "[workspace 3 silent] ${lib.getExe pkgs.thunderbird}"
+          "xembedsniproxy"
         ];
 
         #####################

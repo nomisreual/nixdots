@@ -16,7 +16,7 @@
       settings = {
         styling = {
           theme-provider = "wallust";
-          theming-monitor = "HDMI-A-1";
+          theming-monitor = "DP-1";
         };
         bar = {
           background-opacity = 60;
@@ -24,14 +24,14 @@
           inset-ends = 0.5;
           layout = [
             {
-              monitor = "HDMI-A-1";
+              monitor = "DP-1";
               left = ["hyprland-workspaces"];
               center = ["clock"];
               right = ["keyboard-input" "hyprsunset" "notifications" "systray" "dashboard"];
               show = true;
             }
             {
-              monitor = "HDMI-A-2";
+              monitor = "HDMI-A-1";
               left = ["hyprland-workspaces"];
               center = ["clock"];
               right = ["dashboard"];
