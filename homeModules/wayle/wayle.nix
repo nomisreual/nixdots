@@ -16,7 +16,7 @@
       settings = {
         styling = {
           theme-provider = "wallust";
-          theming-monitor = "DP-1";
+          theming-monitor = "DP-3";
         };
         bar = {
           background-opacity = 60;
@@ -24,7 +24,7 @@
           inset-ends = 0.5;
           layout = [
             {
-              monitor = "DP-1";
+              monitor = "DP-3";
               left = ["hyprland-workspaces"];
               center = ["clock"];
               right = ["keyboard-input" "hyprsunset" "notifications" "systray" "dashboard"];

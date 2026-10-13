@@ -29,10 +29,10 @@
             on-resume = "hyprctl dispatch dpms on"; # screen on when activity is detected after timeout has fired.
           }
 
-          # {
-          #   timeout = 1800; # 30min
-          #   on-timeout = "systemctl suspend"; # suspend pc
-          # }
+          {
+            timeout = 1800; # 30min
+            on-timeout = "systemctl suspend"; # suspend pc
+          }
         ];
       };
     };

@@ -72,11 +72,11 @@
 
         ### Workspaces ###
         workspace = [
-          "1, monitor:DP-1, default:true, persistent:true"
-          "2, monitor:DP-1, persistent:true"
-          "3, monitor:DP-1, persistent:true"
-          "4, monitor:DP-1, persistent:true"
-          "5, monitor:DP-1, persistent:true"
+          "1, monitor:DP-3, default:true, persistent:true"
+          "2, monitor:DP-3, persistent:true"
+          "3, monitor:DP-3, persistent:true"
+          "4, monitor:DP-3, persistent:true"
+          "5, monitor:DP-3, persistent:true"
 
           "6, monitor:HDMI-A-1"
           "7, monitor:HDMI-A-1"
