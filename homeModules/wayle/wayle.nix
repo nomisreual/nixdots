@@ -31,7 +31,7 @@
               show = true;
             }
             {
-              monitor = "HDMI-A-1";
+              monitor = "DP-2";
               left = ["hyprland-workspaces"];
               center = ["clock"];
               right = ["dashboard"];
