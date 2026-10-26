@@ -165,7 +165,7 @@
       discord
 
       # Office
-      libreoffice-fresh
+      libreoffice
       simple-scan
       evince
 
