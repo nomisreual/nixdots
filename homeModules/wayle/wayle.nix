@@ -27,7 +27,7 @@
               monitor = "DP-3";
               left = ["hyprland-workspaces"];
               center = ["clock"];
-              right = ["keyboard-input" "hyprsunset" "notifications" "systray" "dashboard"];
+              right = ["idle-inhibit" "keyboard-input" "hyprsunset" "notifications" "systray" "dashboard"];
               show = true;
             }
             {
